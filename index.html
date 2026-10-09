@@ -571,6 +571,257 @@
   </section>
 
   <!-- ==========================================
+       6b. DAS ORIGINALE KATALOG-MENÜ (11 SPEZIALITÄTEN)
+       "Vom Buffet auf den Teller Ihrer Gäste"
+  ========================================== -->
+  <section id="menue-katalog" class="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#EAE5DC]">
+    <div class="max-w-[1260px] mx-auto px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-xs font-bold uppercase tracking-wider mb-3">
+          <span>👑</span> <span>Das Originale Festtags-Menü</span>
+        </div>
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]">
+          Vom Buffet auf den Teller Ihrer Gäste
+        </h2>
+        <div class="section-separator"></div>
+        <p class="text-sm sm:text-base text-[#555048]">
+          Eine Auswahl unserer 11 traditionellen Spezialitäten – frisch zubereitet, reichhaltig portioniert und in professionellen Chafing-Dishes warm serviert.
+        </p>
+
+        <!-- Interactive Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-8">
+          <button onclick="filterDishes('all', this)" class="dish-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-[#D97706] text-white shadow-sm transition">
+            Alle 11 Spezialitäten (11)
+          </button>
+          <button onclick="filterDishes('meat', this)" class="dish-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#1A1A1A] transition">
+            🥩 Warme Hauptgerichte (3)
+          </button>
+          <button onclick="filterDishes('live', this)" class="dish-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#1A1A1A] transition">
+            🔥 Live-Cooking & Chapatis (2)
+          </button>
+          <button onclick="filterDishes('side', this)" class="dish-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#1A1A1A] transition">
+            🍚 Reis & Saucen (3)
+          </button>
+          <button onclick="filterDishes('snack', this)" class="dish-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#1A1A1A] transition">
+            🥟 Fingerfood & Dessert (3)
+          </button>
+        </div>
+      </div>
+
+      <!-- 11-Dish Responsive Cards Grid -->
+      <div id="dishes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        
+        <!-- Dish 1: Fleischeintopf -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="meat">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./05_beef_meat_stew_chafing.jpg" alt="Fleischeintopf" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-[#D97706] text-white text-[10px] font-bold px-2 py-0.5 rounded">Slow Cooked Beef</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">HAUPTGERICHT</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Traditioneller Fleischeintopf</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Über 4 Stunden sanft geschmortes Rindfleisch in reichhaltiger Tomaten-Kräutersauce mit Ingwer und Knoblauch.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ In Chafing Dishes warm serviert</div>
+        </div>
+
+        <!-- Dish 2: Hähnchen -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="meat">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Mariniertes Hähnchen" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Zartes Geflügel</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">HAUPTGERICHT</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Mariniertes Hähnchen</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Saftig gewürztes Hähnchenfleisch, abgerundet mit ostafrikanischem Curry, Zwiebeln und feinen Kräutern.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Beliebter Klassiker für alle Gäste</div>
+        </div>
+
+        <!-- Dish 3: Matooke -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="meat side">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./06_buffet_event_guests.jpg" alt="Gedämpfte Matooke" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">🌱 Vegan / Tradition</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">TRADITIONSGERICHT</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Gedämpfte Matooke</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Ostafrikanische Kochbananen, traditionell im Bananenblatt gegart. Stärkereich, mild und wunderbar samtig.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ 100% Pflanzlich & Authentisch</div>
+        </div>
+
+        <!-- Dish 4: Ugandan Rolex -->
+        <div class="dish-item-card bg-white rounded-xl border-2 border-[#D97706] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="live">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./veggie_rolex_signature.png" alt="Ugandan Rolex Live" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-[#D97706] text-white text-[10px] font-bold px-2 py-0.5 rounded">🔥 Live Tawa Show</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">SIGNATURE DISH</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Original Ugandan Rolex</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Frisch gerolltes Omelett mit Tomaten und Weißkohl auf heißem Chapati. Wahlweise Veggie oder Chicken!
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-[#D97706]">✓ Live vor den Gästen gerollt</div>
+        </div>
+
+        <!-- Dish 5: Chapati -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="live side">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Handgeknetetes Chapati" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Handgeknetet</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">BACKKUNST</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Blättriges Chapati-Brot</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Handgeknetete, mehrlagig geschichtete Fladenbrote. Warm, buttrig-knusprig und unverzichtbar zu jedem Stew.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Frisch auf der Tawa gebacken</div>
+        </div>
+
+        <!-- Dish 6: Pilau-Reis -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="side">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./08_buffet_spread_clean.jpg" alt="Swahili Pilau Reis" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">🌱 Vegan</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">GEWÜRZREIS</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Swahili Pilau-Reis</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Langkornreis sanft geröstet mit ganzen Gewürznelken, Zimt, Kreuzkümmel, Kardamom und gerösteten Zwiebeln.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Wärmend & intensiv aromatisch</div>
+        </div>
+
+        <!-- Dish 7: Weißer Reis -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="side">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./08_buffet_spread_clean.jpg" alt="Weißer Reis" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-gray-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Milde Beilage</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">BEILAGE</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Feiner Weißer Duftreis</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Klassischer, locker gedämpfter Langkornreis – die milde Grundlage für Fleischsaucen und Currys.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Leicht & bekömmlich</div>
+        </div>
+
+        <!-- Dish 8: Samosas -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="snack">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Knusprige Samosas" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Fingerfood</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">SNACK & VORSPEISE</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Knusprige Samosas</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Handgefaltete Dreieckstaschen, kross frittiert mit pikanter Rinderhack- oder vegetarischer Gemüsefüllung.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Perfekt handheld ohne Besteck</div>
+        </div>
+
+        <!-- Dish 9: Kachumbari -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="side snack">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./veggie_rolex_signature.png" alt="Frisches Kachumbari" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">🌱 Frisch & Rohkost</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">FRISCHE SALSA</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Frisches Kachumbari</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Traditionelle ostafrikanische Salsa aus feinen Strauchtomaten, roten Zwiebeln, frischer Limette und Koriander.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Bringt Frische & Säure ans Buffet</div>
+        </div>
+
+        <!-- Dish 10: Traditionelle Saucen -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="side">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./10_beef_stew_portrait_heatlamp.png" alt="Traditionelle Saucen" class="w-full h-full object-cover">
+              <span class="absolute top-2.5 left-2.5 bg-amber-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Hausgemacht</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">DIPS & JUS</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Traditionelle Saucen</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Samtige Erdnusssauce nach ugandischer Art und reichhaltiger Fleischeintopf-Jus zur individuellen Verfeinerung.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-emerald-700">✓ Vollmundige Umami-Aromen</div>
+        </div>
+
+        <!-- Dish 11: Swahili Mandazi -->
+        <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="snack">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative bg-amber-50 flex items-center justify-center">
+              <span class="text-5xl">🍯</span>
+              <span class="absolute top-2.5 left-2.5 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">Süßer Abschluss</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">DESSERT</span>
+              <h4 class="font-heading font-bold text-base text-[#1A1A1A]">Swahili Mandazi-Krapfen</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Goldgelb gebackene Kardamom-Hefegebäcke, warm serviert mit feinstem bayerischem Bio-Blütenhonig.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-semibold text-amber-700">✓ Das süße Highlight jedes Menüs</div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#kalkulator" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
+          <span>Menü jetzt für Ihre Gästezahl berechnen</span> <span>➔</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
        7. NEUE SEKTION: LIVE-VIDEOS & PRAXIS-IMPRESSIONEN
        3 Reale Kunden-Videos direkt abspielbar!
   ========================================== -->
@@ -685,9 +936,79 @@
   </section>
 
   <!-- ==========================================
+       7b. PROFESSIONELLER SERVICE FÜR IHRE VERANSTALTUNG (KATALOG SEITE 4)
+  ========================================== -->
+  <section class="py-20 bg-white border-b border-[#EAE5DC]">
+    <div class="max-w-[1260px] mx-auto px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-xs font-bold uppercase tracking-wider mb-3">
+          <span>✨</span> <span>Unser Service-Versprechen</span>
+        </div>
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]">
+          Professioneller Service für Ihre Veranstaltung
+        </h2>
+        <div class="section-separator"></div>
+        <p class="text-sm sm:text-base text-[#555048]">
+          Von der Vorbereitung bis zur Präsentation möchten wir das Catering für Veranstalter einfach und für Gäste zu einem schönen Erlebnis machen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-[#FAF8F5] p-6 rounded-xl border border-[#EAE5DC] flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-3xl mb-3 block">📋</span>
+            <h4 class="font-heading font-bold text-base text-[#1A1A1A] uppercase">Flexible Menüs</h4>
+            <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+              Wir richten uns nach Gästezahl, Veranstaltungsart und Ihren individuellen Wünschen – von 15 bis 300+ Personen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-[#FAF8F5] p-6 rounded-xl border border-[#EAE5DC] flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-3xl mb-3 block">🍲</span>
+            <h4 class="font-heading font-bold text-base text-[#1A1A1A] uppercase">Buffet-Präsentation</h4>
+            <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+              Warme Speisen werden professionell in hochwertigen Chafing-Dishes präsentiert und stundenlang optimal heiß gehalten.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-[#FAF8F5] p-6 rounded-xl border border-[#EAE5DC] flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-3xl mb-3 block">🔥</span>
+            <h4 class="font-heading font-bold text-base text-[#1A1A1A] uppercase">Live-Erlebnis</h4>
+            <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+              Eine Live-Rolex-Station sorgt für ein besonderes afrikanisches Street-Food-Erlebnis und interaktive Unterhaltung Ihrer Gäste.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-[#FAF8F5] p-6 rounded-xl border border-[#EAE5DC] flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-3xl mb-3 block">🏢</span>
+            <h4 class="font-heading font-bold text-base text-[#1A1A1A] uppercase">Privat & Geschäftlich</h4>
+            <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+              Zuverlässig geeignet für Büros, Firmenfeiern, Hochzeiten, Abschlussfeiern und Festivals in ganz München & Bayern.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
        8. CATERING-PREISRECHNER (Deutscher Standard)
   ========================================== -->
-  <section id="kalkulator" class="py-20 sm:py-28 bg-white border-b border-[#EAE5DC]">
+  <section id="kalkulator" class="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#EAE5DC]">
     <div class="max-w-[1100px] mx-auto px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
@@ -1044,6 +1365,22 @@
     let currentOccasion = 'Firmenfeier';
     let guestCount = 50;
     let selectedPackageId = 'live-rolex-station';
+
+    // 11-Dish Catalog Filter
+    function filterDishes(category, btn) {
+      document.querySelectorAll('.dish-filter-btn').forEach(b => {
+        b.className = 'dish-filter-btn px-4 py-2 rounded-full text-xs font-bold transition ' + 
+          (b === btn ? 'bg-[#D97706] text-white shadow-sm' : 'bg-white border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#1A1A1A]');
+      });
+      document.querySelectorAll('.dish-item-card').forEach(card => {
+        const cats = card.getAttribute('data-dish-cat') || '';
+        if (category === 'all' || cats.includes(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
 
     // Video Clips
     const clientVideos = {
