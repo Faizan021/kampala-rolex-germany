@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kampala Rolex Germany — Feines Afrikanisches Catering & Live-Rolex Atelier München</title>
-  <meta name="description" content="Münchens führende Adresse für authentisches ostafrikanisches Event-Catering: Interaktive Live-Rolex-Station auf der heißen Tawa, festliche Chafing-Dish Warmbuffets, feines Fingerfood & Foodtruck für Firmenfeiern und Hochzeiten.">
+  <title>Kampala Rolex Germany | Feines Afrikanisches Catering & Live-Rolex Atelier München</title>
+  <meta name="description" content="Münchens führende Adresse für authentisches ostafrikanisches Event-Catering: Interaktive Live-Rolex-Station auf der heißen Tawa, festliche Chafing-Dish Warmbuffets, Fingerfood & Foodtruck für Firmenfeiern und Hochzeiten.">
   <link rel="icon" type="image/png" href="./logo.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kampala Rolex Germany — Feines Afrikanisches Catering München">
+  <meta property="og:title" content="Kampala Rolex Germany — Feines Afrikanisches Event-Catering München">
   <meta property="og:description" content="Echte Live-Rolex Station, butterzart geschmortes Beef Stew und festliche Warmbuffets für 15 bis 500+ Personen in München & Bayern.">
   <meta property="og:image" content="./02_ugandan_rolex_duo_signature.jpg">
 
-  <!-- Typography: Playfair Display + Plus Jakarta Sans + Space Grotesk -->
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury) + Plus Jakarta Sans + Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,30 +25,22 @@
       theme: {
         extend: {
           colors: {
-            canvas: '#FAF8F5',
-            canvasDark: '#121312',
-            cardBg: '#FFFFFF',
-            cardDark: '#1A1C1A',
-            charcoal: '#212421',
-            charcoalLight: '#4A4E4A',
-            ochre: '#D99B26',
-            ochreHover: '#C2871C',
-            ochreLight: '#FDF4E2',
-            terracotta: '#B84A28',
-            sand: '#EDE8DF',
-            sandLight: '#F5F2EB',
-            borderSubtle: '#E5DFD3',
-            borderDark: '#2C302C'
+            brand: {
+              noir: '#080A09',
+              dark: '#111412',
+              card: '#161A17',
+              border: '#242A25',
+              ochre: '#D99B26',
+              ochreHover: '#C2871C',
+              ochreLight: '#F3E5AB',
+              cream: '#F7F4EC',
+              sand: '#9E9A8E'
+            }
           },
           fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace']
-          },
-          boxShadow: {
-            'soft': '0 10px 30px -10px rgba(33, 36, 33, 0.07)',
-            'elevated': '0 20px 40px -15px rgba(33, 36, 33, 0.12)',
-            'dark-soft': '0 20px 40px -15px rgba(0, 0, 0, 0.6)'
           }
         }
       }
@@ -60,42 +52,71 @@
 
   <style>
     html, body {
-      background-color: #FAF8F5;
-      color: #212421;
+      background-color: #080A09;
+      color: #F7F4EC;
       font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
     }
 
     ::selection {
       background: #D99B26;
-      color: #FFFFFF;
+      color: #080A09;
     }
 
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #FAF8F5; }
-    ::-webkit-scrollbar-thumb { background: #D99B26; border-radius: 9999px; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #080A09; }
+    ::-webkit-scrollbar-thumb { background: #242A25; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D99B26; }
 
-    /* Custom Slider */
-    .catering-slider {
+    /* Video Background Treatment */
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hero-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.38;
+      filter: saturate(1.2) contrast(1.1);
+    }
+
+    /* Ambient Warm Glow */
+    .warm-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(217, 155, 38, 0.12) 0%, rgba(8, 10, 9, 0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Slider */
+    .budget-slider {
       -webkit-appearance: none;
       width: 100%;
       height: 6px;
-      background: #EDE8DF;
+      background: #242A25;
       border-radius: 9999px;
       outline: none;
     }
-    .catering-slider::-webkit-slider-thumb {
+    .budget-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: #D99B26;
-      border: 3px solid #FAF8F5;
-      box-shadow: 0 4px 12px rgba(217, 155, 38, 0.35);
+      border: 3px solid #080A09;
       cursor: pointer;
+      box-shadow: 0 0 15px rgba(217, 155, 38, 0.6);
       transition: transform 0.15s ease;
     }
-    .catering-slider::-webkit-slider-thumb:hover {
+    .budget-slider::-webkit-slider-thumb:hover {
       transform: scale(1.15);
     }
   </style>
@@ -120,470 +141,337 @@
   }
   </script>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-brand-ochre selection:text-brand-noir">
 
   <!-- ==========================================
-       1. MINIMAL ELEGANT TOP BAR
+       1. FLOATING MINIMAL HEADER
   ========================================== -->
-  <aside class="bg-[#181A18] text-[#E0DDD5] text-xs py-2 px-6 border-b border-[#2C302C]">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-[#D99B26]"></span>
-        <span class="font-medium tracking-wide text-xs" data-i18n="topBar">
-          Münchens Original: Ugandisches Live-Rolex Catering & Festtags-Warmbuffets · Termine 2026 buchbar
-        </span>
-      </div>
-      <div class="flex items-center gap-6 text-xs text-[#B5B0A4]">
-        <a href="tel:+4915214438923" class="hover:text-white transition flex items-center gap-1.5 font-medium">
-          <span>+49 152 14438923</span>
-        </a>
-        <div class="flex items-center border border-[#3A3F3A] rounded-full p-0.5 bg-[#212421]">
-          <button id="lang-de-btn" onclick="setLanguage('de')" class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#D99B26] text-white transition">DE</button>
-          <button id="lang-en-btn" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-[#B5B0A4] hover:text-white transition">EN</button>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ==========================================
-       2. REFINED HEADER
-  ========================================== -->
-  <header class="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-borderSubtle transition-all">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo & Identity -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-full border border-borderSubtle bg-white p-1 flex items-center justify-center shadow-sm group-hover:border-ochre transition">
-          <img src="./logo.png" alt="Kampala Rolex Crest" class="w-full h-full object-contain">
-        </div>
-        <div>
-          <div class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-charcoal flex items-center gap-2">
-            <span>Kampala Rolex</span>
-            <span class="text-[10px] font-sans font-bold tracking-widest text-ochre uppercase bg-ochreLight px-2 py-0.5 rounded-full border border-ochre/20">Germany</span>
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5">
+      <div class="bg-brand-dark/80 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+        
+        <!-- Brand Crest -->
+        <a href="#hero" class="flex items-center gap-3.5 group">
+          <div class="w-10 h-10 rounded-full border border-brand-ochre/40 p-0.5 bg-brand-noir overflow-hidden flex items-center justify-center group-hover:border-brand-ochre transition">
+            <img src="./logo.png" alt="Kampala Rolex Logo" class="w-full h-full object-contain">
           </div>
-          <span class="text-[11px] font-sans font-medium text-charcoalLight tracking-wide block" data-i18n="tagline">
-            Authentisches Ugandisches Catering & Live-Atelier München
-          </span>
+          <div>
+            <div class="font-serif text-lg font-bold tracking-wider text-white flex items-center gap-2 leading-none">
+              <span>Kampala Rolex</span>
+              <span class="text-[9px] font-mono text-brand-ochre uppercase tracking-widest border border-brand-ochre/30 px-1.5 py-0.5 rounded-full">Germany</span>
+            </div>
+            <span class="text-[10px] text-brand-sand tracking-widest uppercase block mt-1 font-mono">Catering Atelier München</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-brand-sand">
+          <a href="#experience" class="hover:text-white transition" data-i18n="navExp">Erlebnis</a>
+          <a href="#pillars" class="hover:text-white transition" data-i18n="navPillars">Menü-Kuration</a>
+          <a href="#chef" class="hover:text-white transition" data-i18n="navChef">Chef Olive</a>
+          <a href="#kalkulator" class="text-brand-ochre hover:text-white transition flex items-center gap-1.5" data-i18n="navCalc">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-ochre animate-pulse"></span> Preiskalkulator
+          </a>
+        </nav>
+
+        <!-- Right Controls -->
+        <div class="flex items-center gap-4">
+          <!-- Language Pill -->
+          <div class="flex items-center border border-white/10 rounded-full p-0.5 bg-brand-noir text-[10px] font-mono">
+            <button id="lang-de-btn" onclick="setLanguage('de')" class="px-2.5 py-0.5 rounded-full bg-brand-ochre text-brand-noir font-bold transition">DE</button>
+            <button id="lang-en-btn" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full text-brand-sand hover:text-white transition">EN</button>
+          </div>
+
+          <a href="#kalkulator" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white hover:bg-brand-ochre text-brand-noir font-mono text-xs font-bold uppercase tracking-wider transition active:scale-95 shadow-md">
+            <span data-i18n="headerCta">Event anfragen</span>
+          </a>
         </div>
-      </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-8 font-sans text-xs font-semibold uppercase tracking-wider text-charcoalLight">
-        <a href="#rolex-station" class="hover:text-ochre transition" data-i18n="navRolex">Live Rolex Station</a>
-        <a href="#warmbuffet" class="hover:text-ochre transition" data-i18n="navBuffet">Festtags-Warmbuffet</a>
-        <a href="#fingerfood" class="hover:text-ochre transition" data-i18n="navFinger">Fingerfood</a>
-        <a href="#chef" class="hover:text-ochre transition" data-i18n="navChef">Chef Olive</a>
-        <a href="#kalkulator" class="text-ochre hover:text-ochreHover transition flex items-center gap-1.5" data-i18n="navCalc">
-          <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span> Preiskalkulator
-        </a>
-      </nav>
-
-      <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
-        <a id="nav-whatsapp-btn" href="https://wa.me/4915214438923" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 text-xs font-semibold tracking-wide transition">
-          <span>WhatsApp VIP</span>
-        </a>
-        <a href="#kalkulator" class="px-5 py-2.5 rounded-full bg-charcoal hover:bg-black text-white text-xs font-semibold tracking-wider uppercase transition active:scale-95 shadow-soft">
-          <span data-i18n="headerCta">Catering Anfragen</span>
-        </a>
       </div>
-
     </div>
   </header>
 
   <!-- ==========================================
-       3. EDITORIAL HERO SECTION
+       2. CINEMATIC VIDEO HERO SECTION
   ========================================== -->
-  <section id="hero" class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden bg-canvas border-b border-borderSubtle">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <!-- Left: Editorial Headline & Narrative -->
-        <div class="lg:col-span-7 space-y-6 text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-ochreLight border border-ochre/25 text-ochre text-xs font-semibold tracking-wide">
-            <span>✨</span>
-            <span data-i18n="heroBadge">Münchens 1. Ugandisches Event-Catering</span>
-          </div>
-
-          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight leading-[1.08]" data-i18n="heroTitle">
-            Die lebendige Seele Ugandas. <br>
-            <span class="italic font-normal text-ochre">Live vor Ihren Gästen serviert.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-charcoalLight font-normal leading-relaxed max-w-2xl" data-i18n="heroSub">
-            Bringen Sie echte kulinarische Begeisterung auf Ihre Feier: Frisch gerollte Streetfood-Rolex auf der heißen Tawa, dampfende Chafing-Dishes mit zartem Beef Stew, duftender Nelken-Pilau-Reis und handgemachtes Fingerfood. Handwerklich zubereitet von Gründerin Olive für 15 bis 500+ Gäste in München und ganz Bayern.
-          </p>
-
-          <!-- 4 Quality Pillars (Honest & Premium) -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-2">
-            <div class="bg-white border border-borderSubtle rounded-2xl p-3.5 shadow-soft text-left">
-              <div class="font-serif text-xl font-bold text-charcoal">Frisch vor Ort</div>
-              <div class="text-[11px] text-charcoalLight font-medium mt-0.5" data-i18n="pill1">Live auf der Tawa</div>
-            </div>
-            <div class="bg-white border border-borderSubtle rounded-2xl p-3.5 shadow-soft text-left">
-              <div class="font-serif text-xl font-bold text-charcoal">15 – 500+</div>
-              <div class="text-[11px] text-charcoalLight font-medium mt-0.5" data-i18n="pill2">Gäste Kapazität</div>
-            </div>
-            <div class="bg-white border border-borderSubtle rounded-2xl p-3.5 shadow-soft text-left">
-              <div class="font-serif text-xl font-bold text-charcoal">★ 5.0</div>
-              <div class="text-[11px] text-charcoalLight font-medium mt-0.5" data-i18n="pill3">Kundenbewertungen</div>
-            </div>
-            <div class="bg-white border border-borderSubtle rounded-2xl p-3.5 shadow-soft text-left">
-              <div class="font-serif text-xl font-bold text-charcoal">Bayernweit</div>
-              <div class="text-[11px] text-charcoalLight font-medium mt-0.5" data-i18n="pill4">Mobil & Autark</div>
-            </div>
-          </div>
-
-          <!-- CTAs -->
-          <div class="flex flex-wrap items-center gap-4 pt-3">
-            <a href="#kalkulator" class="px-7 py-4 rounded-full bg-charcoal hover:bg-black text-white font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-soft hover:shadow-elevated transition active:scale-95 flex items-center gap-2">
-              <span data-i18n="heroBtnCalc">Menü & Budget Kalkulieren</span>
-              <span>→</span>
-            </a>
-            <button onclick="toggleVideoModal()" class="px-6 py-4 rounded-full bg-white border border-borderSubtle hover:border-ochre text-charcoal font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-soft transition flex items-center gap-2.5">
-              <span class="w-5 h-5 rounded-full bg-ochreLight text-ochre flex items-center justify-center text-xs">▶</span>
-              <span data-i18n="heroBtnVideo">Video-Reel ansehen (30s)</span>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Right: Curated Food Photography Card -->
-        <div class="lg:col-span-5 flex flex-col items-center">
-          <div class="relative w-full max-w-md bg-white rounded-3xl border border-borderSubtle p-3.5 shadow-elevated group">
-            
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-sand">
-              <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Signature Rolex Duo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-              
-              <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] font-sans uppercase font-bold tracking-widest text-ochreLight">Ugandisches Signature Gericht</span>
-                <p class="font-serif text-lg sm:text-xl font-bold mt-0.5">Rolex Duo — Veggie & Chicken</p>
-                <p class="text-xs text-white/80 font-sans mt-0.5">Frisch vor Ort gerollt auf der heißen Gusseisen-Tawa</p>
-              </div>
-            </div>
-
-            <!-- Video Player Strip -->
-            <div class="mt-3.5 p-3.5 bg-sandLight rounded-2xl border border-borderSubtle flex items-center justify-between">
-              <div>
-                <div class="text-xs font-bold text-charcoal flex items-center gap-1.5">
-                  <span data-i18n="videoStripTitle">Offizielles Live-Reel</span>
-                  <span class="px-1.5 py-0.2 rounded text-[8px] font-mono font-bold bg-charcoal text-white tracking-widest uppercase">HD</span>
-                </div>
-                <div class="text-[11px] text-charcoalLight" data-i18n="videoStripSub">Chef Olive am Foodtruck & Tawa Show</div>
-              </div>
-              <button onclick="toggleVideoModal()" class="px-3.5 py-1.5 rounded-full bg-charcoal hover:bg-black text-white text-xs font-semibold transition">
-                <span data-i18n="play">Abspielen</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 lg:px-10 overflow-hidden">
+    
+    <!-- Video Wallpaper -->
+    <div class="hero-video-wrap">
+      <video src="./reel_kampala_rolex.mp4" autoplay loop muted playsinline poster="./02_ugandan_rolex_duo_signature.jpg"></video>
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-noir via-brand-noir/70 to-brand-noir/80"></div>
     </div>
-  </section>
 
-  <!-- ==========================================
-       4. STORY: DAS ROLEX PHÄNOMEN
-  ========================================== -->
-  <section class="py-20 sm:py-28 bg-white border-b border-borderSubtle">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+    <!-- Ambient Light -->
+    <div class="warm-glow -top-32 left-1/4"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10 text-center flex flex-col items-center">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="storyBadge">Ursprung & Handwerk</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal mt-2 tracking-tight" data-i18n="storyTitle">
-          Warum Rolex in Uganda Kultstatus genießt
-        </h2>
-        <p class="mt-3 text-sm sm:text-base text-charcoalLight" data-i18n="storySub">
-          Von den bunten Straßen Kampalas bis zu Münchens schönsten Festen: Die Entstehungsgeschichte eines Gerichts, das Menschen zusammenbringt.
-        </p>
+      <!-- Top Meta Pill -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-ochre/30 text-brand-ochre text-xs font-mono uppercase tracking-widest mb-8">
+        <span class="w-2 h-2 rounded-full bg-brand-ochre animate-ping"></span>
+        <span data-i18n="heroPill">Münchens 1. Authentisches Ugandisches Catering Atelier</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Step 1 -->
-        <div class="bg-sandLight/60 rounded-3xl p-8 border border-borderSubtle text-left">
-          <div class="w-12 h-12 rounded-2xl bg-white border border-borderSubtle flex items-center justify-center text-xl mb-6 shadow-sm">
-            🍳
-          </div>
-          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="feat1Title">„Rolled Eggs“ — Der Name</h3>
-          <p class="text-sm text-charcoalLight leading-relaxed" data-i18n="feat1Desc">
-            Was als schnelles Streetfood für Studenten in Kampala begann, ist heute Ugandas kulinarisches Nationalheiligtum. Aus der Lautverschiebung von „Rolled Eggs“ entstand der Name „Rolex“ — saftiges Omelett im warmen Fladenbrot.
-          </p>
-        </div>
+      <!-- Hero Heading -->
+      <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl xl:text-9xl text-white font-normal tracking-tight leading-[0.95] max-w-5xl" data-i18n="heroTitle">
+        Die Magie Ugandas. <br>
+        <span class="italic font-light text-brand-ochreLight">Live vor Ihren Gästen serviert.</span>
+      </h1>
 
-        <!-- Step 2 -->
-        <div class="bg-sandLight/60 rounded-3xl p-8 border border-borderSubtle text-left">
-          <div class="w-12 h-12 rounded-2xl bg-white border border-borderSubtle flex items-center justify-center text-xl mb-6 shadow-sm">
-            🔥
-          </div>
-          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="feat2Title">Die heiße Gusseisen-Tawa</h3>
-          <p class="text-sm text-charcoalLight leading-relaxed" data-i18n="feat2Desc">
-            Auf der kreisrunden, glühenden Tawa-Platte wird jedes Ei einzeln mit frischem Kraut, Tomaten und Zwiebeln aufgeschlagen. Die Chapatis werden von Hand geknetet und sofort heiß mit dem Ei verschmolzen.
-          </p>
-        </div>
+      <p class="text-base sm:text-xl text-brand-cream/80 font-light leading-relaxed max-w-2xl mt-8" data-i18n="heroSub">
+        Frisch geworfene Chapatis auf glühender Gusseisen-Tawa, dampfend heiß gerollte Rolex, stundenlang geschmortes Beef Stew und feiner Nelken-Pilau-Reis. Ein interaktives Fest der Sinne für anspruchsvolle Firmenfeiern, Premieren und Hochzeiten in ganz Bayern.
+      </p>
 
-        <!-- Step 3 -->
-        <div class="bg-sandLight/60 rounded-3xl p-8 border border-borderSubtle text-left">
-          <div class="w-12 h-12 rounded-2xl bg-white border border-borderSubtle flex items-center justify-center text-xl mb-6 shadow-sm">
-            🌿
-          </div>
-          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="feat3Title">Natürliche Frische & Vielfalt</h3>
-          <p class="text-sm text-charcoalLight leading-relaxed" data-i18n="feat3Desc">
-            Keine künstlichen Zusätze oder Fertigmischungen. Knackiges Marktgemüse, zartes Hähnchen oder vegetarische Rezepturen garantieren ein unkompliziertes, pures Geschmackserlebnis.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       5. PILLAR 1: LIVE ROLEX STATION
-  ========================================== -->
-  <section id="rolex-station" class="py-20 sm:py-28 bg-canvas border-b border-borderSubtle">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="rounded-3xl overflow-hidden border border-borderSubtle aspect-[4/5] relative shadow-soft">
-            <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Chicken Rolex Close-up" class="w-full h-full object-cover">
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-charcoal">
-              Chicken Rolex
-            </div>
-          </div>
-          <div class="rounded-3xl overflow-hidden border border-borderSubtle aspect-[4/5] relative shadow-soft sm:translate-y-6">
-            <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Classic Veggie Rolex" class="w-full h-full object-cover">
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-charcoal">
-              Classic Veggie Rolex
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-6 space-y-6 text-left">
-          <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="p1Badge">Das Kulinarische Herzstück</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal tracking-tight leading-tight" data-i18n="p1Title">
-            Die Mobile Live-Rolex-Station
-          </h2>
-          <p class="text-sm sm:text-base text-charcoalLight leading-relaxed" data-i18n="p1Desc">
-            Ein unverwechselbares Show-Cooking-Erlebnis für Ihre Gäste: Zusehen, wie der Teig auf der Tawa brutzelt, das Omelett gewendet und der heiße Rolex von Hand gerollt wird. Serviert frisch auf die Hand im Streetfood-Papier.
-          </p>
-
-          <div class="space-y-3 pt-2">
-            <div class="p-4 bg-white rounded-2xl border border-borderSubtle flex items-start gap-3 shadow-soft">
-              <span class="text-ochre text-lg font-bold">✓</span>
-              <div>
-                <strong class="text-charcoal text-sm font-semibold">Live Cooking in unter 90 Sekunden:</strong>
-                <p class="text-xs text-charcoalLight mt-0.5">Garantiert frischer Genuss ohne lange Wartezeiten, auch bei vielen Gästen.</p>
-              </div>
-            </div>
-
-            <div class="p-4 bg-white rounded-2xl border border-borderSubtle flex items-start gap-3 shadow-soft">
-              <span class="text-ochre text-lg font-bold">✓</span>
-              <div>
-                <strong class="text-charcoal text-sm font-semibold">Veggie & Chicken Optionen:</strong>
-                <p class="text-xs text-charcoalLight mt-0.5">Individuell belegt nach Vorlieben Ihrer Gäste mit frischem Kraut, Tomaten und hausgemachten Dips.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4 flex items-center justify-between border-t border-borderSubtle">
-            <div>
-              <span class="text-xs text-charcoalLight">Paketpreis Live-Station</span>
-              <div class="font-serif text-2xl font-bold text-charcoal">ab 25 € <span class="font-sans text-xs text-charcoalLight font-normal">/ Person</span></div>
-            </div>
-            <a href="#kalkulator" onclick="selectPackage('live-rolex-station')" class="px-6 py-3 rounded-full bg-charcoal hover:bg-black text-white text-xs font-semibold uppercase tracking-wider transition">
-              <span data-i18n="selectLive">Auswählen im Rechner</span> →
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       6. PILLAR 2: FESTTAGS-WARMBUFFET
-  ========================================== -->
-  <section id="warmbuffet" class="py-20 sm:py-28 bg-white border-b border-borderSubtle">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="p2Badge">Traditionelles Bankett</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal mt-2 tracking-tight" data-i18n="p2Title">
-          Das Ostafrika Festtags-Warmbuffet
-        </h2>
-        <p class="mt-3 text-sm sm:text-base text-charcoalLight" data-i18n="p2Sub">
-          Opulentes Warmbuffet im Chafing-Dish: Zart geschmortes Rindfleisch, duftender Gewürzreis und traditionelle Beilagen für bis zu 3 Stunden warmen Genuss.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Buffet Card 1 -->
-        <div class="bg-sandLight/60 rounded-3xl overflow-hidden border border-borderSubtle flex flex-col group">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="./10_beef_stew_portrait_heatlamp.png" alt="Slow-Cooked Beef Stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between text-left">
-            <div>
-              <h3 class="font-serif text-xl font-bold text-charcoal" data-i18n="stewTitle">Slow-Cooked Beef Stew</h3>
-              <p class="text-xs sm:text-sm text-charcoalLight mt-2 leading-relaxed" data-i18n="stewDesc">
-                Stundenlang sanft geschmortes, butterweiches Rindfleisch in einer aromatischen Tomaten-, Zwiebel- und Kräutersauce.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-borderSubtle text-xs text-ochre font-semibold">
-              ✓ Bis zu 3 Stunden Heißhalte-Garantie
-            </div>
-          </div>
-        </div>
-
-        <!-- Buffet Card 2 -->
-        <div class="bg-sandLight/60 rounded-3xl overflow-hidden border border-borderSubtle flex flex-col group">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="./08_buffet_spread_clean.jpg" alt="Pilau-Reis" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between text-left">
-            <div>
-              <h3 class="font-serif text-xl font-bold text-charcoal" data-i18n="pilauTitle">Aromatischer Pilau-Gewürzreis</h3>
-              <p class="text-xs sm:text-sm text-charcoalLight mt-2 leading-relaxed" data-i18n="pilauDesc">
-                Feiner Basmati-Gewürzreis, schonend gedämpft mit geröstetem Kreuzkümmel, Nelken, Zimtrinde, Knoblauch und Ingwer. Vegan & glutenfrei.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-borderSubtle text-xs text-ochre font-semibold">
-              ✓ Duftende, vegane Beilage
-            </div>
-          </div>
-        </div>
-
-        <!-- Buffet Card 3 -->
-        <div class="bg-sandLight/60 rounded-3xl overflow-hidden border border-borderSubtle flex flex-col group">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="./06_buffet_event_guests.jpg" alt="Buffet Guests" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between text-left">
-            <div>
-              <h3 class="font-serif text-xl font-bold text-charcoal" data-i18n="matookeTitle">Matooke & Warmes Chapati</h3>
-              <p class="text-xs sm:text-sm text-charcoalLight mt-2 leading-relaxed" data-i18n="matookeDesc">
-                Traditionell gedämpfte Kochbananen (Matooke), handgebackene Chapatis im Weidenkorb und frischer Kachumbari-Tomatensalat.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-borderSubtle text-xs text-ochre font-semibold">
-              ✓ Traditionelle ugandische Beilagenvielfalt
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-12 text-center">
-        <a href="#kalkulator" onclick="selectPackage('festtags-warmbuffet')" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-charcoal hover:bg-black text-white text-xs font-semibold uppercase tracking-wider transition shadow-soft">
-          <span data-i18n="selectWarm">Warmbuffet auswählen (ab 29 € / Pers.)</span> →
+      <!-- CTAs -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+        <a href="#kalkulator" class="px-8 py-4 rounded-full bg-brand-ochre hover:bg-brand-ochreHover text-brand-noir font-mono text-xs font-bold uppercase tracking-widest transition active:scale-95 shadow-[0_0_25px_rgba(217,155,38,0.35)] flex items-center gap-2">
+          <span data-i18n="heroBtnCalc">Catering Kalkulieren</span>
+          <span>→</span>
+        </a>
+        <a href="https://wa.me/4915214438923" target="_blank" class="px-7 py-4 rounded-full bg-brand-card/80 backdrop-blur-md hover:bg-brand-card text-white border border-white/20 font-mono text-xs uppercase tracking-widest transition flex items-center gap-2.5">
+          <span>💬</span>
+          <span data-i18n="heroBtnWa">Direktanfrage an Olive</span>
         </a>
       </div>
 
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 w-full max-w-3xl pt-8 border-t border-white/10 text-center font-mono text-xs">
+        <div>
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-white">100% Live</div>
+          <div class="text-[11px] text-brand-sand uppercase mt-1" data-i18n="metric1">Auf der heißen Tawa</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-white">15 – 500+</div>
+          <div class="text-[11px] text-brand-sand uppercase mt-1" data-i18n="metric2">Gäste Kapazität</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-white">90 Sek.</div>
+          <div class="text-[11px] text-brand-sand uppercase mt-1" data-i18n="metric3">Frisch gerollt</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl sm:text-3xl font-bold text-white">★ 5.0</div>
+          <div class="text-[11px] text-brand-sand uppercase mt-1" data-i18n="metric4">Kundenbewertungen</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ==========================================
-       7. PILLAR 3: FLYING FINGERFOOD
+       3. CHAPTER 01: THE SENSORY EXPERIENCE
   ========================================== -->
-  <section id="fingerfood" class="py-20 sm:py-28 bg-canvas border-b border-borderSubtle">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <section id="experience" class="py-24 sm:py-36 border-t border-brand-border bg-brand-noir relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <div class="lg:col-span-6 rounded-3xl overflow-hidden border border-borderSubtle shadow-soft bg-white p-2">
-          <img src="./12_crispy_chicken_clean.jpg" alt="Crispy Chicken Fingerfood" class="w-full h-auto rounded-2xl object-cover">
-        </div>
-
-        <div class="lg:col-span-6 space-y-6 text-left">
-          <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="p3Badge">Für Apéritifs & Stehempfänge</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal tracking-tight leading-tight" data-i18n="p3Title">
-            Ostafrika Flying Fingerfood
-          </h2>
-          <p class="text-sm sm:text-base text-charcoalLight leading-relaxed" data-i18n="p3Desc">
-            Mundgerecht, unkompliziert ohne Besteck und voller Geschmack: Speziell kuratiert für Networking-Events, Cocktailabende und sommerliche Terrassenfeste.
-          </p>
-
-          <div class="space-y-3">
-            <div class="p-4 bg-white rounded-2xl border border-borderSubtle flex items-start gap-3 shadow-soft">
-              <span class="text-ochre text-lg font-bold">✓</span>
-              <div>
-                <strong class="text-charcoal text-sm font-semibold">Mini-Rolex Rolls:</strong>
-                <p class="text-xs text-charcoalLight mt-0.5">Elegante mundgerechte Happen im Tapas-Schnitt mit hausgemachtem Dip.</p>
-              </div>
-            </div>
-
-            <div class="p-4 bg-white rounded-2xl border border-borderSubtle flex items-start gap-3 shadow-soft">
-              <span class="text-ochre text-lg font-bold">✓</span>
-              <div>
-                <strong class="text-charcoal text-sm font-semibold">Knusprige Samosas:</strong>
-                <p class="text-xs text-charcoalLight mt-0.5">Goldbraun gebacken mit würziger Rind- oder aromatischer Gemüsefüllung.</p>
-              </div>
-            </div>
-
-            <div class="p-4 bg-white rounded-2xl border border-borderSubtle flex items-start gap-3 shadow-soft">
-              <span class="text-ochre text-lg font-bold">✓</span>
-              <div>
-                <strong class="text-charcoal text-sm font-semibold">Swahili Mandazi:</strong>
-                <p class="text-xs text-charcoalLight mt-0.5">Fluffige ostafrikanische Kardamom-Krapfen, beträufelt mit feinem Bio-Honig.</p>
-              </div>
+        <!-- Left: Image Duo -->
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-3xl overflow-hidden border border-brand-border aspect-[4/5] relative group">
+            <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Chicken Rolex Makro" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="font-mono text-[9px] text-brand-ochre uppercase tracking-widest">Handcrafted</span>
+              <p class="font-serif text-lg font-bold text-white mt-0.5">Chicken Rolex</p>
             </div>
           </div>
-
-          <div class="pt-4 flex items-center justify-between border-t border-borderSubtle">
-            <div>
-              <span class="text-xs text-charcoalLight">Paketpreis Fingerfood</span>
-              <div class="font-serif text-2xl font-bold text-charcoal">ab 22 € <span class="font-sans text-xs text-charcoalLight font-normal">/ Person</span></div>
+          <div class="rounded-3xl overflow-hidden border border-brand-border aspect-[4/5] relative group sm:translate-y-8">
+            <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Veggie Rolex" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="font-mono text-[9px] text-brand-ochre uppercase tracking-widest">Vegetarisch</span>
+              <p class="font-serif text-lg font-bold text-white mt-0.5">Classic Veggie Rolex</p>
             </div>
-            <a href="#kalkulator" onclick="selectPackage('fingerfood-flying')" class="px-6 py-3 rounded-full bg-charcoal hover:bg-black text-white text-xs font-semibold uppercase tracking-wider transition">
-              <span data-i18n="selectFinger">Auswählen im Rechner</span> →
+          </div>
+        </div>
+
+        <!-- Right: Storytelling -->
+        <div class="lg:col-span-6 space-y-6 text-left">
+          <span class="font-mono text-xs text-brand-ochre uppercase tracking-[0.25em]" data-i18n="expBadge">01 // The Culinary Secret</span>
+          <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.05]" data-i18n="expTitle">
+            Warum Rolex die Welt erobert hat.
+          </h2>
+          <p class="text-sm sm:text-base text-brand-sand leading-relaxed font-light" data-i18n="expText1">
+            Der Name entstand aus einer legendären Lautverschiebung in den Straßen Kampalas: Aus <em>„Rolled Eggs“</em> wurde <em>„Rolex“</em>. Ein Gericht, das weltweit Millionen Fans begeistert — von CNN bis zu internationalen Streetfood-Festivals.
+          </p>
+          <p class="text-sm sm:text-base text-brand-sand leading-relaxed font-light" data-i18n="expText2">
+            Auf der glühend heißen Gusseisen-Tawa wird ein saftiges Omelett mit frischem Kraut, Tomaten und Zwiebeln gebrutzelt. Ein handgeknetetes, buttrig geschichtetes Chapati-Fladenbrot wird direkt darauf gepresst, gewendet und vor den Augen des Gastes heiß gerollt.
+          </p>
+
+          <div class="pt-4 grid grid-cols-2 gap-4 font-mono text-xs text-brand-sand">
+            <div class="p-4 rounded-2xl bg-brand-dark border border-brand-border">
+              <div class="text-brand-ochre font-bold mb-1">01 / Chapati Handwerk</div>
+              <div>Täglich frisch gekneteter Teig, vielschichtig und warm.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-dark border border-brand-border">
+              <div class="text-brand-ochre font-bold mb-1">02 / Sizzling Tawa</div>
+              <div>Auf 280°C Gusseisen zischend heiß gegart.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. CHAPTER 02: THE 3 CATERING PILLARS
+  ========================================== -->
+  <section id="pillars" class="py-24 sm:py-36 border-t border-brand-border bg-brand-dark/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-brand-border">
+        <div>
+          <span class="font-mono text-xs text-brand-ochre uppercase tracking-[0.25em]" data-i18n="menuBadge">02 // Curation</span>
+          <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal mt-2 tracking-tight" data-i18n="menuTitle">Drei Kulinarische Säulen</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-brand-sand max-w-md font-mono" data-i18n="menuSub">
+          Kombinierbare Module: Von der interaktiven Live-Station bis zum opulenten warmen Bankett-Buffet.
+        </p>
+      </div>
+
+      <!-- 3 Pillars Grid -->
+      <div class="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-brand-card rounded-3xl p-8 border border-brand-border flex flex-col justify-between group hover:border-brand-ochre/50 transition duration-500">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-brand-border">
+              <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Live Rolex Station" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="flex items-center justify-between font-mono text-xs text-brand-ochre mb-2">
+              <span>SÄULE 01</span>
+              <span>LIVE COOKING</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-white">Live Rolex Station</h3>
+            <p class="text-xs sm:text-sm text-brand-sand mt-3 font-light leading-relaxed" data-i18n="p1Desc">
+              Die mobile Gusseisen-Tawa Station: Chef Olive bereitet vor den Gästen frische Veggie- & Chicken-Rolex zu. Inklusive Samosas und pikanter Kachumbari-Salsa.
+            </p>
+            
+            <ul class="mt-6 space-y-2 font-mono text-xs text-brand-sand border-t border-brand-border pt-4">
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Live-Show vor den Gästen</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Veggie & Chicken Rezepturen</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Serviert frisch auf die Hand</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="font-mono text-[10px] text-brand-sand uppercase">Investition</span>
+              <div class="font-serif text-2xl text-brand-ochre">25 € <span class="font-mono text-xs text-brand-sand">/ Gast</span></div>
+            </div>
+            <a href="#kalkulator" onclick="selectPackage('live-rolex-station')" class="px-5 py-2.5 rounded-full bg-brand-noir border border-brand-ochre/40 hover:border-brand-ochre text-white font-mono text-xs uppercase tracking-wider transition">
+              Wählen →
             </a>
           </div>
+        </div>
 
+        <!-- Pillar 2 -->
+        <div class="bg-brand-card rounded-3xl p-8 border border-brand-border flex flex-col justify-between group hover:border-brand-ochre/50 transition duration-500">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-brand-border">
+              <img src="./10_beef_stew_portrait_heatlamp.png" alt="Slow Beef Stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="flex items-center justify-between font-mono text-xs text-brand-ochre mb-2">
+              <span>SÄULE 02</span>
+              <span>WARMBUFFET</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-white">Festtags-Warmbuffet</h3>
+            <p class="text-xs sm:text-sm text-brand-sand mt-3 font-light leading-relaxed" data-i18n="p2Desc">
+              Butterzartes, stundenlang geschmortes Beef Stew, aromatischer Nelken-Zimt-Pilau-Reis, gedämpfte Matooke-Kochbananen und warme Chapati-Körbe im Chafing-Dish.
+            </p>
+            
+            <ul class="mt-6 space-y-2 font-mono text-xs text-brand-sand border-t border-brand-border pt-4">
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> 3h Heißhalte-Garantie</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Schmorrind & Pilau-Reis</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Ideal für große Bankette</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="font-mono text-[10px] text-brand-sand uppercase">Investition</span>
+              <div class="font-serif text-2xl text-brand-ochre">29 € <span class="font-mono text-xs text-brand-sand">/ Gast</span></div>
+            </div>
+            <a href="#kalkulator" onclick="selectPackage('festtags-warmbuffet')" class="px-5 py-2.5 rounded-full bg-brand-noir border border-brand-ochre/40 hover:border-brand-ochre text-white font-mono text-xs uppercase tracking-wider transition">
+              Wählen →
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-brand-card rounded-3xl p-8 border border-brand-border flex flex-col justify-between group hover:border-brand-ochre/50 transition duration-500">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-brand-border">
+              <img src="./12_crispy_chicken_clean.jpg" alt="Fingerfood Platter" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="flex items-center justify-between font-mono text-xs text-brand-ochre mb-2">
+              <span>SÄULE 03</span>
+              <span>FLYING BUFFET</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-white">Flying Fingerfood</h3>
+            <p class="text-xs sm:text-sm text-brand-sand mt-3 font-light leading-relaxed" data-i18n="p3Desc">
+              Mundgerecht & unkompliziert ohne Besteck: Mini-Rolex Rolls im Tapas-Schnitt, knusprige Rind- & Gemüse-Samosas und warme Swahili-Kardamom-Mandazi mit Honig.
+            </p>
+            
+            <ul class="mt-6 space-y-2 font-mono text-xs text-brand-sand border-t border-brand-border pt-4">
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Gabel-frei für Stehempfänge</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Knusprige Samosas & Dips</li>
+              <li class="flex items-center gap-2"><span class="text-brand-ochre">✓</span> Perfekt zum Champagner</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="font-mono text-[10px] text-brand-sand uppercase">Investition</span>
+              <div class="font-serif text-2xl text-brand-ochre">22 € <span class="font-mono text-xs text-brand-sand">/ Gast</span></div>
+            </div>
+            <a href="#kalkulator" onclick="selectPackage('fingerfood-flying')" class="px-5 py-2.5 rounded-full bg-brand-noir border border-brand-ochre/40 hover:border-brand-ochre text-white font-mono text-xs uppercase tracking-wider transition">
+              Wählen →
+            </a>
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- ==========================================
-       8. CHEF OLIVE PORTRAIT
+       5. CHEF OLIVE PORTRAIT
   ========================================== -->
-  <section id="chef" class="py-20 sm:py-28 bg-white border-b border-borderSubtle">
-    <div class="max-w-6xl mx-auto px-6 sm:px-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <section id="chef" class="py-24 sm:py-36 border-t border-brand-border bg-brand-noir relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <div class="lg:col-span-5 rounded-3xl overflow-hidden border border-borderSubtle shadow-soft bg-sandLight p-2">
-          <img src="./01_live_station_foodtruck.jpg" alt="Chef Olive Foodtruck" class="w-full h-auto rounded-2xl object-cover">
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl overflow-hidden border border-brand-border shadow-2xl">
+            <img src="./01_live_station_foodtruck.jpg" alt="Chef Olive" class="w-full h-auto object-cover">
+          </div>
+          <div class="absolute -bottom-5 -right-5 bg-brand-dark p-4 rounded-2xl border border-brand-ochre/40 hidden sm:block font-mono text-xs text-brand-ochre">
+            <span>Gründerin & Küchenchefin</span>
+            <div class="text-white font-serif text-lg font-bold">Olive</div>
+          </div>
         </div>
 
-        <div class="lg:col-span-7 space-y-5 text-left">
-          <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="chefBadge">Gründerin & Küchenchefin</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal tracking-tight" data-i18n="chefTitle">
-            Über Chef Olive & Kampala Rolex
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="font-mono text-xs text-brand-ochre uppercase tracking-[0.25em]" data-i18n="chefBadge">03 // The Heart</span>
+          <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight leading-[1.05]" data-i18n="chefTitle">
+            „Essen in Uganda bedeutet Familie, Lachen und Herzlichkeit.“
           </h2>
-          
-          <p class="text-sm sm:text-base text-charcoalLight leading-relaxed" data-i18n="chefP1">
-            „Essen in Uganda ist keine bloße Mahlzeit — es ist ein Fest der Gemeinschaft, des Lachens und der Herzlichkeit.“ Mit diesem Leitgedanken gründete Olive Kampala Rolex Germany in München.
+          <p class="text-sm sm:text-base text-brand-sand leading-relaxed font-light" data-i18n="chefP1">
+            Olive stammt aus Kampala, Uganda. Sie brachte die authentischen Familienrezepte ihrer Großmutter, die Geheimnisse der Gewürzmischungen und die unvergleichliche Energie der afrikanischen Festkultur mit nach Bayern.
           </p>
-          
-          <p class="text-sm sm:text-base text-charcoalLight leading-relaxed" data-i18n="chefP2">
-            Ob auf Firmenevents renommierter Unternehmen, bunten Hochzeiten oder privaten Feiern: Olive bringt authentische Familienrezepte, handwerkliche Präzision und pure afrikanische Lebensfreude auf jeden Teller. Frisch vor Ort zubereitet mit besten Zutaten.
+          <p class="text-sm sm:text-base text-brand-sand leading-relaxed font-light" data-i18n="chefP2">
+            Ob auf exklusiven Firmenfesten, filmreifen Premieren oder intimen Hochzeiten am Starnberger See: Bei Olive ist jedes Event eine Herzensangelegenheit. Frischeste Zutaten, handwerkliche Hingabe und herzliche Gastfreundschaft machen Ihr Catering unvergesslich.
           </p>
 
-          <div class="pt-3 flex flex-wrap gap-2 text-xs font-semibold text-charcoal">
-            <span class="px-3.5 py-1.5 bg-sandLight rounded-full border border-borderSubtle">📍 München & Großraum Bayern</span>
-            <span class="px-3.5 py-1.5 bg-sandLight rounded-full border border-borderSubtle">🍳 Frische Live-Zubereitung</span>
-            <span class="px-3.5 py-1.5 bg-sandLight rounded-full border border-borderSubtle">🌱 Veggie & Vegane Optionen</span>
+          <div class="pt-4 flex flex-wrap gap-3 font-mono text-xs text-brand-sand">
+            <div class="px-4 py-2 rounded-full border border-brand-border bg-brand-dark">📍 München & Bayern</div>
+            <div class="px-4 py-2 rounded-full border border-brand-border bg-brand-dark">🍳 Frische Live-Zubereitung</div>
+            <div class="px-4 py-2 rounded-full border border-brand-border bg-brand-dark">🌱 Veggie & Vegane Optionen</div>
           </div>
         </div>
 
@@ -592,194 +480,186 @@
   </section>
 
   <!-- ==========================================
-       9. LIVE CATERING CALCULATOR & BOOKING FUNNEL
+       6. INTERACTIVE CALCULATOR & 1-CLICK BOOKING
   ========================================== -->
-  <section id="kalkulator" class="py-20 sm:py-28 bg-canvas border-b border-borderSubtle">
-    <div class="max-w-6xl mx-auto px-6 sm:px-10">
+  <section id="kalkulator" class="py-24 sm:py-36 border-t border-brand-border bg-brand-dark/30">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-semibold uppercase tracking-widest text-ochre" data-i18n="calcBadge">Transparente Event-Kalkulation</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal mt-2 tracking-tight" data-i18n="calcTitle">
-          Event-Kalkulator & Buchungsanfrage
-        </h2>
-        <p class="mt-3 text-sm text-charcoalLight" data-i18n="calcSub">
-          Kalkulieren Sie Ihr Catering unverbindlich in Sekunden und senden Sie Ihre Anfrage mit 1 Klick direkt per WhatsApp an Chef Olive.
+        <span class="font-mono text-xs text-brand-ochre uppercase tracking-[0.25em]" data-i18n="calcBadge">04 // Budgeting</span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal mt-2 tracking-tight" data-i18n="calcTitle">Transparenter Catering-Kalkulator</h2>
+        <p class="text-xs sm:text-sm text-brand-sand mt-3 font-mono" data-i18n="calcSub">
+          Konfigurieren Sie Ihr Event in Echtzeit. Unverbindlich, sekundenschnell und mit 1-Klick WhatsApp-Bestätigung.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Controls Configurator -->
-        <div class="lg:col-span-7 bg-white rounded-3xl p-8 border border-borderSubtle shadow-soft space-y-7">
+        <!-- Configurator Left -->
+        <div class="lg:col-span-7 bg-brand-card rounded-3xl p-8 border border-brand-border space-y-8">
           
-          <!-- Step 1: Occasion -->
+          <!-- Event Type -->
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-3" data-i18n="step1Label">1. Art der Veranstaltung</label>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-              <button type="button" onclick="setOccasion('Firmenfeier', this)" class="occ-btn px-3 py-2.5 rounded-xl border border-charcoal bg-charcoal text-white font-semibold transition">Firmenfeier</button>
-              <button type="button" onclick="setOccasion('Hochzeit', this)" class="occ-btn px-3 py-2.5 rounded-xl border border-borderSubtle bg-white text-charcoal hover:border-charcoal transition">Hochzeit</button>
-              <button type="button" onclick="setOccasion('Privatfeier / Gala', this)" class="occ-btn px-3 py-2.5 rounded-xl border border-borderSubtle bg-white text-charcoal hover:border-charcoal transition">Privat / Gala</button>
-              <button type="button" onclick="setOccasion('Foodtruck / Outdoor', this)" class="occ-btn px-3 py-2.5 rounded-xl border border-borderSubtle bg-white text-charcoal hover:border-charcoal transition">Foodtruck</button>
+            <label class="block font-mono text-xs uppercase tracking-widest text-brand-sand mb-3" data-i18n="step1Label">1. Art der Feier</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
+              <button type="button" onclick="setOccasion('Firmenfeier', this)" class="occ-btn px-3 py-3 rounded-xl border border-brand-ochre bg-brand-ochre text-brand-noir font-bold transition">Firmenfeier</button>
+              <button type="button" onclick="setOccasion('Hochzeit', this)" class="occ-btn px-3 py-3 rounded-xl border border-brand-border bg-brand-noir text-brand-sand hover:text-white transition">Hochzeit</button>
+              <button type="button" onclick="setOccasion('Privatfeier / Gala', this)" class="occ-btn px-3 py-3 rounded-xl border border-brand-border bg-brand-noir text-brand-sand hover:text-white transition">Privat / Gala</button>
+              <button type="button" onclick="setOccasion('Foodtruck Outdoor', this)" class="occ-btn px-3 py-3 rounded-xl border border-brand-border bg-brand-noir text-brand-sand hover:text-white transition">Foodtruck</button>
             </div>
           </div>
 
-          <!-- Step 2: Guest Slider -->
+          <!-- Guest Count -->
           <div>
             <div class="flex items-center justify-between mb-3">
-              <label class="text-xs font-semibold uppercase tracking-wider text-charcoal" data-i18n="step2Label">2. Gästeanzahl</label>
-              <span id="guest-display" class="font-serif text-2xl font-bold text-charcoal bg-sandLight px-4 py-1 rounded-xl border border-borderSubtle">50 Gäste</span>
+              <label class="font-mono text-xs uppercase tracking-widest text-brand-sand" data-i18n="step2Label">2. Gästeanzahl</label>
+              <span id="guest-display" class="font-serif text-3xl text-brand-ochre">50 Gäste</span>
             </div>
-            <input id="guest-slider" type="range" min="15" max="300" step="5" value="50" oninput="updateGuests(this.value)" class="catering-slider">
-            <div class="flex justify-between font-mono text-[11px] text-charcoalLight/60 mt-2">
-              <span>15 (Mindestanzahl)</span>
+            <input id="guest-slider" type="range" min="15" max="300" step="5" value="50" oninput="updateGuests(this.value)" class="budget-slider">
+            <div class="flex justify-between font-mono text-[10px] text-brand-sand/60 mt-2">
+              <span>15 (Intim)</span>
               <span>50</span>
               <span>100</span>
               <span>200</span>
-              <span>300+</span>
+              <span>300+ (Großevent)</span>
             </div>
           </div>
 
-          <!-- Step 3: Packages -->
+          <!-- Packages -->
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-3" data-i18n="step3Label">3. Catering-Paket</label>
+            <label class="block font-mono text-xs uppercase tracking-widest text-brand-sand mb-3" data-i18n="step3Label">3. Menü-Format</label>
             <div class="space-y-3">
               
-              <div onclick="selectPackage('live-rolex-station')" id="pkg-card-live-rolex-station" class="pkg-card p-4 rounded-2xl border-2 border-ochre bg-ochreLight/30 cursor-pointer flex items-center justify-between transition">
+              <div onclick="selectPackage('live-rolex-station')" id="pkg-card-live-rolex-station" class="pkg-card p-4 rounded-2xl border border-brand-ochre bg-brand-dark cursor-pointer flex items-center justify-between transition">
                 <div>
-                  <div class="font-sans font-bold text-sm text-charcoal flex items-center gap-2">
-                    <span>Live Ugandan Rolex Station</span>
-                    <span class="text-[9px] uppercase font-bold bg-ochre text-white px-2 py-0.5 rounded-full">Bestseller</span>
-                  </div>
-                  <div class="text-xs text-charcoalLight mt-0.5">Live Tawa Show, Veggie & Chicken, Samosas</div>
+                  <div class="font-serif text-lg text-white font-bold">Live Ugandan Rolex Station</div>
+                  <div class="font-mono text-xs text-brand-sand">Live Tawa Rolling, Veggie & Chicken, Samosas</div>
                 </div>
-                <div class="text-right">
-                  <div class="font-serif text-lg font-bold text-charcoal">25 €</div>
-                  <div class="text-[10px] text-charcoalLight font-mono">/ Gast</div>
+                <div class="text-right font-mono">
+                  <div class="text-brand-ochre font-bold text-base">25 €</div>
+                  <div class="text-[10px] text-brand-sand">/ Gast</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('festtags-warmbuffet')" id="pkg-card-festtags-warmbuffet" class="pkg-card p-4 rounded-2xl border border-borderSubtle bg-white cursor-pointer flex items-center justify-between transition hover:border-charcoal">
+              <div onclick="selectPackage('festtags-warmbuffet')" id="pkg-card-festtags-warmbuffet" class="pkg-card p-4 rounded-2xl border border-brand-border bg-brand-noir cursor-pointer flex items-center justify-between transition hover:border-brand-ochre/40">
                 <div>
-                  <div class="font-sans font-bold text-sm text-charcoal">Das Große Festtags-Warmbuffet</div>
-                  <div class="text-xs text-charcoalLight mt-0.5">Slow Beef Stew, Pilau-Reis, Matooke & Chapati</div>
+                  <div class="font-serif text-lg text-white font-bold">Das Große Festtags-Warmbuffet</div>
+                  <div class="font-mono text-xs text-brand-sand">Slow Beef Stew, Pilau-Reis, Matooke & Chapati</div>
                 </div>
-                <div class="text-right">
-                  <div class="font-serif text-lg font-bold text-charcoal">29 €</div>
-                  <div class="text-[10px] text-charcoalLight font-mono">/ Gast</div>
+                <div class="text-right font-mono">
+                  <div class="text-brand-ochre font-bold text-base">29 €</div>
+                  <div class="text-[10px] text-brand-sand">/ Gast</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('fingerfood-flying')" id="pkg-card-fingerfood-flying" class="pkg-card p-4 rounded-2xl border border-borderSubtle bg-white cursor-pointer flex items-center justify-between transition hover:border-charcoal">
+              <div onclick="selectPackage('fingerfood-flying')" id="pkg-card-fingerfood-flying" class="pkg-card p-4 rounded-2xl border border-brand-border bg-brand-noir cursor-pointer flex items-center justify-between transition hover:border-brand-ochre/40">
                 <div>
-                  <div class="font-sans font-bold text-sm text-charcoal">Ostafrika Fingerfood & Flying Buffet</div>
-                  <div class="text-xs text-charcoalLight mt-0.5">Mini-Rolex Rolls, knusprige Samosas, Mandazi Krapfen</div>
+                  <div class="font-serif text-lg text-white font-bold">Flying Fingerfood & Cocktail Bites</div>
+                  <div class="font-mono text-xs text-brand-sand">Mini-Rolex Rolls, knusprige Samosas, Mandazi Krapfen</div>
                 </div>
-                <div class="text-right">
-                  <div class="font-serif text-lg font-bold text-charcoal">22 €</div>
-                  <div class="text-[10px] text-charcoalLight font-mono">/ Gast</div>
+                <div class="text-right font-mono">
+                  <div class="text-brand-ochre font-bold text-base">22 €</div>
+                  <div class="text-[10px] text-brand-sand">/ Gast</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('vip-kombi')" id="pkg-card-vip-kombi" class="pkg-card p-4 rounded-2xl border border-borderSubtle bg-white cursor-pointer flex items-center justify-between transition hover:border-charcoal">
+              <div onclick="selectPackage('vip-kombi')" id="pkg-card-vip-kombi" class="pkg-card p-4 rounded-2xl border border-brand-border bg-brand-noir cursor-pointer flex items-center justify-between transition hover:border-brand-ochre/40">
                 <div>
-                  <div class="font-sans font-bold text-sm text-charcoal flex items-center gap-2">
-                    <span>The Ultimate VIP Kombi-Erlebnis</span>
-                    <span class="text-[9px] uppercase font-bold bg-charcoal text-white px-2 py-0.5 rounded-full">All-in</span>
-                  </div>
-                  <div class="text-xs text-charcoalLight mt-0.5">Warmbuffet Chafing-Dishes PLUS mobile Live-Rolex-Station</div>
+                  <div class="font-serif text-lg text-white font-bold">The Ultimate VIP Combo (All-in)</div>
+                  <div class="font-mono text-xs text-brand-sand">Vollständiges Warmbuffet PLUS mobile Live-Rolex-Station</div>
                 </div>
-                <div class="text-right">
-                  <div class="font-serif text-lg font-bold text-charcoal">38 €</div>
-                  <div class="text-[10px] text-charcoalLight font-mono">/ Gast</div>
+                <div class="text-right font-mono">
+                  <div class="text-brand-ochre font-bold text-base">38 €</div>
+                  <div class="text-[10px] text-brand-sand">/ Gast</div>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- Step 4: Upgrades -->
+          <!-- Upgrades -->
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-3" data-i18n="step4Label">4. Optionale Upgrades</label>
-            <div class="space-y-2.5 text-xs">
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-sandLight/60 border border-borderSubtle cursor-pointer hover:border-ochre transition">
+            <label class="block font-mono text-xs uppercase tracking-widest text-brand-sand mb-3" data-i18n="step4Label">4. Veredelungen</label>
+            <div class="space-y-2.5 font-mono text-xs">
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-brand-noir border border-brand-border cursor-pointer hover:border-brand-ochre/30 transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-mandazi" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-ochre accent-ochre">
+                  <input id="extra-mandazi" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-brand-ochre accent-brand-ochre">
                   <span>Swahili Mandazi-Dessert mit Bio-Honig (+3,50 € / Gast)</span>
                 </div>
-                <span id="extra-mandazi-cost" class="font-semibold text-charcoal">+175 €</span>
+                <span id="extra-mandazi-cost" class="font-bold text-brand-ochre">+175 €</span>
               </label>
 
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-sandLight/60 border border-borderSubtle cursor-pointer hover:border-ochre transition">
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-brand-noir border border-brand-border cursor-pointer hover:border-brand-ochre/30 transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-tableware" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-ochre accent-ochre">
+                  <input id="extra-tableware" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-brand-ochre accent-brand-ochre">
                   <span>Bio-Streetfood-Servierschalen & Besteck (+2,50 € / Gast)</span>
                 </div>
-                <span id="extra-tableware-cost" class="font-semibold text-charcoal">+125 €</span>
+                <span id="extra-tableware-cost" class="font-bold text-brand-ochre">+125 €</span>
               </label>
 
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-sandLight/60 border border-borderSubtle cursor-pointer hover:border-ochre transition">
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-brand-noir border border-brand-border cursor-pointer hover:border-brand-ochre/30 transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-truck" type="checkbox" onchange="recalculate()" class="w-4 h-4 rounded text-ochre accent-ochre">
+                  <input id="extra-truck" type="checkbox" onchange="recalculate()" class="w-4 h-4 rounded text-brand-ochre accent-brand-ochre">
                   <span>Foodtruck-Anfahrt / Outdoor-Setup (+150 € Pauschale)</span>
                 </div>
-                <span class="font-semibold text-charcoal">+150 €</span>
+                <span class="font-bold text-brand-ochre">+150 €</span>
               </label>
             </div>
           </div>
 
         </div>
 
-        <!-- Sidebar Summary Quote -->
-        <div class="lg:col-span-5 bg-white rounded-3xl p-8 border border-borderSubtle shadow-elevated space-y-6">
+        <!-- Quote Card Right -->
+        <div class="lg:col-span-5 bg-brand-card rounded-3xl p-8 border border-brand-ochre/40 shadow-2xl space-y-6">
           
-          <div class="border-b border-borderSubtle pb-4">
-            <span class="text-xs uppercase font-semibold tracking-widest text-ochre" data-i18n="calcSummaryTitle">Ihre Kalkulation</span>
-            <h3 id="summary-pkg-title" class="font-serif text-2xl font-bold text-charcoal mt-1">Live Ugandan Rolex Station</h3>
-            <p id="summary-occ-title" class="text-xs text-charcoalLight font-sans mt-0.5">Anlass: Firmenfeier</p>
+          <div class="border-b border-brand-border pb-4">
+            <span class="font-mono text-xs uppercase tracking-widest text-brand-ochre" data-i18n="calcSummaryTitle">Ihre Konfiguration</span>
+            <h3 id="summary-pkg-title" class="font-serif text-2xl text-white font-bold mt-1">Live Ugandan Rolex Station</h3>
+            <p id="summary-occ-title" class="font-mono text-xs text-brand-sand mt-1">Anlass: Firmenfeier</p>
           </div>
 
-          <div class="space-y-3 font-sans text-xs text-charcoalLight">
-            <div class="flex justify-between py-1 border-b border-borderSubtle/60">
+          <div class="space-y-3 font-mono text-xs text-brand-sand">
+            <div class="flex justify-between py-1 border-b border-brand-border/50">
               <span id="summary-base-label">50 × 25 € Basis-Paket</span>
-              <span id="summary-base-cost" class="font-semibold text-charcoal font-mono">1.250 €</span>
+              <span id="summary-base-cost" class="text-white font-bold">1.250 €</span>
             </div>
-            <div id="summary-mandazi-row" class="flex justify-between py-1 border-b border-borderSubtle/60">
-              <span>Mandazi-Dessert</span>
-              <span id="summary-mandazi-val" class="font-semibold text-charcoal font-mono">+175 €</span>
+            <div id="summary-mandazi-row" class="flex justify-between py-1 border-b border-brand-border/50">
+              <span>Swahili Mandazi</span>
+              <span id="summary-mandazi-val" class="text-brand-ochre font-bold">+175 €</span>
             </div>
-            <div id="summary-tableware-row" class="flex justify-between py-1 border-b border-borderSubtle/60">
+            <div id="summary-tableware-row" class="flex justify-between py-1 border-b border-brand-border/50">
               <span>Streetfood-Geschirr</span>
-              <span id="summary-tableware-val" class="font-semibold text-charcoal font-mono">+125 €</span>
+              <span id="summary-tableware-val" class="text-brand-ochre font-bold">+125 €</span>
             </div>
-            <div id="summary-truck-row" class="flex justify-between py-1 border-b border-borderSubtle/60 hidden">
+            <div id="summary-truck-row" class="flex justify-between py-1 border-b border-brand-border/50 hidden">
               <span>Foodtruck-Setup</span>
-              <span class="font-semibold text-charcoal font-mono">+150 €</span>
+              <span class="text-brand-ochre font-bold">+150 €</span>
             </div>
 
-            <div class="pt-4 border-t border-borderSubtle flex items-baseline justify-between">
+            <div class="pt-4 border-t border-brand-border flex items-baseline justify-between">
               <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-charcoal block" data-i18n="totalLabel">Voraussichtliche Gesamtsumme</span>
-                <span class="text-[10px] text-charcoalLight/70" data-i18n="guidelineLabel">Unverbindlicher Richtwert gem. § 19 UStG</span>
+                <span class="text-[10px] uppercase tracking-widest text-brand-sand block" data-i18n="totalLabel">GESAMTSUMME (RICHTWERT)</span>
+                <span class="text-[9px] text-brand-sand/60" data-i18n="guidelineLabel">Unverbindlich gem. § 19 UStG</span>
               </div>
-              <div id="summary-total-display" class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">1.550 €</div>
+              <div id="summary-total-display" class="font-serif text-4xl text-brand-ochre font-bold">1.550 €</div>
             </div>
           </div>
 
           <!-- Direct 1-Click WhatsApp Booking -->
-          <a id="calc-whatsapp-btn" href="https://wa.me/4915214438923" target="_blank" class="w-full py-4 px-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-sans font-semibold text-sm flex items-center justify-center gap-2.5 shadow-soft transition active:scale-95">
+          <a id="calc-whatsapp-btn" href="https://wa.me/4915214438923" target="_blank" class="w-full py-4 px-4 rounded-full bg-brand-ochre hover:bg-brand-ochreHover text-brand-noir font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-[0_0_25px_rgba(217,155,38,0.3)]">
             <span>💬</span> <span data-i18n="waBtnText">1-Klick WhatsApp Anfrage mit diesen Daten</span>
           </a>
 
-          <!-- Quick Form -->
-          <form onsubmit="handleInquiry(event)" class="pt-4 border-t border-borderSubtle space-y-3 font-sans text-xs">
-            <span class="text-charcoalLight block font-medium" data-i18n="formOrText">Oder Terminanfrage unverbindlich per Formular senden:</span>
-            <input type="text" id="f-name" required placeholder="Ihr Name / Ansprechpartner *" class="w-full px-3.5 py-2.5 rounded-xl bg-sandLight/50 border border-borderSubtle text-charcoal placeholder:text-charcoalLight/50 focus:border-ochre outline-none">
-            <input type="tel" id="f-phone" required placeholder="Telefon / WhatsApp *" class="w-full px-3.5 py-2.5 rounded-xl bg-sandLight/50 border border-borderSubtle text-charcoal placeholder:text-charcoalLight/50 focus:border-ochre outline-none">
-            <input type="date" id="f-date" class="w-full px-3.5 py-2.5 rounded-xl bg-sandLight/50 border border-borderSubtle text-charcoal focus:border-ochre outline-none">
-            <button type="submit" class="w-full py-3 rounded-xl bg-charcoal hover:bg-black text-white font-semibold uppercase tracking-wider transition">
+          <!-- Form Fallback -->
+          <form onsubmit="handleInquiry(event)" class="pt-6 border-t border-brand-border space-y-3 font-mono text-xs">
+            <span class="text-brand-sand block" data-i18n="formOrText">Oder Terminanfrage per E-Mail senden:</span>
+            <input type="text" id="f-name" required placeholder="Name / Ansprechpartner *" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-noir border border-brand-border text-white placeholder:text-brand-sand/40 focus:border-brand-ochre outline-none">
+            <input type="tel" id="f-phone" required placeholder="Telefon / WhatsApp *" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-noir border border-brand-border text-white placeholder:text-brand-sand/40 focus:border-brand-ochre outline-none">
+            <input type="date" id="f-date" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-noir border border-brand-border text-white focus:border-brand-ochre outline-none">
+            <button type="submit" class="w-full py-2.5 rounded-xl border border-brand-ochre/40 hover:border-brand-ochre text-white uppercase tracking-wider transition">
               <span data-i18n="formSubmit">Anfrage Absenden</span> →
             </button>
-            <div id="form-success" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-center font-semibold">
+            <div id="form-success" class="hidden p-3 rounded-xl bg-brand-noir border border-brand-ochre text-brand-ochre text-center">
               ✓ Vielen Dank! Chef Olive prüft Ihren Termin und meldet sich zeitnah.
             </div>
           </form>
@@ -792,65 +672,37 @@
   </section>
 
   <!-- ==========================================
-       10. REFINED FOOTER
+       7. EDITORIAL FOOTER
   ========================================== -->
-  <footer class="bg-[#181A18] text-[#B5B0A4] py-16 text-xs border-t border-[#2C302C]">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+  <footer class="py-16 border-t border-brand-border bg-brand-noir font-mono text-xs text-brand-sand">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#2C302C] text-left">
-        
-        <div class="md:col-span-2 space-y-3">
-          <div class="flex items-center gap-3">
-            <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-ochre/40 object-contain p-0.5 bg-[#212421]">
-            <span class="font-serif text-xl font-bold text-white">Kampala Rolex Germany</span>
-          </div>
-          <p class="text-xs text-[#8E8B83] max-w-md leading-relaxed">
-            Münchens erste Adresse für authentisches ostafrikanisches Event-Catering, Live-Rolex-Cooking auf der heißen Tawa und festliche Warmbuffets für Feiern von 15 bis 500+ Personen.
-          </p>
+      <div class="flex items-center gap-3">
+        <img src="./logo.png" alt="Logo" class="w-8 h-8 rounded-full border border-brand-ochre/40 object-contain p-0.5 bg-brand-dark">
+        <div>
+          <span class="text-white font-serif font-bold text-base block">Kampala Rolex Germany</span>
+          <span class="text-[10px] text-brand-sand">Authentisches Ugandisches Catering · München & Bayern</span>
         </div>
-
-        <div class="space-y-2">
-          <span class="font-sans font-semibold uppercase tracking-wider text-ochre">Kontakt & Buchung</span>
-          <p class="text-white font-medium">Frau Olive</p>
-          <p><a href="tel:+4915214438923" class="hover:text-ochre transition">+49 152 14438923</a></p>
-          <p><a href="mailto:info@kampalarolex.de" class="hover:text-ochre transition">info@kampalarolex.de</a></p>
-          <p>München & ganz Bayern</p>
-        </div>
-
-        <div class="space-y-2">
-          <span class="font-sans font-semibold uppercase tracking-wider text-ochre">Rechtliches & Domain</span>
-          <p class="text-white">kampalarolex.de</p>
-          <p>Standalone Client Project</p>
-          <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
-        </div>
-
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#8E8B83]">
-        <div>© 2026 Kampala Rolex Germany. Alle Rechte vorbehalten.</div>
-        <a href="#hero" class="text-ochre hover:underline font-medium">Nach oben ↑</a>
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="tel:+4915214438923" class="hover:text-brand-ochre transition">+49 152 14438923</a>
+        <a href="mailto:info@kampalarolex.de" class="hover:text-brand-ochre transition">info@kampalarolex.de</a>
+        <a href="#hero" class="text-brand-ochre hover:underline">Nach oben ↑</a>
+      </div>
+
+      <div class="text-[10px] text-brand-sand/50">
+        © 2026 Kampala Rolex Germany. Dedicated Client Project. § 19 UStG.
       </div>
 
     </div>
   </footer>
 
   <!-- ==========================================
-       11. VIDEO MODAL
-  ========================================== -->
-  <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative max-w-sm w-full bg-[#181A18] rounded-3xl overflow-hidden border border-[#3A3F3A] shadow-2xl">
-      <button onclick="toggleVideoModal()" class="absolute top-3 right-3 z-10 bg-black/70 hover:bg-black text-white rounded-full px-3 py-1 font-sans text-xs border border-white/20 transition">
-        ✕ Schließen
-      </button>
-      <video id="modal-video" src="./reel_kampala_rolex.mp4" controls playsinline class="w-full aspect-[9/16] object-cover"></video>
-    </div>
-  </div>
-
-  <!-- ==========================================
-       12. SCRIPTS: LENIS + I18N + CALCULATOR
+       8. JAVASCRIPT: LENIS + LOGIC + I18N
   ========================================== -->
   <script>
-    // Initialize Lenis Smooth Scroll
+    // Initialize Lenis
     let lenis;
     if (typeof Lenis !== 'undefined') {
       lenis = new Lenis({
@@ -884,22 +736,22 @@
         price: 29
       },
       'fingerfood-flying': {
-        nameDe: 'Ostafrika Fingerfood & Flying Buffet',
-        nameEn: 'East African Fingerfood & Flying Buffet',
+        nameDe: 'Flying Fingerfood & Cocktail Bites',
+        nameEn: 'Flying Fingerfood & Cocktail Bites',
         price: 22
       },
       'vip-kombi': {
-        nameDe: 'The Ultimate VIP Kombi-Erlebnis',
-        nameEn: 'The Ultimate VIP Combo Experience',
+        nameDe: 'The Ultimate VIP Combo (All-in)',
+        nameEn: 'The Ultimate VIP Combo (All-in)',
         price: 38
       }
     };
 
     function setOccasion(occ, btn) {
       document.querySelectorAll('.occ-btn').forEach(b => {
-        b.className = 'occ-btn px-3 py-2.5 rounded-xl border border-borderSubtle bg-white text-charcoal hover:border-charcoal transition';
+        b.className = 'occ-btn px-3 py-3 rounded-xl border border-brand-border bg-brand-noir text-brand-sand hover:text-white transition';
       });
-      btn.className = 'occ-btn px-3 py-2.5 rounded-xl border border-charcoal bg-charcoal text-white font-semibold transition';
+      btn.className = 'occ-btn px-3 py-3 rounded-xl border border-brand-ochre bg-brand-ochre text-brand-noir font-bold transition';
       currentOccasion = occ;
       document.getElementById('summary-occ-title').innerText = (currentLang === 'de' ? 'Anlass: ' : 'Occasion: ') + occ;
       recalculate();
@@ -914,11 +766,11 @@
     function selectPackage(pkgId) {
       selectedPackageId = pkgId;
       document.querySelectorAll('.pkg-card').forEach(c => {
-        c.className = 'pkg-card p-4 rounded-2xl border border-borderSubtle bg-white cursor-pointer flex items-center justify-between transition hover:border-charcoal';
+        c.className = 'pkg-card p-4 rounded-2xl border border-brand-border bg-brand-noir cursor-pointer flex items-center justify-between transition hover:border-brand-ochre/40';
       });
       const el = document.getElementById('pkg-card-' + pkgId);
       if (el) {
-        el.className = 'pkg-card p-4 rounded-2xl border-2 border-ochre bg-ochreLight/30 cursor-pointer flex items-center justify-between transition';
+        el.className = 'pkg-card p-4 rounded-2xl border border-brand-ochre bg-brand-dark cursor-pointer flex items-center justify-between transition';
       }
       recalculate();
     }
@@ -964,21 +816,6 @@
 
       const waUrl = 'https://wa.me/4915214438923?text=' + encodeURIComponent(text);
       document.getElementById('calc-whatsapp-btn').href = waUrl;
-      document.getElementById('nav-whatsapp-btn').href = waUrl;
-    }
-
-    function toggleVideoModal() {
-      const modal = document.getElementById('video-modal');
-      const vid = document.getElementById('modal-video');
-      if (modal.classList.contains('hidden')) {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        vid.play();
-      } else {
-        modal.classList.remove('flex');
-        modal.classList.add('hidden');
-        vid.pause();
-      }
     }
 
     function handleInquiry(e) {
@@ -988,124 +825,86 @@
 
     function setLanguage(lang) {
       currentLang = lang;
-      document.getElementById('lang-de-btn').className = lang === 'de' ? 'px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#D99B26] text-white transition' : 'px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-[#B5B0A4] hover:text-white transition';
-      document.getElementById('lang-en-btn').className = lang === 'en' ? 'px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#D99B26] text-white transition' : 'px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-[#B5B0A4] hover:text-white transition';
+      document.getElementById('lang-de-btn').className = lang === 'de' ? 'px-2.5 py-0.5 rounded-full bg-brand-ochre text-brand-noir font-bold transition' : 'px-2.5 py-0.5 rounded-full text-brand-sand hover:text-white transition';
+      document.getElementById('lang-en-btn').className = lang === 'en' ? 'px-2.5 py-0.5 rounded-full bg-brand-ochre text-brand-noir font-bold transition' : 'px-2.5 py-0.5 rounded-full text-brand-sand hover:text-white transition';
       
       const dict = {
-        topBar: {
-          de: 'Münchens Original: Ugandisches Live-Rolex Catering & Festtags-Warmbuffets · Termine 2026 buchbar',
-          en: 'Munich’s Premier Ugandan Live Rolex Catering & Festive Warm Buffets · 2026 Dates Open'
-        },
-        tagline: {
-          de: 'Authentisches Ugandisches Catering & Live-Atelier München',
-          en: 'Authentic Ugandan Catering & Live Atelier Munich'
-        },
-        navRolex: { de: 'Live Rolex Station', en: 'Live Rolex Station' },
-        navBuffet: { de: 'Festtags-Warmbuffet', en: 'Festive Warm Buffet' },
-        navFinger: { de: 'Fingerfood', en: 'Finger Food' },
+        navExp: { de: 'Erlebnis', en: 'Experience' },
+        navPillars: { de: 'Menü-Kuration', en: 'Menu' },
         navChef: { de: 'Chef Olive', en: 'Chef Olive' },
         navCalc: { de: 'Preiskalkulator', en: 'Price Calculator' },
-        headerCta: { de: 'Catering Anfragen', en: 'Book Catering' },
-        heroBadge: { de: 'Münchens 1. Ugandisches Event-Catering', en: 'Munich’s Premier Ugandan Event Catering' },
+        headerCta: { de: 'Event anfragen', en: 'Book Catering' },
+        heroPill: { de: 'Münchens 1. Authentisches Ugandisches Catering Atelier', en: 'Munich’s Premier Authentic Ugandan Catering Atelier' },
         heroTitle: {
-          de: 'Die lebendige Seele Ugandas. <br><span class="italic font-normal text-ochre">Live vor Ihren Gästen serviert.</span>',
-          en: 'The Vibrant Soul of Uganda. <br><span class="italic font-normal text-ochre">Served live before your guests.</span>'
+          de: 'Die Magie Ugandas. <br><span class="italic font-light text-brand-ochreLight">Live vor Ihren Gästen serviert.</span>',
+          en: 'The Magic of Uganda. <br><span class="italic font-light text-brand-ochreLight">Served live before your guests.</span>'
         },
         heroSub: {
-          de: 'Bringen Sie echte kulinarische Begeisterung auf Ihre Feier: Frisch gerollte Streetfood-Rolex auf der heißen Tawa, dampfende Chafing-Dishes mit zartem Beef Stew, duftender Nelken-Pilau-Reis und handgemachtes Fingerfood. Handwerklich zubereitet von Gründerin Olive für 15 bis 500+ Gäste in München und ganz Bayern.',
-          en: 'Bring genuine culinary excitement to your celebration: freshly rolled street food Rolex on the piping-hot tawa, steaming chafing dishes of tender beef stew, fragrant pilau rice, and handmade finger food. Handcrafted by Founder Olive for 15 to 500+ guests across Munich and Bavaria.'
+          de: 'Frisch geworfene Chapatis auf glühender Gusseisen-Tawa, dampfend heiß gerollte Rolex, stundenlang geschmortes Beef Stew und feiner Nelken-Pilau-Reis. Ein interaktives Fest der Sinne für anspruchsvolle Firmenfeiern, Premieren und Hochzeiten in ganz Bayern.',
+          en: 'Freshly griddled chapatis on sizzling cast-iron tawas, piping-hot rolled Rolex, slow-simmered beef stew, and fragrant clove pilau rice. An interactive feast for corporate galas, premieres, and private weddings across Bavaria.'
         },
-        pill1: { de: 'Live auf der Tawa', en: 'Live on the Tawa' },
-        pill2: { de: 'Gäste Kapazität', en: 'Guest Capacity' },
-        pill3: { de: 'Kundenbewertungen', en: 'Client Reviews' },
-        pill4: { de: 'Mobil & Autark', en: 'Mobile & Autonomous' },
-        heroBtnCalc: { de: 'Menü & Budget Kalkulieren', en: 'Calculate Menu & Budget' },
-        heroBtnVideo: { de: 'Video-Reel ansehen (30s)', en: 'Watch Video Reel (30s)' },
-        videoStripTitle: { de: 'Offizielles Live-Reel', en: 'Official Live Reel' },
-        videoStripSub: { de: 'Chef Olive am Foodtruck & Tawa Show', en: 'Chef Olive at Food Truck & Tawa Show' },
-        play: { de: 'Abspielen', en: 'Play' },
-        storyBadge: { de: 'Ursprung & Handwerk', en: 'Heritage & Craft' },
-        storyTitle: { de: 'Warum Rolex in Uganda Kultstatus genießt', en: 'Why Rolex Holds Cult Status in Uganda' },
-        storySub: {
-          de: 'Von den bunten Straßen Kampalas bis zu Münchens schönsten Festen: Die Entstehungsgeschichte eines Gerichts, das Menschen zusammenbringt.',
-          en: 'From the bustling avenues of Kampala to Munich’s finest private celebrations: the story of a dish that brings people together.'
+        heroBtnCalc: { de: 'Catering Kalkulieren', en: 'Calculate Catering' },
+        heroBtnWa: { de: 'Direktanfrage an Olive', en: 'Direct Inquiry to Olive' },
+        metric1: { de: 'Auf der heißen Tawa', en: 'On Sizzling Tawa' },
+        metric2: { de: 'Gäste Kapazität', en: 'Guest Capacity' },
+        metric3: { de: 'Frisch gerollt', en: 'Freshly Rolled' },
+        metric4: { de: 'Kundenbewertungen', en: 'Client Satisfaction' },
+        expBadge: { de: '01 // Das Geheimnis', en: '01 // The Secret' },
+        expTitle: { de: 'Warum Rolex die Welt erobert hat.', en: 'Why Rolex Took the World by Storm.' },
+        expText1: {
+          de: 'Der Name entstand aus einer legendären Lautverschiebung in den Straßen Kampalas: Aus „Rolled Eggs“ wurde „Rolex“. Ein Gericht, das weltweit Millionen Fans begeistert — von CNN bis zu internationalen Streetfood-Festivals.',
+          en: 'Born from a phonetic twist on the streets of Kampala: “Rolled Eggs” became “Rolex”. A dish celebrated globally from CNN to international food festivals.'
         },
-        feat1Title: { de: '„Rolled Eggs“ — Der Name', en: '“Rolled Eggs” — The Name' },
-        feat1Desc: {
-          de: 'Was als schnelles Streetfood für Studenten in Kampala begann, ist heute Ugandas kulinarisches Nationalheiligtum. Aus der Lautverschiebung von „Rolled Eggs“ entstand der Name „Rolex“ — saftiges Omelett im warmen Fladenbrot.',
-          en: 'Starting as fast student street food in Kampala, it is now Uganda’s national culinary pride. Born from the phonetic twist “Rolled Eggs” into “Rolex” — juicy omelette in warm layered flatbread.'
+        expText2: {
+          de: 'Auf der glühend heißen Gusseisen-Tawa wird ein saftiges Omelett mit frischem Kraut, Tomaten und Zwiebeln gebrutzelt. Ein handgeknetetes, buttrig geschichtetes Chapati-Fladenbrot wird direkt darauf gepresst, gewendet und vor den Augen des Gastes heiß gerollt.',
+          en: 'On the sizzling cast-iron tawa, a fluffy omelette meets crisp cabbage, tomatoes, and onions. A hand-kneaded layered chapati is pressed on top, flipped, and rolled hot right before the guest.'
         },
-        feat2Title: { de: 'Die heiße Gusseisen-Tawa', en: 'The Sizzling Cast-Iron Tawa' },
-        feat2Desc: {
-          de: 'Auf der kreisrunden, glühenden Tawa-Platte wird jedes Ei einzeln mit frischem Kraut, Tomaten und Zwiebeln aufgeschlagen. Die Chapatis werden von Hand geknetet und sofort heiß mit dem Ei verschmolzen.',
-          en: 'On the circular sizzling cast-iron tawa, eggs are whisked with crisp cabbage, tomatoes, and onions. Chapatis are hand-kneaded and fused with the eggs while piping hot.'
+        menuBadge: { de: '02 // Kuration', en: '02 // Curation' },
+        menuTitle: { de: 'Drei Kulinarische Säulen', en: 'Three Culinary Pillars' },
+        menuSub: {
+          de: 'Kombinierbare Module: Von der interaktiven Live-Station bis zum opulenten warmen Bankett-Buffet.',
+          en: 'Modular options: From interactive live street food theatrics to opulent seated banquet buffets.'
         },
-        feat3Title: { de: 'Natürliche Frische & Vielfalt', en: 'Natural Freshness & Variety' },
-        feat3Desc: {
-          de: 'Keine künstlichen Zusätze oder Fertigmischungen. Knackiges Marktgemüse, zartes Hähnchen oder vegetarische Rezepturen garantieren ein unkompliziertes, pures Geschmackserlebnis.',
-          en: 'Zero artificial additives. Fresh market vegetables, tender chicken, and vibrant vegetarian recipes guarantee an unpretentious, pure culinary experience.'
-        },
-        p1Badge: { de: 'Das Kulinarische Herzstück', en: 'The Culinary Centerpiece' },
-        p1Title: { de: 'Die Mobile Live-Rolex-Station', en: 'The Mobile Live Rolex Station' },
         p1Desc: {
-          de: 'Ein unverwechselbares Show-Cooking-Erlebnis für Ihre Gäste: Zusehen, wie der Teig auf der Tawa brutzelt, das Omelett gewendet und der heiße Rolex von Hand gerollt wird. Serviert frisch auf die Hand im Streetfood-Papier.',
-          en: 'An unforgettable live show-cooking spectacle: watching the batter sizzle on the tawa, the omelette flipped, and the hot Rolex rolled by hand.'
+          de: 'Die mobile Gusseisen-Tawa Station: Chef Olive bereitet vor den Gästen frische Veggie- & Chicken-Rolex zu. Inklusive Samosas und pikanter Kachumbari-Salsa.',
+          en: 'The mobile cast-iron tawa station: Chef Olive prepares fresh Veggie & Chicken Rolex live before your guests. Includes samosas and kachumbari salsa.'
         },
-        selectLive: { de: 'Auswählen im Rechner', en: 'Select in Calculator' },
-        p2Badge: { de: 'Traditionelles Bankett', en: 'Traditional Banquet' },
-        p2Title: { de: 'Das Ostafrika Festtags-Warmbuffet', en: 'The East African Festive Warm Buffet' },
-        p2Sub: {
-          de: 'Opulentes Warmbuffet im Chafing-Dish: Zart geschmortes Rindfleisch, duftender Gewürzreis und traditionelle Beilagen für bis zu 3 Stunden warmen Genuss.',
-          en: 'Opulent warm chafing-dish banquet: tender braised beef stew, spiced pilau rice, and traditional sides kept warm for up to 3 hours.'
+        p2Desc: {
+          de: 'Butterzartes, stundenlang geschmortes Beef Stew, aromatischer Nelken-Zimt-Pilau-Reis, gedämpfte Matooke-Kochbananen und warme Chapati-Körbe im Chafing-Dish.',
+          en: 'Melt-in-mouth slow beef stew, fragrant clove-cinnamon pilau rice, steamed matooke plantains, and warm chapati baskets in chafing dishes.'
         },
-        stewTitle: { de: 'Slow-Cooked Beef Stew', en: 'Slow-Cooked Beef Stew' },
-        stewDesc: {
-          de: 'Stundenlang sanft geschmortes, butterweiches Rindfleisch in einer aromatischen Tomaten-, Zwiebel- und Kräutersauce.',
-          en: 'Slow-braised tender beef stew simmered for hours in rich tomato, onion, and herb reduction.'
-        },
-        pilauTitle: { de: 'Aromatischer Pilau-Gewürzreis', en: 'Fragrant Spiced Pilau Rice' },
-        pilauDesc: {
-          de: 'Feiner Basmati-Gewürzreis, schonend gedämpft mit geröstetem Kreuzkümmel, Nelken, Zimtrinde, Knoblauch und Ingwer. Vegan & glutenfrei.',
-          en: 'Basmati rice gently steamed with roasted cumin, cloves, cinnamon bark, garlic, and ginger. Vegan & gluten-free.'
-        },
-        matookeTitle: { de: 'Matooke & Warmes Chapati', en: 'Matooke & Warm Chapatis' },
-        matookeDesc: {
-          de: 'Traditionell gedämpfte Kochbananen (Matooke), handgebackene Chapatis im Weidenkorb und frischer Kachumbari-Tomatensalat.',
-          en: 'Traditional steamed plantain (matooke), hand-baked layered chapatis in wicker baskets, and fresh kachumbari salsa.'
-        },
-        selectWarm: { de: 'Warmbuffet auswählen (ab 29 € / Pers.)', en: 'Select Warm Buffet (from 29 € / pax)' },
-        p3Badge: { de: 'Für Apéritifs & Stehempfänge', en: 'For Receptions & Cocktails' },
-        p3Title: { de: 'Ostafrika Flying Fingerfood', en: 'East African Flying Finger Food' },
         p3Desc: {
-          de: 'Mundgerecht, unkompliziert ohne Besteck und voller Geschmack: Speziell kuratiert für Networking-Events, Cocktailabende und sommerliche Terrassenfeste.',
-          en: 'Bite-sized, fork-free, and bursting with flavor: curated for networking galas, cocktail parties, and open-air summer celebrations.'
+          de: 'Mundgerecht & unkompliziert ohne Besteck: Mini-Rolex Rolls im Tapas-Schnitt, knusprige Rind- & Gemüse-Samosas und warme Swahili-Kardamom-Mandazi mit Honig.',
+          en: 'Finger-friendly forkless cocktail bites: Tapas-cut Mini-Rolex rolls, crispy samosas, and warm Swahili cardamom mandazi with honey.'
         },
-        selectFinger: { de: 'Auswählen im Rechner', en: 'Select in Calculator' },
-        chefBadge: { de: 'Gründerin & Küchenchefin', en: 'Founder & Head Chef' },
-        chefTitle: { de: 'Über Chef Olive & Kampala Rolex', en: 'About Chef Olive & Kampala Rolex' },
+        chefBadge: { de: '03 // Das Herz', en: '03 // The Heart' },
+        chefTitle: {
+          de: '„Essen in Uganda bedeutet Familie, Lachen und Herzlichkeit.“',
+          en: '“Food in Uganda means family, joy, and openhearted hospitality.”'
+        },
         chefP1: {
-          de: '„Essen in Uganda ist keine bloße Mahlzeit — es ist ein Fest der Gemeinschaft, des Lachens und der Herzlichkeit.“ Mit diesem Leitgedanken gründete Olive Kampala Rolex Germany in München.',
-          en: '“Food in Uganda is never just a meal — it is a celebration of community, laughter, and open hospitality.” With this ethos, Olive founded Kampala Rolex Germany in Munich.'
+          de: 'Olive stammt aus Kampala, Uganda. Sie brachte die authentischen Familienrezepte ihrer Großmutter, die Geheimnisse der Gewürzmischungen und die unvergleichliche Energie der afrikanischen Festkultur mit nach Bayern.',
+          en: 'Olive hails from Kampala, Uganda. She brought her grandmother’s traditional recipes, secret spice blends, and the vibrant warmth of African culinary culture to Bavaria.'
         },
         chefP2: {
-          de: 'Ob auf Firmenevents renommierter Unternehmen, bunten Hochzeiten oder privaten Feiern: Olive bringt authentische Familienrezepte, handwerkliche Präzision und pure afrikanische Lebensfreude auf jeden Teller. Frisch vor Ort zubereitet mit besten Zutaten.',
-          en: 'Whether catering high-profile corporate galas, multicultural weddings, or private birthdays: Olive delivers authentic family recipes, culinary finesse, and vibrant joy.'
+          de: 'Ob auf exklusiven Firmenfesten, filmreifen Premieren oder intimen Hochzeiten am Starnberger See: Bei Olive ist jedes Event eine Herzensangelegenheit. Frischeste Zutaten, handwerkliche Hingabe und herzliche Gastfreundschaft machen Ihr Catering unvergesslich.',
+          en: 'Whether catering corporate celebrations, film premieres, or intimate lakeside weddings: Olive delivers dedicated artisan craft, fresh market ingredients, and memorable hospitality.'
         },
-        calcBadge: { de: 'Transparente Event-Kalkulation', en: 'Transparent Event Budgeting' },
-        calcTitle: { de: 'Event-Kalkulator & Buchungsanfrage', en: 'Event Calculator & Booking' },
+        calcBadge: { de: '04 // Budgetierung', en: '04 // Budgeting' },
+        calcTitle: { de: 'Transparenter Catering-Kalkulator', en: 'Transparent Catering Calculator' },
         calcSub: {
-          de: 'Kalkulieren Sie Ihr Catering unverbindlich in Sekunden und senden Sie Ihre Anfrage mit 1 Klick direkt per WhatsApp an Chef Olive.',
-          en: 'Calculate your catering in seconds and send your inquiry directly via WhatsApp to Chef Olive with 1 click.'
+          de: 'Konfigurieren Sie Ihr Event in Echtzeit. Unverbindlich, sekundenschnell und mit 1-Klick WhatsApp-Bestätigung.',
+          en: 'Configure your catering in real time. Instant budget estimation and 1-click WhatsApp quote confirmation.'
         },
-        step1Label: { de: '1. Art der Veranstaltung', en: '1. Type of Occasion' },
+        step1Label: { de: '1. Art der Feier', en: '1. Type of Occasion' },
         step2Label: { de: '2. Gästeanzahl', en: '2. Number of Guests' },
-        step3Label: { de: '3. Catering-Paket', en: '3. Catering Package' },
-        step4Label: { de: '4. Optionale Upgrades', en: '4. Optional Upgrades' },
-        calcSummaryTitle: { de: 'Ihre Kalkulation', en: 'Estimated Quote Summary' },
-        totalLabel: { de: 'Voraussichtliche Gesamtsumme', en: 'Estimated Total Investment' },
-        guidelineLabel: { de: 'Unverbindlicher Richtwert gem. § 19 UStG', en: 'Non-binding guideline quote pursuant to § 19 UStG' },
+        step3Label: { de: '3. Menü-Format', en: '3. Catering Package' },
+        step4Label: { de: '4. Veredelungen', en: '4. Optional Upgrades' },
+        calcSummaryTitle: { de: 'Ihre Konfiguration', en: 'Estimated Quote Summary' },
+        totalLabel: { de: 'GESAMTSUMME (RICHTWERT)', en: 'ESTIMATED TOTAL' },
+        guidelineLabel: { de: 'Unverbindlich gem. § 19 UStG', en: 'Non-binding quote pursuant to § 19 UStG' },
         waBtnText: { de: '1-Klick WhatsApp Anfrage mit diesen Daten', en: '1-Click WhatsApp Booking with this Quote' },
-        formOrText: { de: 'Oder Terminanfrage unverbindlich per Formular senden:', en: 'Or submit an inquiry form:' },
+        formOrText: { de: 'Oder Terminanfrage per E-Mail senden:', en: 'Or submit an inquiry form:' },
         formSubmit: { de: 'Anfrage Absenden', en: 'Submit Inquiry' }
       };
 
