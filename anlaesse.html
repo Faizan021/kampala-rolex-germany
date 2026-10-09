@@ -53,12 +53,62 @@
         </div>
       </a>
 
+      <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center gap-7 font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A]">
         <a href="index.html" class="hover:text-[#D97706] transition">Home</a>
         <a href="rolex-experience.html" class="hover:text-[#D97706] transition">Live Rolex</a>
         <a href="warmbuffet.html" class="hover:text-[#D97706] transition">Warmbuffet</a>
         <a href="fingerfood.html" class="hover:text-[#D97706] transition">Fingerfood</a>
-        <a href="anlaesse.html" class="text-[#D97706] font-extrabold">Anlässe</a>
+        
+        <!-- Occasions Dropdown -->
+        <div class="relative group py-2">
+          <a href="anlaesse.html" class="inline-flex items-center gap-1.5 text-[#D97706] transition">
+            <span>Anlässe</span>
+            <svg class="w-3.5 h-3.5 text-[#D97706] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50 w-72">
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#EAE5DC] p-2 text-left space-y-1">
+              <a href="firmencatering.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#FAF8F5] transition group/item">
+                <span class="w-8 h-8 rounded-lg bg-amber-50 text-[#D97706] flex items-center justify-center text-sm shrink-0 border border-amber-100">🏢</span>
+                <div>
+                  <div class="font-heading font-bold text-xs text-[#1A1A1A] group-hover/item:text-[#D97706]">Event- & Firmencatering</div>
+                  <div class="text-[10px] text-[#767C85]">50 bis 500+ Gäste · B2B</div>
+                </div>
+              </a>
+              <a href="hochzeitscatering.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#FAF8F5] transition group/item">
+                <span class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center text-sm shrink-0 border border-rose-100">💍</span>
+                <div>
+                  <div class="font-heading font-bold text-xs text-[#1A1A1A] group-hover/item:text-[#D97706]">Hochzeitscatering</div>
+                  <div class="text-[10px] text-[#767C85]">Der besondere Tag · Live-Show</div>
+                </div>
+              </a>
+              <a href="private-catering.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#FAF8F5] transition group/item">
+                <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm shrink-0 border border-emerald-100">🥂</span>
+                <div>
+                  <div class="font-heading font-bold text-xs text-[#1A1A1A] group-hover/item:text-[#D97706]">Private Catering</div>
+                  <div class="text-[10px] text-[#767C85]">Geburtstage & Feste ab 15 Pers.</div>
+                </div>
+              </a>
+              <a href="foodtruck-outdoor.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#FAF8F5] transition group/item">
+                <span class="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center text-sm shrink-0 border border-orange-100">🎪</span>
+                <div>
+                  <div class="font-heading font-bold text-xs text-[#1A1A1A] group-hover/item:text-[#D97706]">Foodtruck & Outdoor</div>
+                  <div class="text-[10px] text-[#767C85]">Autarkes Live-Cooking</div>
+                </div>
+              </a>
+              <div class="pt-1 border-t border-[#EAE5DC]">
+                <a href="anlaesse.html" class="flex items-center justify-between p-2 rounded-lg text-[11px] font-heading font-bold text-[#D97706] hover:bg-[#FAF8F5] transition">
+                  <span>Alle Anlässe Übersicht</span>
+                  <span>➔</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a href="index.html#anfrage" class="hover:text-[#D97706] transition">Anfrage</a>
       </nav>
 
@@ -110,64 +160,84 @@
             Mitarbeiter und Kunden schätzen Abwechslung. Statt der üblichen Standard-Sandwiches begeistern wir mit Live-Kochstationen und warmem Buffet. Schnell serviert, ohne lange Wartezeiten, ideal für Mittags-Slots und Abendveranstaltungen ab 50 Personen.
           </p>
           <ul class="text-xs text-[#1A1A1A] font-semibold space-y-1.5 pt-2">
-            <li>✓ Schnelle Taktung für viele Gäste</li>
-            <li>✓ Rechnungsstellung gem. § 19 UStG</li>
+            <li>✓ Schnelle Taktung für 50 bis 500+ Gäste</li>
+            <li>✓ B2B-Rechnungsstellung gem. § 19 UStG</li>
             <li>✓ Pünktlicher Aufbau & autarker Ablauf</li>
           </ul>
+          <div class="pt-2">
+            <a href="firmencatering.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
+              <span>Firmencatering Details & B2B-Pakete</span> <span>➔</span>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Anlass 2: Hochzeiten -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6 space-y-4 order-2 lg:order-1">
-          <span class="text-xs uppercase font-bold text-[#D97706] tracking-wider">DER BESONDERE TAG</span>
+          <span class="text-xs uppercase font-bold text-rose-600 tracking-wider">DER BESONDERE TAG</span>
           <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">Traumhaftes Hochzeitscatering</h3>
           <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
             Machen Sie Ihr Hochzeitsessen zum unvergesslichen Gesprächsstoff. Wir kombinieren das festliche Warmbuffet mit einer interaktiven Live-Station, bei der sich Brautpaar und Gäste ihren persönlichen Rolex frisch rollen lassen.
           </p>
           <ul class="text-xs text-[#1A1A1A] font-semibold space-y-1.5 pt-2">
             <li>✓ Liebevoll angerichtetes Festtagsbuffet</li>
-            <li>✓ Live Cooking als Unterhaltungs-Highlight</li>
-            <li>✓ Probeessen & persönliche Menüabstimmung</li>
+            <li>✓ Spektakulärer Mitternachts-Rolex Snack</li>
+            <li>✓ Probeessen & persönliche Menüabstimmung mit Olive</li>
           </ul>
+          <div class="pt-2">
+            <a href="hochzeitscatering.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
+              <span>Hochzeitscatering Specials ansehen</span> <span>➔</span>
+            </a>
+          </div>
         </div>
         <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#EAE5DC] shadow-md order-1 lg:order-2">
           <img src="./glazed_meat_platter.png" alt="Hochzeitscatering & Festtags-Buffet München" class="w-full h-[340px] object-cover">
         </div>
       </div>
 
-      <!-- Anlass 3: Weihnachtsfeiern -->
+      <!-- Anlass 3: Private Feiern & Familie -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#EAE5DC] shadow-md">
-          <img src="./10_beef_stew_portrait_heatlamp.png" alt="Weihnachtsfeier Catering" class="w-full h-[340px] object-cover">
+          <img src="./12_crispy_chicken_clean.jpg" alt="Private Feiern Catering München" class="w-full h-[340px] object-cover">
         </div>
         <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs uppercase font-bold text-[#D97706] tracking-wider">HERBST & WINTER SPECIAL</span>
-          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">Weihnachtsfeiern & Winter-Galas</h3>
+          <span class="text-xs uppercase font-bold text-emerald-700 tracking-wider">FAMILIE & FREUNDE</span>
+          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">Private Catering ab 15 Personen</h3>
           <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
-            In der kalten Jahreszeit spenden unsere stundenlang geschmorten Fleischgerichte, der wärmende Nelken-Zimt-Reis und die frisch gebackenen Fladenbrote pure Gemütlichkeit. Eine willkommene und aromatische Überraschung für jede Weihnachtsfeier.
+            Geburtstage, Gartenfeste, Jubiläen und Taufen in entspannter Atmosphäre. Chef Olive kocht persönlich für Sie und Ihre liebsten Menschen, während Sie Ihr Fest in vollen Zügen genießen.
           </p>
           <ul class="text-xs text-[#1A1A1A] font-semibold space-y-1.5 pt-2">
-            <li>✓ Warme Chafing Dishes für anhaltende Hitze</li>
-            <li>✓ Aromatische Nelken-, Zimt- & Kardamomnoten</li>
-            <li>✓ Beliebt bei Teams von 20 bis 200 Personen</li>
+            <li>✓ Bereits ab 15 Gästen buchbar</li>
+            <li>✓ 0 Minuten Küchenstress für den Gastgeber</li>
+            <li>✓ Transparente Pauschalpreise ab 25 € p.P.</li>
           </ul>
+          <div class="pt-2">
+            <a href="private-catering.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
+              <span>Private Feiern & Formate entdecken</span> <span>➔</span>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Anlass 4: Foodtruck & Outdoor -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6 space-y-4 order-2 lg:order-1">
-          <span class="text-xs uppercase font-bold text-[#D97706] tracking-wider">OPEN AIR & STREETFOOD FESTIVAL</span>
-          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">Foodtruck, Festivals & Sommerfeste</h3>
+          <span class="text-xs uppercase font-bold text-orange-600 tracking-wider">OPEN AIR & STREETFOOD FESTIVAL</span>
+          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">Foodtruck & Outdoor Catering</h3>
           <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
-            Auf Freiflächen, Firmenparkplätzen und Festivalgeländen rollt unser mobiler Foodtruck an. Sehen Sie rechts unser Live-Video vom Dachauer Altstadtfest: Volle Straßen, mitreißende Musik und authentisches Streetfood-Feeling für Hunderte begeisterte Gäste.
+            Auf Freiflächen, Firmenparkplätzen und Festivalgeländen rollt unsere mobile Tawa-Station an. Sehen Sie rechts unser Live-Video vom Dachauer Altstadtfest: Volle Straßen, mitreißende Musik und authentisches Streetfood-Feeling für Hunderte begeisterte Gäste.
           </p>
           <ul class="text-xs text-[#1A1A1A] font-semibold space-y-1.5 pt-2">
-            <li>✓ Vollkommen autarker Betrieb ohne Vor-Ort-Küche</li>
-            <li>✓ Attraktiver Blickfang auf jedem Außengelände</li>
-            <li>✓ Live erprobt bei Großevents & Stadtfesten in Bayern</li>
+            <li>✓ Vollkommen autarker Betrieb (Gas / Strom)</li>
+            <li>✓ Attraktiver Blickfang auf jedem Außengelände (2 × 2 m)</li>
+            <li>✓ 100% biologisch abbaubares Bio-Geschirr inklusive</li>
           </ul>
+          <div class="pt-2">
+            <a href="foodtruck-outdoor.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
+              <span>Outdoor & Foodtruck Infos</span> <span>➔</span>
+            </a>
+          </div>
         </div>
         <div class="lg:col-span-6 rounded-2xl overflow-hidden border-2 border-white shadow-xl order-1 lg:order-2 bg-black aspect-[9/16] max-h-[440px] flex items-center justify-center">
           <video src="./video_dachau_altstadtfest.mp4" controls playsinline poster="./01_live_station_foodtruck.jpg" class="w-full h-full object-cover"></video>
