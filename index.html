@@ -13,7 +13,7 @@
   <meta property="og:description" content="Münchens kulinarischer Höhepunkt: Live Cooking Rolex, stundenlang geschmortes Beef Stew & Festtagsbuffets für 15 bis 500+ Personen.">
   <meta property="og:image" content="./02_ugandan_rolex_duo_signature.jpg">
 
-  <!-- Google Fonts: Raleway + Montserrat (German Catering Standard ala Spreekueche) -->
+  <!-- Google Fonts: Montserrat + Raleway (Deutscher Catering-Standard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -25,16 +25,15 @@
       theme: {
         extend: {
           colors: {
-            spree: {
-              charcoal: '#1C1C1C',
-              dark: '#212934',
-              muted: '#767C85',
-              border: '#E2E2E2',
-              bgLight: '#F8F9FA',
-              white: '#FFFFFF',
-              green: '#27AE60',
-              accent: '#E67E22',
-              gold: '#D4AC0D'
+            brand: {
+              charcoal: '#1A1A1A',
+              slate: '#2D3748',
+              warmIvory: '#FAF8F5',
+              warmBorder: '#EAE5DC',
+              amber: '#D97706',
+              amberDark: '#B45309',
+              green: '#15803D',
+              lightGray: '#F4F1EB'
             }
           },
           fontFamily: {
@@ -53,41 +52,37 @@
   <style>
     html, body {
       background-color: #FFFFFF;
-      color: #1C1C1C;
+      color: #1A1A1A;
       font-family: 'Raleway', sans-serif;
     }
 
     ::selection {
-      background: #212934;
+      background: #D97706;
       color: #FFFFFF;
     }
 
-    /* Spreekueche Characteristic Accents */
+    /* Signature 55px Separator (Spreeküche Style) */
     .section-separator {
       width: 55px;
-      height: 2px;
-      background-color: #212934;
-      margin: 18px auto 26px auto;
-    }
-    .section-separator-white {
-      width: 55px;
-      height: 2px;
-      background-color: #FFFFFF;
-      margin: 18px auto 26px auto;
+      height: 3px;
+      background-color: #D97706;
+      margin: 16px auto 24px auto;
+      border-radius: 2px;
     }
     .section-separator-left {
       width: 55px;
-      height: 2px;
-      background-color: #212934;
-      margin: 18px 0 26px 0;
+      height: 3px;
+      background-color: #D97706;
+      margin: 16px 0 24px 0;
+      border-radius: 2px;
     }
 
-    /* Slider */
+    /* Slider Styling */
     .spree-slider {
       -webkit-appearance: none;
       width: 100%;
-      height: 6px;
-      background: #E2E2E2;
+      height: 8px;
+      background: #EAE5DC;
       border-radius: 9999px;
       outline: none;
     }
@@ -97,14 +92,15 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: #212934;
+      background: #D97706;
       border: 3px solid #FFFFFF;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      transition: transform 0.15s ease;
+      transition: transform 0.15s ease, background 0.15s ease;
     }
     .spree-slider::-webkit-slider-thumb:hover {
       transform: scale(1.15);
+      background: #B45309;
     }
   </style>
 
@@ -118,7 +114,7 @@
     "telephone": "+4915214438923",
     "email": "info@kampalarolex.de",
     "priceRange": "ab 22 € p.P.",
-    "servesCuisine": "Ugandisches Event-Catering, Live-Cooking, Buffet",
+    "servesCuisine": "Ugandisches Event-Catering, Live-Cooking, Warmbuffet",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "München",
@@ -128,44 +124,44 @@
   }
   </script>
 </head>
-<body class="antialiased text-[#1C1C1C]">
+<body class="antialiased text-[#1A1A1A] bg-white">
 
   <!-- ==========================================
-       1. TOP BAR (Telefon & Sprachen)
+       1. TOP BAR (Heller, klarer Header mit Hotline)
   ========================================== -->
-  <aside class="bg-[#1C1C1C] text-[#E2E2E2] text-xs py-2 px-6 border-b border-[#2C2C2C]">
+  <aside class="bg-[#FAF8F5] text-[#4A453E] text-xs py-2 px-6 border-b border-[#EAE5DC]">
     <div class="max-w-[1260px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-[#27AE60]"></span>
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803D]"></span>
         <span class="font-medium text-xs tracking-wide" data-i18n="topBar">
           Ihr Caterer für München & Bayern: Frische Live-Cooking Stationen & Festtags-Buffets · Termine 2026 buchbar
         </span>
       </div>
-      <div class="flex items-center gap-6 text-xs text-[#B5B0A4]">
-        <a href="tel:+4915214438923" class="hover:text-white transition flex items-center gap-1.5 font-semibold text-white">
+      <div class="flex items-center gap-5 text-xs text-[#555048]">
+        <a href="tel:+4915214438923" class="hover:text-[#D97706] transition flex items-center gap-1.5 font-bold text-[#1A1A1A]">
           <span>📞</span> <span>0152 14438923</span>
         </a>
-        <div class="flex items-center border border-[#3A3F3A] rounded p-0.5 bg-[#212934]">
-          <button id="lang-de-btn" onclick="setLanguage('de')" class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#E67E22] text-white transition">DE</button>
-          <button id="lang-en-btn" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-[10px] font-bold text-[#B5B0A4] hover:text-white transition">EN</button>
+        <div class="flex items-center border border-[#DDD8CF] rounded p-0.5 bg-white">
+          <button id="lang-de-btn" onclick="setLanguage('de')" class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#D97706] text-white transition">DE</button>
+          <button id="lang-en-btn" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-[10px] font-bold text-[#767C85] hover:text-[#1A1A1A] transition">EN</button>
         </div>
       </div>
     </div>
   </aside>
 
   <!-- ==========================================
-       2. SPREEKÜCHE-STYLE HEADER
+       2. HEADER NAVIGATION (Reinweiß & Klar)
   ========================================== -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2E2E2] shadow-sm">
-    <div class="max-w-[1260px] mx-auto px-6 h-24 flex items-center justify-between">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#EAE5DC] shadow-sm">
+    <div class="max-w-[1260px] mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-full border border-[#E2E2E2] p-1 flex items-center justify-center bg-white shadow-sm">
+        <div class="w-12 h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm">
           <img src="./logo.png" alt="Kampala Rolex Germany Logo" class="w-full h-full object-contain">
         </div>
         <div>
-          <div class="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-[#212934] uppercase leading-none">
+          <div class="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">
             Kampala Rolex
           </div>
           <span class="text-[11px] font-medium text-[#767C85] tracking-wider block mt-1">
@@ -175,17 +171,17 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-7 font-heading text-xs font-bold uppercase tracking-wider text-[#212934]">
-        <a href="#anlaesse" class="hover:text-[#E67E22] transition" data-i18n="navAnlaesse">Anlässe</a>
-        <a href="#catering-arten" class="hover:text-[#E67E22] transition" data-i18n="navCatering">Catering-Arten</a>
-        <a href="#philosophie" class="hover:text-[#E67E22] transition" data-i18n="navPhil">Über Uns</a>
-        <a href="#kalkulator" class="hover:text-[#E67E22] transition" data-i18n="navPreise">Catering-Preise</a>
-        <a href="#faq" class="hover:text-[#E67E22] transition" data-i18n="navFaq">FAQ</a>
+      <nav class="hidden lg:flex items-center gap-7 font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A]">
+        <a href="#anlaesse" class="hover:text-[#D97706] transition" data-i18n="navAnlaesse">Anlässe</a>
+        <a href="#catering-arten" class="hover:text-[#D97706] transition" data-i18n="navCatering">Catering-Arten</a>
+        <a href="#philosophie" class="hover:text-[#D97706] transition" data-i18n="navPhil">Über Uns</a>
+        <a href="#kalkulator" class="hover:text-[#D97706] transition" data-i18n="navPreise">Catering-Preise</a>
+        <a href="#faq" class="hover:text-[#D97706] transition" data-i18n="navFaq">FAQ</a>
       </nav>
 
       <!-- Action Button -->
       <div class="flex items-center gap-3">
-        <a href="#kalkulator" class="px-6 py-3 rounded border border-[#212934] bg-[#212934] hover:bg-black text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm">
+        <a href="#kalkulator" class="px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm">
           <span data-i18n="headerCta">Jetzt Anfragen</span>
         </a>
       </div>
@@ -194,28 +190,112 @@
   </header>
 
   <!-- ==========================================
-       3. SPREEKÜCHE HERO BANNER (Full-Bleed mit Dunklem Bild-Overlay)
+       3. BRIGHT & CRISP HERO SECTION (SPLIT-LAYOUT)
+       Kein dunkles Overlay! Volle Sichtbarkeit des Essens!
   ========================================== -->
-  <section id="hero" class="relative py-28 sm:py-36 px-6 text-center text-white bg-cover bg-center overflow-hidden" style="background-image: linear-gradient(rgba(33, 41, 52, 0.78), rgba(28, 28, 28, 0.85)), url('./08_buffet_spread_clean.jpg');">
-    <div class="max-w-[900px] mx-auto relative z-10 flex flex-col items-center">
+  <section id="hero" class="relative bg-[#FAF8F5] pt-12 pb-20 sm:pt-16 sm:pb-28 border-b border-[#EAE5DC] overflow-hidden">
+    
+    <!-- Subtle warm glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1260px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center relative z-10">
       
-      <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-tight" data-i18n="heroH1">
-        Catering München – frisch, authentisch & mit Leidenschaft
-      </h1>
+      <!-- Left Column: Premium German Catering Copy & Actions -->
+      <div class="lg:col-span-6 space-y-6 text-left">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
+          <span data-i18n="heroBadge">Münchens #1 Live-Cooking & Catering Atelier</span>
+        </div>
 
-      <div class="section-separator-white"></div>
+        <h1 class="font-heading text-3xl sm:text-5xl lg:text-[3.25rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.12]" data-i18n="heroH1">
+          Catering München – frisch, authentisch & mit Leidenschaft.
+        </h1>
 
-      <h3 class="font-heading text-base sm:text-xl font-medium tracking-wide max-w-2xl text-[#E2E2E2]" data-i18n="heroH3">
-        Die authentische ugandische Live-Rolex-Station und festliche Warmbuffets für Ihre Events in München und Umgebung.
-      </h3>
+        <div class="section-separator-left"></div>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-        <a href="#kalkulator" class="px-8 py-3.5 rounded bg-transparent border-2 border-white hover:bg-white hover:text-[#212934] text-white font-heading text-xs sm:text-sm font-bold uppercase tracking-wider transition">
-          <span data-i18n="heroBtn1">Catering jetzt unverbindlich anfragen</span>
-        </a>
-        <button onclick="toggleVideoModal()" class="px-6 py-3.5 rounded bg-white/10 hover:bg-white/20 border border-white/40 text-white font-heading text-xs sm:text-sm font-semibold uppercase tracking-wider transition flex items-center gap-2">
-          <span>▶</span> <span data-i18n="heroBtn2">Video-Reel ansehen (30s)</span>
-        </button>
+        <p class="text-base sm:text-lg text-[#555048] leading-relaxed font-normal" data-i18n="heroH3">
+          Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Eisenplatte, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.
+        </p>
+
+        <!-- 4 Key USPs Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-heading font-semibold text-[#2D2A26]">
+          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
+            <span class="text-base">🍳</span>
+            <span>Live-Cooking vor Ihren Gästen</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
+            <span class="text-base">🌾</span>
+            <span>100% Handgeknetete Chapatis</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
+            <span class="text-base">👥</span>
+            <span>Für 15 bis 300+ Personen</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
+            <span class="text-base">📍</span>
+            <span>München & ganz Bayern</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="#kalkulator" class="px-8 py-4 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-md flex items-center gap-2">
+            <span data-i18n="heroBtn1">Preise live berechnen & buchen</span>
+            <span>➔</span>
+          </a>
+          <button onclick="toggleVideoModal()" class="px-6 py-4 rounded-lg bg-white hover:bg-[#F3EFEA] border-2 border-[#1A1A1A] text-[#1A1A1A] font-heading text-xs sm:text-sm font-bold uppercase tracking-wider transition flex items-center gap-2.5 shadow-sm">
+            <span class="text-[#D97706] text-base">▶</span>
+            <span data-i18n="heroBtn2">Video-Reel ansehen (30s)</span>
+          </button>
+        </div>
+
+        <!-- Direct Hotline -->
+        <div class="flex items-center gap-2.5 text-xs text-[#767C85] pt-1">
+          <span>Persönliche Beratung & Termin-Check:</span>
+          <a href="tel:+4915214438923" class="font-bold text-[#1A1A1A] hover:text-[#D97706] underline">+49 152 14438923</a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Kristallklare, ungefilterte Food-Fotografie -->
+      <div class="lg:col-span-6 relative">
+        
+        <!-- Main Food Showcase Card (100% Daylight, keine Abdunklung!) -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+          <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Signature Ugandan Rolex Live Catering München" class="w-full h-[420px] sm:h-[480px] object-cover hover:scale-105 transition duration-700">
+          
+          <!-- Live Floating Pill -->
+          <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm border border-[#EAE5DC] px-4 py-2 rounded-xl shadow-lg flex items-center gap-2.5">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div>
+              <div class="text-[10px] uppercase font-bold text-[#767C85]">Live vor Ort gerollt</div>
+              <div class="font-heading text-xs font-black text-[#1A1A1A]">Original Ugandan Rolex</div>
+            </div>
+          </div>
+
+          <!-- Price Tag Badge -->
+          <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm border border-[#EAE5DC] px-5 py-3 rounded-xl shadow-xl text-right">
+            <div class="text-[10px] uppercase tracking-wider text-[#D97706] font-bold">Show-Cooking</div>
+            <div class="font-heading text-xl font-black text-[#1A1A1A] leading-none mt-0.5">ab 25,00 € <span class="text-xs font-normal text-[#767C85]">p.P.</span></div>
+          </div>
+        </div>
+
+        <!-- Secondary Overlapping Visual Card: Warm Buffet Stew -->
+        <div class="hidden sm:flex absolute -bottom-6 -left-6 bg-white border-2 border-[#EAE5DC] p-3 rounded-xl shadow-xl items-center gap-3.5 max-w-xs z-20">
+          <img src="./10_beef_stew_portrait_heatlamp.png" alt="Slow-cooked Beef Stew Chafing Dish" class="w-16 h-16 rounded-lg object-cover border border-[#EAE5DC]">
+          <div>
+            <div class="text-[10px] font-bold uppercase text-[#D97706]">Festtags-Warmbuffet</div>
+            <div class="font-heading text-xs font-bold text-[#1A1A1A]">Zartes Beef Stew & Pilau</div>
+            <div class="text-[11px] text-[#767C85] mt-0.5">ab 29,00 € p.P.</div>
+          </div>
+        </div>
+
+        <!-- Overlapping Play Button -->
+        <div onclick="toggleVideoModal()" class="cursor-pointer absolute -top-3 -right-3 bg-[#D97706] hover:bg-[#B45309] text-white p-4 rounded-full shadow-xl flex items-center justify-center transition transform hover:scale-110 z-20" title="Video starten">
+          <span class="text-lg">▶</span>
+        </div>
+
       </div>
 
     </div>
@@ -223,16 +303,17 @@
 
   <!-- ==========================================
        4. ANLÄSSE ÜBERSICHT (Spreeküche Style)
+       Weißer Hintergrund, klare Karten, gestochen scharfe Bilder
   ========================================== -->
-  <section id="anlaesse" class="py-20 sm:py-24 bg-white border-b border-[#E2E2E2]">
+  <section id="anlaesse" class="py-20 sm:py-24 bg-white border-b border-[#EAE5DC]">
     <div class="max-w-[1260px] mx-auto px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#212934]" data-i18n="anlaesseTitle">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]" data-i18n="anlaesseTitle">
           Jetzt Catering für jeden Anlass buchen
         </h2>
         <div class="section-separator"></div>
-        <p class="text-sm sm:text-base text-[#767C85]" data-i18n="anlaesseSub">
+        <p class="text-sm sm:text-base text-[#555048]" data-i18n="anlaesseSub">
           Ob opulente Hochzeitsfeier, Firmenjubiläum, Business-Lunch oder lockeres Sommerfest: Wir inszenieren für alle Anlässe den passenden kulinarischen Höhepunkt.
         </p>
       </div>
@@ -240,73 +321,77 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         
         <!-- Anlass 1 -->
-        <div class="bg-[#F8F9FA] rounded-lg overflow-hidden border border-[#E2E2E2] flex flex-col group hover:shadow-md transition">
-          <div class="aspect-[16/10] overflow-hidden">
+        <div class="bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EAE5DC] flex flex-col group hover:shadow-lg transition">
+          <div class="aspect-[16/11] overflow-hidden">
             <img src="./06_buffet_event_guests.jpg" alt="Firmencatering München" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="font-heading text-base font-bold text-[#212934] uppercase">Event- & Firmen-Catering</h4>
-              <p class="text-xs text-[#767C85] mt-2 leading-relaxed">
-                Schnelle Bewirtung von 50 bis 500+ Gästen bei Tagungen, Sommerfesten und Weihnachtsfeiern.
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">B2B & MESSE</span>
+              <h4 class="font-heading text-base font-bold text-[#1A1A1A] uppercase">Event- & Firmen-Catering</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Schnelle, professionelle Bewirtung von 50 bis 500+ Gästen bei Tagungen, Sommerfesten und Weihnachtsfeiern.
               </p>
             </div>
-            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#212934] group-hover:text-[#E67E22] transition uppercase">
-              Mehr erfahren ➔
+            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase">
+              Jetzt kalkulieren ➔
             </a>
           </div>
         </div>
 
         <!-- Anlass 2 -->
-        <div class="bg-[#F8F9FA] rounded-lg overflow-hidden border border-[#E2E2E2] flex flex-col group hover:shadow-md transition">
-          <div class="aspect-[16/10] overflow-hidden">
+        <div class="bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EAE5DC] flex flex-col group hover:shadow-lg transition">
+          <div class="aspect-[16/11] overflow-hidden">
             <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Hochzeitscatering München" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="font-heading text-base font-bold text-[#212934] uppercase">Hochzeitscatering</h4>
-              <p class="text-xs text-[#767C85] mt-2 leading-relaxed">
-                Ein unverwechselbares kulinarisches Highlight, das sich erfrischend von Standardbuffets abhebt.
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">DER BESONDERE TAG</span>
+              <h4 class="font-heading text-base font-bold text-[#1A1A1A] uppercase">Hochzeitscatering</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Ein unverwechselbares Live-Cooking Highlight, das Ihren Gästen durch Frische und Geschmack in Erinnerung bleibt.
               </p>
             </div>
-            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#212934] group-hover:text-[#E67E22] transition uppercase">
-              Mehr erfahren ➔
+            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase">
+              Jetzt kalkulieren ➔
             </a>
           </div>
         </div>
 
         <!-- Anlass 3 -->
-        <div class="bg-[#F8F9FA] rounded-lg overflow-hidden border border-[#E2E2E2] flex flex-col group hover:shadow-md transition">
-          <div class="aspect-[16/10] overflow-hidden">
+        <div class="bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EAE5DC] flex flex-col group hover:shadow-lg transition">
+          <div class="aspect-[16/11] overflow-hidden">
             <img src="./12_crispy_chicken_clean.jpg" alt="Private Feiern" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="font-heading text-base font-bold text-[#212934] uppercase">Private Catering</h4>
-              <p class="text-xs text-[#767C85] mt-2 leading-relaxed">
-                Geburtstage, Jubiläen und Gartenfeste ab 15 Personen mit persönlichem Koch und herzlichem Service.
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">FAMILIE & FREUNDE</span>
+              <h4 class="font-heading text-base font-bold text-[#1A1A1A] uppercase">Private Catering</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Geburtstage, Jubiläen und Gartenfeste ab 15 Personen mit persönlicher Köchin und herzlichem Service.
               </p>
             </div>
-            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#212934] group-hover:text-[#E67E22] transition uppercase">
-              Mehr erfahren ➔
+            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase">
+              Jetzt kalkulieren ➔
             </a>
           </div>
         </div>
 
         <!-- Anlass 4 -->
-        <div class="bg-[#F8F9FA] rounded-lg overflow-hidden border border-[#E2E2E2] flex flex-col group hover:shadow-md transition">
-          <div class="aspect-[16/10] overflow-hidden">
+        <div class="bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EAE5DC] flex flex-col group hover:shadow-lg transition">
+          <div class="aspect-[16/11] overflow-hidden">
             <img src="./01_live_station_foodtruck.jpg" alt="Foodtruck Catering" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="font-heading text-base font-bold text-[#212934] uppercase">Foodtruck & Outdoor</h4>
-              <p class="text-xs text-[#767C85] mt-2 leading-relaxed">
-                Autarke Zubereitung auf Freiflächen, Festivalgeländen und Firmengeländen in ganz Bayern.
+              <span class="text-[10px] uppercase font-bold text-[#D97706] block mb-1">OUTDOOR & STREETFOOD</span>
+              <h4 class="font-heading text-base font-bold text-[#1A1A1A] uppercase">Foodtruck & Outdoor</h4>
+              <p class="text-xs text-[#555048] mt-2 leading-relaxed">
+                Autarke Zubereitung auf Freiflächen, Firmenhöfen und Open-Air-Events in ganz München und Umgebung.
               </p>
             </div>
-            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#212934] group-hover:text-[#E67E22] transition uppercase">
-              Mehr erfahren ➔
+            <a href="#kalkulator" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase">
+              Jetzt kalkulieren ➔
             </a>
           </div>
         </div>
@@ -317,29 +402,36 @@
   </section>
 
   <!-- ==========================================
-       5. EDITORIAL STORY: GAUMENKINO AUS OSTAFRIKA (Spreeküche Style)
+       5. EDITORIAL STORY: GAUMENKINO AUS OSTAFRIKA
+       Heller, warmer Elfenbein-Hintergrund, klares Foto!
   ========================================== -->
-  <section id="philosophie" class="py-24 bg-[#1C1C1C] text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(28, 28, 28, 0.88), rgba(28, 28, 28, 0.94)), url('./05_beef_meat_stew_chafing.jpg');">
+  <section id="philosophie" class="py-24 bg-[#FAF8F5] text-[#1A1A1A] border-b border-[#EAE5DC]">
     <div class="max-w-[1260px] mx-auto px-6">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-5 rounded-lg overflow-hidden border border-white/20 shadow-2xl">
+        <!-- Bild: Vollkommen hell, scharf, kein schwarzes Overlay -->
+        <div class="lg:col-span-5 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white">
           <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Frischer Rolex auf der Tawa" class="w-full h-auto object-cover">
         </div>
 
         <div class="lg:col-span-7 space-y-4 text-left">
-          <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white leading-tight" data-i18n="gaumenTitle">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-[#EAE5DC] text-[#D97706] text-xs font-bold uppercase tracking-wider">
+            <span>✨</span> <span>Handwerkskunst & Leidenschaft</span>
+          </div>
+
+          <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A] leading-tight" data-i18n="gaumenTitle">
             Catering München – Vorhang auf für echtes Gaumenkino
           </h2>
           
-          <div class="section-separator-left" style="background-color: #E67E22;"></div>
+          <div class="section-separator-left"></div>
 
-          <h4 class="font-heading text-base sm:text-lg font-semibold text-[#E2E2E2]" data-i18n="gaumenSubtitle">
+          <h4 class="font-heading text-base sm:text-lg font-semibold text-[#2D2A26]" data-i18n="gaumenSubtitle">
             Wir von Kampala Rolex Germany bringen marktfrische ostafrikanische Küche und lebendige Gastfreundschaft direkt zu Ihrem Event.
           </h4>
 
-          <div class="space-y-3 text-sm text-[#B5B0A4] leading-relaxed font-normal">
+          <div class="space-y-3 text-sm text-[#555048] leading-relaxed font-normal">
             <p data-i18n="gaumenP1">
               Unser junger Betrieb ruht sich nicht auf bislang geernteten Lorbeeren aus, wenn es um die Catering-Planung und Organisation Ihrer privaten oder betrieblichen Feierlichkeiten in München und Umgebung geht. Ob opulentes Hochzeitsmahl oder unkomplizierter Begleiter bei einer Schulung, einer Firmenfeier oder am Messestand – wir inszenieren für alle Anlässe die passenden kulinarischen Höhepunkte!
             </p>
@@ -351,9 +443,12 @@
             </p>
           </div>
 
-          <div class="pt-4">
-            <a href="#kalkulator" class="px-7 py-3 rounded bg-[#E67E22] hover:bg-[#D35400] text-white font-heading text-xs font-bold uppercase tracking-wider transition">
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#kalkulator" class="px-7 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-sm">
               <span data-i18n="gaumenBtn">Jetzt Catering unverbindlich anfragen</span>
+            </a>
+            <a href="tel:+4915214438923" class="text-xs font-bold text-[#1A1A1A] hover:text-[#D97706] underline">
+              Oder anrufen: 0152 14438923
             </a>
           </div>
 
@@ -366,16 +461,17 @@
 
   <!-- ==========================================
        6. CATERING-ARTEN (Die 3 Module)
+       Heller Hintergrund, weiße Karten
   ========================================== -->
-  <section id="catering-arten" class="py-20 sm:py-28 bg-[#F8F9FA] border-b border-[#E2E2E2]">
+  <section id="catering-arten" class="py-20 sm:py-28 bg-white border-b border-[#EAE5DC]">
     <div class="max-w-[1260px] mx-auto px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#212934]" data-i18n="artenTitle">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]" data-i18n="artenTitle">
           Unsere Catering-Formate im Überblick
         </h2>
         <div class="section-separator"></div>
-        <p class="text-sm sm:text-base text-[#767C85]" data-i18n="artenSub">
+        <p class="text-sm sm:text-base text-[#555048]" data-i18n="artenSub">
           Entscheiden Sie sich für einzelne Module oder kombinieren Sie die interaktive Live-Station mit einem festlichen Warmbuffet.
         </p>
       </div>
@@ -383,69 +479,69 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Format 1: Live Rolex -->
-        <div class="bg-white rounded-lg border border-[#E2E2E2] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div class="bg-[#FAF8F5] rounded-xl border border-[#EAE5DC] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition">
           <div>
             <div class="aspect-[16/10] overflow-hidden">
               <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Live Rolex Station" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-bold text-[#E67E22] uppercase tracking-wider block mb-1">INTERAKTIVES SHOW COOKING</span>
-              <h3 class="font-heading text-xl font-bold text-[#212934] uppercase">Live Rolex Station</h3>
+              <span class="text-[11px] font-bold text-[#D97706] uppercase tracking-wider block mb-1">INTERAKTIVES SHOW COOKING</span>
+              <h3 class="font-heading text-xl font-bold text-[#1A1A1A] uppercase">Live Rolex Station</h3>
               <div class="section-separator-left my-3"></div>
-              <p class="text-xs sm:text-sm text-[#767C85] leading-relaxed">
+              <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
                 Der mobile Klassiker: Vor den Augen Ihrer Gäste rollen wir frisch zubereitete Chicken- und Veggie-Rolex auf der heißen Tawa. Inklusive Samosas und pikanter Kachumbari-Salsa.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 border-t border-[#E2E2E2] flex items-center justify-between mt-4">
-            <span class="font-heading font-bold text-sm text-[#212934]">ab 25,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
-            <a href="#kalkulator" onclick="selectPackage('live-rolex-station')" class="px-4 py-2 rounded bg-[#212934] hover:bg-black text-white font-heading text-xs font-bold uppercase transition">
+          <div class="p-6 pt-0 border-t border-[#EAE5DC] flex items-center justify-between mt-4">
+            <span class="font-heading font-bold text-sm text-[#1A1A1A]">ab 25,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
+            <a href="#kalkulator" onclick="selectPackage('live-rolex-station')" class="px-4 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase transition">
               Auswählen
             </a>
           </div>
         </div>
 
         <!-- Format 2: Warmbuffet -->
-        <div class="bg-white rounded-lg border border-[#E2E2E2] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div class="bg-[#FAF8F5] rounded-xl border border-[#EAE5DC] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition">
           <div>
             <div class="aspect-[16/10] overflow-hidden">
               <img src="./10_beef_stew_portrait_heatlamp.png" alt="Ostafrika Festtags-Warmbuffet" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-bold text-[#E67E22] uppercase tracking-wider block mb-1">EDLE CHAFING DISHES</span>
-              <h3 class="font-heading text-xl font-bold text-[#212934] uppercase">Festtags-Warmbuffet</h3>
+              <span class="text-[11px] font-bold text-[#D97706] uppercase tracking-wider block mb-1">EDLE CHAFING DISHES</span>
+              <h3 class="font-heading text-xl font-bold text-[#1A1A1A] uppercase">Festtags-Warmbuffet</h3>
               <div class="section-separator-left my-3"></div>
-              <p class="text-xs sm:text-sm text-[#767C85] leading-relaxed">
+              <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
                 Stundenlang geschmortes, butterweiches Beef Stew in reichhaltiger Tomaten-Kräutersauce, duftender Nelken-Zimt-Pilau-Reis, Matooke und warme Chapati-Körbe im Chafing-Dish.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 border-t border-[#E2E2E2] flex items-center justify-between mt-4">
-            <span class="font-heading font-bold text-sm text-[#212934]">ab 29,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
-            <a href="#kalkulator" onclick="selectPackage('festtags-warmbuffet')" class="px-4 py-2 rounded bg-[#212934] hover:bg-black text-white font-heading text-xs font-bold uppercase transition">
+          <div class="p-6 pt-0 border-t border-[#EAE5DC] flex items-center justify-between mt-4">
+            <span class="font-heading font-bold text-sm text-[#1A1A1A]">ab 29,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
+            <a href="#kalkulator" onclick="selectPackage('festtags-warmbuffet')" class="px-4 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase transition">
               Auswählen
             </a>
           </div>
         </div>
 
         <!-- Format 3: Fingerfood -->
-        <div class="bg-white rounded-lg border border-[#E2E2E2] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div class="bg-[#FAF8F5] rounded-xl border border-[#EAE5DC] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition">
           <div>
             <div class="aspect-[16/10] overflow-hidden">
               <img src="./12_crispy_chicken_clean.jpg" alt="Flying Fingerfood" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-bold text-[#E67E22] uppercase tracking-wider block mb-1">FÜR STEHEMPFÄNGE & APÉRO</span>
-              <h3 class="font-heading text-xl font-bold text-[#212934] uppercase">Flying Fingerfood</h3>
+              <span class="text-[11px] font-bold text-[#D97706] uppercase tracking-wider block mb-1">FÜR STEHEMPFÄNGE & APÉRO</span>
+              <h3 class="font-heading text-xl font-bold text-[#1A1A1A] uppercase">Flying Fingerfood</h3>
               <div class="section-separator-left my-3"></div>
-              <p class="text-xs sm:text-sm text-[#767C85] leading-relaxed">
+              <p class="text-xs sm:text-sm text-[#555048] leading-relaxed">
                 Mundgerecht & unkompliziert ohne Besteck: Mini-Rolex Rolls im Tapas-Schnitt, knusprige Samosas mit Rind- und Gemüsefüllung sowie süße Swahili Mandazi-Krapfen mit Honig.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 border-t border-[#E2E2E2] flex items-center justify-between mt-4">
-            <span class="font-heading font-bold text-sm text-[#212934]">ab 22,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
-            <a href="#kalkulator" onclick="selectPackage('fingerfood-flying')" class="px-4 py-2 rounded bg-[#212934] hover:bg-black text-white font-heading text-xs font-bold uppercase transition">
+          <div class="p-6 pt-0 border-t border-[#EAE5DC] flex items-center justify-between mt-4">
+            <span class="font-heading font-bold text-sm text-[#1A1A1A]">ab 22,00 € <span class="text-xs text-[#767C85] font-normal">p.P.</span></span>
+            <a href="#kalkulator" onclick="selectPackage('fingerfood-flying')" class="px-4 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase transition">
               Auswählen
             </a>
           </div>
@@ -457,17 +553,17 @@
   </section>
 
   <!-- ==========================================
-       7. CATERING-PREISRECHNER (German Standard)
+       7. CATERING-PREISRECHNER (Deutscher Standard)
   ========================================== -->
-  <section id="kalkulator" class="py-20 sm:py-28 bg-white border-b border-[#E2E2E2]">
+  <section id="kalkulator" class="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#EAE5DC]">
     <div class="max-w-[1100px] mx-auto px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#212934]" data-i18n="calcH2">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]" data-i18n="calcH2">
           Catering-Preise live kalkulieren
         </h2>
         <div class="section-separator"></div>
-        <p class="text-sm text-[#767C85]" data-i18n="calcSub">
+        <p class="text-sm text-[#555048]" data-i18n="calcSub">
           Ermitteln Sie Ihren unverbindlichen Richtpreis in wenigen Sekunden und fordern Sie Ihr maßgeschneidertes Angebot an.
         </p>
       </div>
@@ -475,24 +571,24 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- Controls Configurator -->
-        <div class="lg:col-span-7 bg-[#F8F9FA] rounded-lg p-8 border border-[#E2E2E2] space-y-7">
+        <div class="lg:col-span-7 bg-white rounded-xl p-8 border border-[#EAE5DC] shadow-sm space-y-7">
           
           <!-- Anlass -->
           <div>
-            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#212934] mb-3">1. Art der Veranstaltung</label>
+            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A] mb-3">1. Art der Veranstaltung</label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-heading font-semibold">
-              <button type="button" onclick="setOccasion('Firmenfeier', this)" class="occ-btn px-3 py-2.5 rounded border border-[#212934] bg-[#212934] text-white transition">Firmenfeier</button>
-              <button type="button" onclick="setOccasion('Hochzeit', this)" class="occ-btn px-3 py-2.5 rounded border border-[#E2E2E2] bg-white text-[#212934] hover:border-[#212934] transition">Hochzeit</button>
-              <button type="button" onclick="setOccasion('Private Feier', this)" class="occ-btn px-3 py-2.5 rounded border border-[#E2E2E2] bg-white text-[#212934] hover:border-[#212934] transition">Privatfeier</button>
-              <button type="button" onclick="setOccasion('Foodtruck Outdoor', this)" class="occ-btn px-3 py-2.5 rounded border border-[#E2E2E2] bg-white text-[#212934] hover:border-[#212934] transition">Foodtruck</button>
+              <button type="button" onclick="setOccasion('Firmenfeier', this)" class="occ-btn px-3 py-2.5 rounded-lg border-2 border-[#1A1A1A] bg-[#1A1A1A] text-white transition">Firmenfeier</button>
+              <button type="button" onclick="setOccasion('Hochzeit', this)" class="occ-btn px-3 py-2.5 rounded-lg border border-[#EAE5DC] bg-white text-[#1A1A1A] hover:border-[#1A1A1A] transition">Hochzeit</button>
+              <button type="button" onclick="setOccasion('Private Feier', this)" class="occ-btn px-3 py-2.5 rounded-lg border border-[#EAE5DC] bg-white text-[#1A1A1A] hover:border-[#1A1A1A] transition">Privatfeier</button>
+              <button type="button" onclick="setOccasion('Foodtruck Outdoor', this)" class="occ-btn px-3 py-2.5 rounded-lg border border-[#EAE5DC] bg-white text-[#1A1A1A] hover:border-[#1A1A1A] transition">Foodtruck</button>
             </div>
           </div>
 
           <!-- Gästeanzahl -->
           <div>
             <div class="flex items-center justify-between mb-3">
-              <label class="font-heading text-xs font-bold uppercase tracking-wider text-[#212934]">2. Gästeanzahl</label>
-              <span id="guest-display" class="font-heading text-xl font-bold text-[#212934] bg-white px-4 py-1 rounded border border-[#E2E2E2]">50 Gäste</span>
+              <label class="font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A]">2. Gästeanzahl</label>
+              <span id="guest-display" class="font-heading text-xl font-bold text-[#1A1A1A] bg-[#FAF8F5] px-4 py-1 rounded-lg border border-[#EAE5DC]">50 Gäste</span>
             </div>
             <input id="guest-slider" type="range" min="15" max="300" step="5" value="50" oninput="updateGuests(this.value)" class="spree-slider">
             <div class="flex justify-between text-[11px] text-[#767C85] mt-2 font-mono">
@@ -506,49 +602,49 @@
 
           <!-- Paket-Auswahl -->
           <div>
-            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#212934] mb-3">3. Catering-Paket</label>
+            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A] mb-3">3. Catering-Paket</label>
             <div class="space-y-2.5">
               
-              <div onclick="selectPackage('live-rolex-station')" id="pkg-card-live-rolex-station" class="pkg-card p-4 rounded border-2 border-[#212934] bg-white cursor-pointer flex items-center justify-between transition">
+              <div onclick="selectPackage('live-rolex-station')" id="pkg-card-live-rolex-station" class="pkg-card p-4 rounded-lg border-2 border-[#D97706] bg-amber-50/20 cursor-pointer flex items-center justify-between transition">
                 <div>
-                  <div class="font-heading font-bold text-sm text-[#212934]">Live Ugandan Rolex Station</div>
-                  <div class="text-xs text-[#767C85] mt-0.5">Live Tawa Show, Veggie & Chicken, Samosas</div>
+                  <div class="font-heading font-bold text-sm text-[#1A1A1A]">Live Ugandan Rolex Station</div>
+                  <div class="text-xs text-[#555048] mt-0.5">Live Tawa Show, Veggie & Chicken, Samosas</div>
                 </div>
                 <div class="text-right">
-                  <div class="font-heading font-bold text-base text-[#212934]">25,00 €</div>
+                  <div class="font-heading font-bold text-base text-[#1A1A1A]">25,00 €</div>
                   <div class="text-[10px] text-[#767C85]">/ Person</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('festtags-warmbuffet')" id="pkg-card-festtags-warmbuffet" class="pkg-card p-4 rounded border border-[#E2E2E2] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#212934]">
+              <div onclick="selectPackage('festtags-warmbuffet')" id="pkg-card-festtags-warmbuffet" class="pkg-card p-4 rounded-lg border border-[#EAE5DC] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#1A1A1A]">
                 <div>
-                  <div class="font-heading font-bold text-sm text-[#212934]">Das Große Festtags-Warmbuffet</div>
-                  <div class="text-xs text-[#767C85] mt-0.5">Slow Beef Stew, Pilau-Reis, Matooke & Chapati</div>
+                  <div class="font-heading font-bold text-sm text-[#1A1A1A]">Das Große Festtags-Warmbuffet</div>
+                  <div class="text-xs text-[#555048] mt-0.5">Slow Beef Stew, Pilau-Reis, Matooke & Chapati</div>
                 </div>
                 <div class="text-right">
-                  <div class="font-heading font-bold text-base text-[#212934]">29,00 €</div>
+                  <div class="font-heading font-bold text-base text-[#1A1A1A]">29,00 €</div>
                   <div class="text-[10px] text-[#767C85]">/ Person</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('fingerfood-flying')" id="pkg-card-fingerfood-flying" class="pkg-card p-4 rounded border border-[#E2E2E2] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#212934]">
+              <div onclick="selectPackage('fingerfood-flying')" id="pkg-card-fingerfood-flying" class="pkg-card p-4 rounded-lg border border-[#EAE5DC] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#1A1A1A]">
                 <div>
-                  <div class="font-heading font-bold text-sm text-[#212934]">Flying Fingerfood & Cocktail Bites</div>
-                  <div class="text-xs text-[#767C85] mt-0.5">Mini-Rolex Rolls, knusprige Samosas, Mandazi Krapfen</div>
+                  <div class="font-heading font-bold text-sm text-[#1A1A1A]">Flying Fingerfood & Cocktail Bites</div>
+                  <div class="text-xs text-[#555048] mt-0.5">Mini-Rolex Rolls, knusprige Samosas, Mandazi Krapfen</div>
                 </div>
                 <div class="text-right">
-                  <div class="font-heading font-bold text-base text-[#212934]">22,00 €</div>
+                  <div class="font-heading font-bold text-base text-[#1A1A1A]">22,00 €</div>
                   <div class="text-[10px] text-[#767C85]">/ Person</div>
                 </div>
               </div>
 
-              <div onclick="selectPackage('vip-kombi')" id="pkg-card-vip-kombi" class="pkg-card p-4 rounded border border-[#E2E2E2] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#212934]">
+              <div onclick="selectPackage('vip-kombi')" id="pkg-card-vip-kombi" class="pkg-card p-4 rounded-lg border border-[#EAE5DC] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#1A1A1A]">
                 <div>
-                  <div class="font-heading font-bold text-sm text-[#212934]">The Ultimate VIP Kombi-Erlebnis</div>
-                  <div class="text-xs text-[#767C85] mt-0.5">Warmbuffet Chafing-Dishes PLUS mobile Live-Rolex-Station</div>
+                  <div class="font-heading font-bold text-sm text-[#1A1A1A]">The Ultimate VIP Kombi-Erlebnis</div>
+                  <div class="text-xs text-[#555048] mt-0.5">Warmbuffet Chafing-Dishes PLUS mobile Live-Rolex-Station</div>
                 </div>
                 <div class="text-right">
-                  <div class="font-heading font-bold text-base text-[#212934]">38,00 €</div>
+                  <div class="font-heading font-bold text-base text-[#1A1A1A]">38,00 €</div>
                   <div class="text-[10px] text-[#767C85]">/ Person</div>
                 </div>
               </div>
@@ -558,30 +654,30 @@
 
           <!-- Zusatzoptionen -->
           <div>
-            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#212934] mb-3">4. Optionale Zusatzleistungen</label>
+            <label class="block font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A] mb-3">4. Optionale Zusatzleistungen</label>
             <div class="space-y-2 text-xs">
-              <label class="flex items-center justify-between p-3 rounded bg-white border border-[#E2E2E2] cursor-pointer hover:border-[#212934] transition">
+              <label class="flex items-center justify-between p-3 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] cursor-pointer hover:border-[#1A1A1A] transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-mandazi" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-[#212934]">
+                  <input id="extra-mandazi" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-[#D97706]">
                   <span>Swahili Mandazi-Dessert mit Bio-Honig (+3,50 € / Person)</span>
                 </div>
-                <span id="extra-mandazi-cost" class="font-bold text-[#212934]">+175,00 €</span>
+                <span id="extra-mandazi-cost" class="font-bold text-[#1A1A1A]">+175,00 €</span>
               </label>
 
-              <label class="flex items-center justify-between p-3 rounded bg-white border border-[#E2E2E2] cursor-pointer hover:border-[#212934] transition">
+              <label class="flex items-center justify-between p-3 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] cursor-pointer hover:border-[#1A1A1A] transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-tableware" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-[#212934]">
+                  <input id="extra-tableware" type="checkbox" checked onchange="recalculate()" class="w-4 h-4 rounded text-[#D97706]">
                   <span>Bio-Streetfood-Servierschalen & Besteck (+2,50 € / Person)</span>
                 </div>
-                <span id="extra-tableware-cost" class="font-bold text-[#212934]">+125,00 €</span>
+                <span id="extra-tableware-cost" class="font-bold text-[#1A1A1A]">+125,00 €</span>
               </label>
 
-              <label class="flex items-center justify-between p-3 rounded bg-white border border-[#E2E2E2] cursor-pointer hover:border-[#212934] transition">
+              <label class="flex items-center justify-between p-3 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] cursor-pointer hover:border-[#1A1A1A] transition">
                 <div class="flex items-center gap-3">
-                  <input id="extra-truck" type="checkbox" onchange="recalculate()" class="w-4 h-4 rounded text-[#212934]">
+                  <input id="extra-truck" type="checkbox" onchange="recalculate()" class="w-4 h-4 rounded text-[#D97706]">
                   <span>Foodtruck-Anfahrt / Outdoor-Pavillon (+150,00 € Pauschale)</span>
                 </div>
-                <span class="font-bold text-[#212934]">+150,00 €</span>
+                <span class="font-bold text-[#1A1A1A]">+150,00 €</span>
               </label>
             </div>
           </div>
@@ -589,56 +685,56 @@
         </div>
 
         <!-- Sidebar Kalkulationsübersicht -->
-        <div class="lg:col-span-5 bg-white rounded-lg p-8 border-2 border-[#212934] shadow-lg space-y-6">
+        <div class="lg:col-span-5 bg-white rounded-xl p-8 border-2 border-[#1A1A1A] shadow-xl space-y-6">
           
-          <div class="border-b border-[#E2E2E2] pb-4">
-            <span class="text-xs uppercase font-bold text-[#767C85] tracking-wider">Ihre Konfiguration</span>
-            <h3 id="summary-pkg-title" class="font-heading text-xl font-bold text-[#212934] mt-1">Live Ugandan Rolex Station</h3>
+          <div class="border-b border-[#EAE5DC] pb-4">
+            <span class="text-xs uppercase font-bold text-[#D97706] tracking-wider">Ihre Konfiguration</span>
+            <h3 id="summary-pkg-title" class="font-heading text-xl font-bold text-[#1A1A1A] mt-1">Live Ugandan Rolex Station</h3>
             <p id="summary-occ-title" class="text-xs text-[#767C85] mt-0.5">Anlass: Firmenfeier</p>
           </div>
 
-          <div class="space-y-3 text-xs text-[#767C85]">
-            <div class="flex justify-between py-1 border-b border-[#E2E2E2]">
+          <div class="space-y-3 text-xs text-[#555048]">
+            <div class="flex justify-between py-1 border-b border-[#EAE5DC]">
               <span id="summary-base-label">50 × 25,00 € Basis-Paket</span>
-              <span id="summary-base-cost" class="text-[#212934] font-bold">1.250,00 €</span>
+              <span id="summary-base-cost" class="text-[#1A1A1A] font-bold">1.250,00 €</span>
             </div>
-            <div id="summary-mandazi-row" class="flex justify-between py-1 border-b border-[#E2E2E2]">
+            <div id="summary-mandazi-row" class="flex justify-between py-1 border-b border-[#EAE5DC]">
               <span>Mandazi-Dessert</span>
-              <span id="summary-mandazi-val" class="text-[#212934] font-bold">+175,00 €</span>
+              <span id="summary-mandazi-val" class="text-[#1A1A1A] font-bold">+175,00 €</span>
             </div>
-            <div id="summary-tableware-row" class="flex justify-between py-1 border-b border-[#E2E2E2]">
+            <div id="summary-tableware-row" class="flex justify-between py-1 border-b border-[#EAE5DC]">
               <span>Streetfood-Geschirr</span>
-              <span id="summary-tableware-val" class="text-[#212934] font-bold">+125,00 €</span>
+              <span id="summary-tableware-val" class="text-[#1A1A1A] font-bold">+125,00 €</span>
             </div>
-            <div id="summary-truck-row" class="flex justify-between py-1 border-b border-[#E2E2E2] hidden">
+            <div id="summary-truck-row" class="flex justify-between py-1 border-b border-[#EAE5DC] hidden">
               <span>Foodtruck-Pauschale</span>
-              <span class="text-[#212934] font-bold">+150,00 €</span>
+              <span class="text-[#1A1A1A] font-bold">+150,00 €</span>
             </div>
 
-            <div class="pt-4 border-t-2 border-[#212934] flex items-baseline justify-between">
+            <div class="pt-4 border-t-2 border-[#1A1A1A] flex items-baseline justify-between">
               <div>
-                <span class="text-xs font-heading font-bold uppercase text-[#212934] block">Gesamtsumme (Richtwert)</span>
+                <span class="text-xs font-heading font-bold uppercase text-[#1A1A1A] block">Gesamtsumme (Richtwert)</span>
                 <span class="text-[10px] text-[#767C85]">Gemäß § 19 UStG ohne USt.</span>
               </div>
-              <div id="summary-total-display" class="font-heading text-3xl font-black text-[#212934]">1.550,00 €</div>
+              <div id="summary-total-display" class="font-heading text-3xl font-black text-[#1A1A1A]">1.550,00 €</div>
             </div>
           </div>
 
           <!-- WhatsApp Buchungsbutton -->
-          <a id="calc-whatsapp-btn" href="https://wa.me/4915214438923" target="_blank" class="w-full py-4 px-4 rounded bg-[#27AE60] hover:bg-[#219653] text-white font-heading text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-sm">
+          <a id="calc-whatsapp-btn" href="https://wa.me/4915214438923" target="_blank" class="w-full py-4 px-4 rounded-lg bg-[#15803D] hover:bg-[#166534] text-white font-heading text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-md">
             <span>💬</span> <span>1-Klick WhatsApp Anfrage mit diesen Daten</span>
           </a>
 
           <!-- Formular Fallback -->
-          <form onsubmit="handleInquiry(event)" class="pt-4 border-t border-[#E2E2E2] space-y-3 text-xs">
+          <form onsubmit="handleInquiry(event)" class="pt-4 border-t border-[#EAE5DC] space-y-3 text-xs">
             <span class="text-[#767C85] block font-semibold">Oder Anfrage per E-Mail senden:</span>
-            <input type="text" id="f-name" required placeholder="Ihr Name / Firma *" class="w-full px-3.5 py-2.5 rounded bg-[#F8F9FA] border border-[#E2E2E2] text-[#1C1C1C] focus:border-[#212934] outline-none">
-            <input type="tel" id="f-phone" required placeholder="Telefon / Rückrufnummer *" class="w-full px-3.5 py-2.5 rounded bg-[#F8F9FA] border border-[#E2E2E2] text-[#1C1C1C] focus:border-[#212934] outline-none">
-            <input type="date" id="f-date" class="w-full px-3.5 py-2.5 rounded bg-[#F8F9FA] border border-[#E2E2E2] text-[#1C1C1C] focus:border-[#212934] outline-none">
-            <button type="submit" class="w-full py-3 rounded bg-[#212934] hover:bg-black text-white font-heading text-xs font-bold uppercase tracking-wider transition">
+            <input type="text" id="f-name" required placeholder="Ihr Name / Firma *" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] focus:border-[#1A1A1A] outline-none">
+            <input type="tel" id="f-phone" required placeholder="Telefon / Rückrufnummer *" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] focus:border-[#1A1A1A] outline-none">
+            <input type="date" id="f-date" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] focus:border-[#1A1A1A] outline-none">
+            <button type="submit" class="w-full py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition">
               Unverbindlich Anfragen ➔
             </button>
-            <div id="form-success" class="hidden p-3 rounded bg-emerald-50 border border-emerald-300 text-emerald-800 text-center font-bold">
+            <div id="form-success" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 text-center font-bold">
               ✓ Vielen Dank! Chef Olive prüft Ihren Termin und meldet sich zeitnah.
             </div>
           </form>
@@ -653,11 +749,11 @@
   <!-- ==========================================
        8. FAQ SEKTION (Spreeküche Style)
   ========================================== -->
-  <section id="faq" class="py-20 sm:py-24 bg-[#F8F9FA] border-b border-[#E2E2E2]">
+  <section id="faq" class="py-20 sm:py-24 bg-white border-b border-[#EAE5DC]">
     <div class="max-w-[900px] mx-auto px-6">
       
       <div class="text-center mb-16">
-        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#212934]">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1A1A1A]">
           Häufig gestellte Fragen (FAQ)
         </h2>
         <div class="section-separator"></div>
@@ -665,42 +761,42 @@
 
       <div class="space-y-4">
         
-        <details class="bg-white p-5 rounded-lg border border-[#E2E2E2] group" open>
-          <summary class="font-heading text-sm font-bold text-[#212934] cursor-pointer list-none flex items-center justify-between">
+        <details class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EAE5DC] group" open>
+          <summary class="font-heading text-sm font-bold text-[#1A1A1A] cursor-pointer list-none flex items-center justify-between">
             <span>Wie viel kostet Catering pro Person?</span>
             <span class="text-[#767C85] group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <p class="text-xs sm:text-sm text-[#767C85] mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#555048] mt-3 leading-relaxed">
             Da wir unsere Angebote immer maßgeschneidert auf unsere Kunden anpassen, variieren die Preise je nach Gästeanzahl und Menüwahl. In der Regel bieten wir bereits ab 22,00 € pro Person feines Flying Fingerfood und ab 25,00 € pro Person eine vollwertige Live-Rolex Station vor Ort an. Uns ist immer wichtig, dass Sie das bestmögliche Ergebnis für Ihr Budget erhalten!
           </p>
         </details>
 
-        <details class="bg-white p-5 rounded-lg border border-[#E2E2E2] group">
-          <summary class="font-heading text-sm font-bold text-[#212934] cursor-pointer list-none flex items-center justify-between">
+        <details class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EAE5DC] group">
+          <summary class="font-heading text-sm font-bold text-[#1A1A1A] cursor-pointer list-none flex items-center justify-between">
             <span>Was genau ist eine Live-Rolex Station?</span>
             <span class="text-[#767C85] group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <p class="text-xs sm:text-sm text-[#767C85] mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#555048] mt-3 leading-relaxed">
             Die Live-Station ist unser interaktives Show-Cooking: Auf einer heißen Gusseisen-Tawa braten wir ein saftiges Gemüse-Omelett, backen ein handgeknetetes Chapati-Fladenbrot darüber und rollen den Rolex vor den Augen Ihrer Gäste frisch zusammen.
           </p>
         </details>
 
-        <details class="bg-white p-5 rounded-lg border border-[#E2E2E2] group">
-          <summary class="font-heading text-sm font-bold text-[#212934] cursor-pointer list-none flex items-center justify-between">
+        <details class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EAE5DC] group">
+          <summary class="font-heading text-sm font-bold text-[#1A1A1A] cursor-pointer list-none flex items-center justify-between">
             <span>Gibt es auch vegetarische und vegane Speisen?</span>
             <span class="text-[#767C85] group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <p class="text-xs sm:text-sm text-[#767C85] mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#555048] mt-3 leading-relaxed">
             Selbstverständlich! Unser Classic Veggie Rolex, der aromatische Pilau-Reis, gedämpfte Matooke-Kochbananen und Gemüse-Samosas sind fester Bestandteil unseres Repertoires und begeistern Vegetarier wie Veganer gleichermaßen.
           </p>
         </details>
 
-        <details class="bg-white p-5 rounded-lg border border-[#E2E2E2] group">
-          <summary class="font-heading text-sm font-bold text-[#212934] cursor-pointer list-none flex items-center justify-between">
+        <details class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EAE5DC] group">
+          <summary class="font-heading text-sm font-bold text-[#1A1A1A] cursor-pointer list-none flex items-center justify-between">
             <span>In welchen Regionen sind Sie buchbar?</span>
             <span class="text-[#767C85] group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <p class="text-xs sm:text-sm text-[#767C85] mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#555048] mt-3 leading-relaxed">
             Wir sind primär im Großraum München, Starnberg, Augsburg und Nürnberg im Einsatz. Auf Anfrage übernehmen wir gerne auch Events in ganz Bayern.
           </p>
         </details>
@@ -711,16 +807,16 @@
   </section>
 
   <!-- ==========================================
-       9. FOOTER (Spreeküche Style)
+       9. FOOTER (Klar & Elegant)
   ========================================== -->
-  <footer class="bg-[#1C1C1C] text-[#B5B0A4] py-16 text-xs border-t border-[#2C2C2C]">
+  <footer class="bg-[#1A1A1A] text-[#B5B0A4] py-16 text-xs border-t border-[#2C2C2C]">
     <div class="max-w-[1260px] mx-auto px-6">
       
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#2C2C2C] text-left">
         
         <div class="md:col-span-2 space-y-3">
           <div class="flex items-center gap-3">
-            <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-white/20 object-contain p-0.5 bg-[#212934]">
+            <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-white/20 object-contain p-0.5 bg-white">
             <span class="font-heading text-xl font-bold text-white uppercase">Kampala Rolex Germany</span>
           </div>
           <p class="text-xs text-[#8E8B83] max-w-md leading-relaxed">
@@ -757,7 +853,7 @@
        10. VIDEO MODAL REEL
   ========================================== -->
   <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative max-w-sm w-full bg-[#1C1C1C] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+    <div class="relative max-w-sm w-full bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
       <button onclick="toggleVideoModal()" class="absolute top-3 right-3 z-10 bg-black/80 hover:bg-black text-white rounded px-3 py-1 text-xs border border-white/20 transition">
         ✕ Schließen
       </button>
@@ -769,7 +865,7 @@
        11. JAVASCRIPT: LENIS + LOGIK + I18N
   ========================================== -->
   <script>
-    // Initialize Lenis
+    // Initialize Lenis Smooth Scroll
     let lenis;
     if (typeof Lenis !== 'undefined') {
       lenis = new Lenis({
@@ -816,9 +912,9 @@
 
     function setOccasion(occ, btn) {
       document.querySelectorAll('.occ-btn').forEach(b => {
-        b.className = 'occ-btn px-3 py-2.5 rounded border border-[#E2E2E2] bg-white text-[#212934] hover:border-[#212934] transition';
+        b.className = 'occ-btn px-3 py-2.5 rounded-lg border border-[#EAE5DC] bg-white text-[#1A1A1A] hover:border-[#1A1A1A] transition';
       });
-      btn.className = 'occ-btn px-3 py-2.5 rounded border border-[#212934] bg-[#212934] text-white transition';
+      btn.className = 'occ-btn px-3 py-2.5 rounded-lg border-2 border-[#1A1A1A] bg-[#1A1A1A] text-white transition';
       currentOccasion = occ;
       document.getElementById('summary-occ-title').innerText = (currentLang === 'de' ? 'Anlass: ' : 'Occasion: ') + occ;
       recalculate();
@@ -833,11 +929,11 @@
     function selectPackage(pkgId) {
       selectedPackageId = pkgId;
       document.querySelectorAll('.pkg-card').forEach(c => {
-        c.className = 'pkg-card p-4 rounded border border-[#E2E2E2] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#212934]';
+        c.className = 'pkg-card p-4 rounded-lg border border-[#EAE5DC] bg-white cursor-pointer flex items-center justify-between transition hover:border-[#1A1A1A]';
       });
       const el = document.getElementById('pkg-card-' + pkgId);
       if (el) {
-        el.className = 'pkg-card p-4 rounded border-2 border-[#212934] bg-white cursor-pointer flex items-center justify-between transition';
+        el.className = 'pkg-card p-4 rounded-lg border-2 border-[#D97706] bg-amber-50/20 cursor-pointer flex items-center justify-between transition';
       }
       recalculate();
     }
@@ -906,8 +1002,8 @@
 
     function setLanguage(lang) {
       currentLang = lang;
-      document.getElementById('lang-de-btn').className = lang === 'de' ? 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#E67E22] text-white transition' : 'px-2 py-0.5 rounded text-[10px] font-bold text-[#B5B0A4] hover:text-white transition';
-      document.getElementById('lang-en-btn').className = lang === 'en' ? 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#E67E22] text-white transition' : 'px-2 py-0.5 rounded text-[10px] font-bold text-[#B5B0A4] hover:text-white transition';
+      document.getElementById('lang-de-btn').className = lang === 'de' ? 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#D97706] text-white transition' : 'px-2 py-0.5 rounded text-[10px] font-bold text-[#767C85] hover:text-[#1A1A1A] transition';
+      document.getElementById('lang-en-btn').className = lang === 'en' ? 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#D97706] text-white transition' : 'px-2 py-0.5 rounded text-[10px] font-bold text-[#767C85] hover:text-[#1A1A1A] transition';
       
       const dict = {
         topBar: {
@@ -920,15 +1016,19 @@
         navPreise: { de: 'Catering-Preise', en: 'Pricing' },
         navFaq: { de: 'FAQ', en: 'FAQ' },
         headerCta: { de: 'Jetzt Anfragen', en: 'Inquire Now' },
+        heroBadge: {
+          de: 'Münchens #1 Live-Cooking & Catering Atelier',
+          en: "Munich's #1 Live-Cooking & Catering Atelier"
+        },
         heroH1: {
-          de: 'Catering München – frisch, authentisch & mit Leidenschaft',
-          en: 'Catering Munich – fresh, authentic & passionately prepared'
+          de: 'Catering München – frisch, authentisch & mit Leidenschaft.',
+          en: 'Catering Munich – fresh, authentic & passionately prepared.'
         },
         heroH3: {
-          de: 'Die authentische ugandische Live-Rolex-Station und festliche Warmbuffets für Ihre Events in München und Umgebung.',
-          en: 'Authentic Ugandan live Rolex stations and festive warm buffets for your events across Munich and Bavaria.'
+          de: 'Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Eisenplatte, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.',
+          en: 'Experience Uganda’s legendary live Rolex station on the sizzling cast-iron tawa, festive warm buffets, and delicate flying fingerfood. Freshly prepared before your guests for corporate galas, exhibitions, weddings, and private events across Munich & Bavaria.'
         },
-        heroBtn1: { de: 'Catering jetzt unverbindlich anfragen', en: 'Inquire Catering Without Obligation' },
+        heroBtn1: { de: 'Preise live berechnen & buchen', en: 'Calculate Prices Live & Book' },
         heroBtn2: { de: 'Video-Reel ansehen (30s)', en: 'Watch Video Reel (30s)' },
         anlaesseTitle: { de: 'Jetzt Catering für jeden Anlass buchen', en: 'Book Catering for Every Occasion' },
         anlaesseSub: {
