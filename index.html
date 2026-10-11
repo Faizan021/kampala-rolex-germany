@@ -102,6 +102,21 @@
       transform: scale(1.15);
       background: #B45309;
     }
+  
+    /* Professional Editorial Justification & Hyphenation for DE & EN */
+    .editorial-justify,
+    p[data-i18n] {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+    /* Keep centered section subtitles cleanly centered */
+    .text-center p[data-i18n] {
+      text-align: center;
+      hyphens: none;
+    }
+
   </style>
 
   <!-- Schema.org Catering -->
@@ -138,44 +153,44 @@
         </span>
       </div>
       <div class="flex items-center gap-5 text-xs text-[#555048]">
+        <a href="https://wa.me/4915214438923" target="_blank" rel="noopener noreferrer" class="hover:text-[#15803D] transition flex items-center gap-1.5 font-semibold text-[#15803D]">
+          <span>💬</span> <span data-i18n="topWaDirect">WhatsApp Direkt</span>
+        </a>
+        <span class="text-[#DDD8CF]">|</span>
         <a href="tel:+4915214438923" class="hover:text-[#D97706] transition flex items-center gap-1.5 font-bold text-[#1A1A1A]">
           <span>📞</span> <span>0152 14438923</span>
         </a>
-        <div class="flex items-center border border-[#DDD8CF] rounded p-0.5 bg-white shadow-2xs">
-          <button onclick="setLanguage('de')" class="lang-btn-de px-2 py-0.5 rounded text-[10px] font-bold bg-[#D97706] text-white transition">DE</button>
-          <button onclick="setLanguage('en')" class="lang-btn-en px-2 py-0.5 rounded text-[10px] font-bold text-[#767C85] hover:text-[#1A1A1A] transition">EN</button>
-        </div>
       </div>
     </div>
   </aside>
 
   <!-- ==========================================
-       2. HEADER NAVIGATION (Reinweiß & Klar)
+       2. HEADER NAVIGATION (Reinweiß, Einzeilig & Präzise)
   ========================================== -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#EAE5DC] shadow-sm">
-    <div class="max-w-[1260px] mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
+    <div class="max-w-[1260px] mx-auto px-6 h-20 sm:h-22 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm">
+      <!-- Brand Logo (No-Wrap) -->
+      <a href="#hero" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm shrink-0">
           <img src="./logo.png" alt="Kampala Rolex Germany Logo" class="w-full h-full object-contain">
         </div>
-        <div>
-          <div class="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">
+        <div class="whitespace-nowrap">
+          <div class="font-heading text-lg sm:text-xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">
             Kampala Rolex
           </div>
-          <span class="text-[11px] font-medium text-[#767C85] tracking-wider block mt-1" data-i18n="brandSubtitle">Catering & Live-Cooking München</span>
+          <span class="text-[11px] font-medium text-[#767C85] tracking-wide block mt-1 whitespace-nowrap" data-i18n="brandSubtitle">Catering & Live-Cooking München</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-6 font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A]">
-        <a href="rolex-experience.html" class="hover:text-[#D97706] transition" data-i18n="navLiveRolex">Live Rolex</a>
-        <a href="warmbuffet.html" class="hover:text-[#D97706] transition" data-i18n="navWarmbuffet">Warmbuffet</a>
-        <a href="fingerfood.html" class="hover:text-[#D97706] transition" data-i18n="navFingerfood">Fingerfood</a>
+      <!-- Desktop Navigation (Strict Single-Line whitespace-nowrap) -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-6 font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A] whitespace-nowrap">
+        <a href="rolex-experience.html" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navLiveRolex">Live Rolex</a>
+        <a href="warmbuffet.html" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navWarmbuffet">Warmbuffet</a>
+        <a href="fingerfood.html" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navFingerfood">Fingerfood</a>
         <!-- Occasions Dropdown Menu -->
         <div class="relative group py-2">
-          <a href="anlaesse.html" class="inline-flex items-center gap-1.5 hover:text-[#D97706] transition group-hover:text-[#D97706]">
+          <a href="anlaesse.html" class="inline-flex items-center gap-1 hover:text-[#D97706] transition group-hover:text-[#D97706] whitespace-nowrap">
             <span data-i18n="navAnlaesse">Anlässe</span>
             <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#D97706] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
@@ -183,7 +198,7 @@
           </a>
           
           <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50 w-72">
-            <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#EAE5DC] p-2 text-left space-y-1">
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#EAE5DC] p-2 text-left space-y-1 whitespace-normal">
               <a href="firmencatering.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#FAF8F5] transition group/item">
                 <span class="w-8 h-8 rounded-lg bg-amber-50 text-[#D97706] flex items-center justify-center text-sm shrink-0 border border-amber-100">🏢</span>
                 <div>
@@ -221,19 +236,18 @@
             </div>
           </div>
         </div>
-        <a href="#videos" class="hover:text-[#D97706] transition" data-i18n="navVideos">Live-Videos</a>
-        <a href="#anfrage" class="hover:text-[#D97706] transition" data-i18n="navAnfrage">Anfrage</a>
-        <a href="#faq" class="hover:text-[#D97706] transition" data-i18n="navFaq">FAQ</a>
+        <a href="#videos" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navVideos">Videos</a>
+        <a href="#anfrage" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navAnfrage">Anfrage</a>
+        <a href="#faq" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navFaq">FAQ</a>
       </nav>
 
-      <!-- Sticky Header Language Switcher & Action CTA -->
-      <div class="flex items-center gap-3">
-        <!-- Persistent Sticky Language Switcher (Always accessible on scroll!) -->
-        <div class="flex items-center border border-[#EAE5DC] rounded-lg p-0.5 bg-[#FAF8F5] shadow-xs">
+      <!-- Sticky Header Language Switcher & Action CTA (No-Wrap, Clean Spacing) -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center border border-[#EAE5DC] rounded-lg p-0.5 bg-[#FAF8F5] shadow-xs shrink-0">
           <button onclick="setLanguage('de')" aria-label="Deutsch" class="lang-btn-de px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">DE</button>
           <button onclick="setLanguage('en')" aria-label="English" class="lang-btn-en px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">EN</button>
         </div>
-        <a href="#anfrage" class="px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm">
+        <a href="#anfrage" class="px-5 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm whitespace-nowrap text-center">
           <span data-i18n="headerCta">Jetzt Anfragen</span>
         </a>
       </div>
@@ -252,58 +266,58 @@
 
     <div class="max-w-[1260px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center relative z-10">
       
-      <!-- Left Column: Premium German Catering Copy & Actions -->
-      <div class="lg:col-span-6 space-y-6 text-left">
+      <!-- Left Column: Balanced Typography & Justified Copy (DE & EN) -->
+      <div class="lg:col-span-6 space-y-5 text-left">
         
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-xs font-bold uppercase tracking-wider">
           <span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
-          <span data-i18n="heroBadge">Münchens einzige ugandische Live-Showküche</span>
+          <span data-i18n="heroBadge">Münchens #1 Live-Cooking & Catering Atelier</span>
         </div>
 
-        <h1 class="font-heading text-3xl sm:text-5xl lg:text-[3.25rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.12]" data-i18n="heroH1">
-          Afrikas legendäres Show-Cooking – exklusiv für Ihr Event in München.
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-[2.45rem] xl:text-[2.55rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.15] whitespace-nowrap" data-i18n="heroH1">
+          Catering München:<br><span class="text-[#D97706]">Frisch, Authentisch</span><br>& Mit Leidenschaft.
         </h1>
 
         <div class="section-separator-left"></div>
 
-        <p class="text-base sm:text-lg text-[#555048] leading-relaxed font-normal" data-i18n="heroH3">
-          Erleben Sie Ugandas weltberühmten Live-Rolex: Knusprig-blättrige Chapatis, frische Landeier, zart mariniertes Hähnchen und marktfrisches Gemüse live vor den Augen Ihrer Gäste zubereitet. Ergänzt durch zart geschmortes Beef Stew, traditionelle Festtags-Warmbuffets und knusprige Fleisch- & Veggie-Samosas für Firmenfeiern, Messen und Hochzeiten in ganz Bayern.
+        <p class="text-sm sm:text-base text-[#3D3934] leading-relaxed font-normal text-justify editorial-justify" data-i18n="heroH3">
+          Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Gusseisen-Tawa, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet – mit zart mariniertem Fleisch und bunter Veggie-Vielfalt für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.
         </p>
 
-        <!-- 4 Key USPs Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-heading font-semibold text-[#2D2A26]">
-          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
-            <span class="text-base">🍳</span>
+        <!-- 4 Key USPs Grid (Uniform Height & Clean Single-Line Alignment) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs font-heading font-semibold text-[#1A1A1A]">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+            <span class="text-base shrink-0">🍳</span>
             <span data-i18n="heroUsp1">Live Show-Cooking auf heißer Tawa</span>
           </div>
-          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
-            <span class="text-base">🇺🇬</span>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+            <span class="text-base shrink-0">🇺🇬</span>
             <span data-i18n="heroUsp2">100% Originalrezept aus Kampala</span>
           </div>
-          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
-            <span class="text-base">🍗</span>
-            <span data-i18n="heroUsp3">Zartes Fleisch & frische Veggie-Vielfalt</span>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+            <span class="text-base shrink-0">🍗</span>
+            <span data-i18n="heroUsp3">Zartes Fleisch & Veggie-Vielfalt</span>
           </div>
-          <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-[#EAE5DC] shadow-sm">
-            <span class="text-base">📍</span>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+            <span class="text-base shrink-0">📍</span>
             <span data-i18n="heroUsp4">Für 15 bis 500+ Gäste in Bayern</span>
           </div>
         </div>
 
-        <!-- Action Buttons -->
-        <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="#anfrage" class="px-8 py-4 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-md flex items-center gap-2">
+        <!-- Action Buttons (Single Row Alignment) -->
+        <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 pt-2">
+          <a href="#anfrage" class="px-6 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
             <span data-i18n="heroBtn1">Individuelles Angebot anfragen</span>
             <span>➔</span>
           </a>
-          <button onclick="playVideo('reel')" class="px-6 py-4 rounded-lg bg-white hover:bg-[#F3EFEA] border-2 border-[#1A1A1A] text-[#1A1A1A] font-heading text-xs sm:text-sm font-bold uppercase tracking-wider transition flex items-center gap-2.5 shadow-sm">
-            <span class="text-[#D97706] text-base">▶</span>
+          <button onclick="playVideo('reel')" class="px-5 py-3.5 rounded-lg bg-white hover:bg-[#F3EFEA] border-2 border-[#1A1A1A] text-[#1A1A1A] font-heading text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-xs whitespace-nowrap">
+            <span class="text-[#D97706] text-sm">▶</span>
             <span data-i18n="heroBtn2">Videos ansehen (5 Clips)</span>
           </button>
         </div>
 
         <!-- Direct Hotline -->
-        <div class="flex items-center gap-2.5 text-xs text-[#767C85] pt-1">
+        <div class="flex items-center gap-2 text-xs text-[#555048] pt-1">
           <span data-i18n="heroConsult">Persönliche Beratung & Termin-Check:</span>
           <a href="tel:+4915214438923" class="font-bold text-[#1A1A1A] hover:text-[#D97706] underline">+49 152 14438923</a>
         </div>
@@ -1776,21 +1790,25 @@
     "de": "Ihr Caterer für München & Bayern: Frische Live-Cooking Stationen & Festtags-Buffets · Termine 2026 buchbar",
     "en": "Premier Catering for Munich & Bavaria: Live Show-Cooking Stations & Festive Buffets · 2026 Dates Now Open"
   },
+  "topWaDirect": {
+    "de": "WhatsApp Direkt",
+    "en": "WhatsApp Direct"
+  },
   "brandSubtitle": {
     "de": "Catering & Live-Cooking München",
-    "en": "Artisan Catering & Live Cooking Munich"
+    "en": "Catering & Live Cooking Munich"
   },
   "navLiveRolex": {
     "de": "Live Rolex",
-    "en": "Live Rolex Station"
+    "en": "Live Rolex"
   },
   "navWarmbuffet": {
     "de": "Warmbuffet",
-    "en": "Warm Feast Buffet"
+    "en": "Warm Buffet"
   },
   "navFingerfood": {
     "de": "Fingerfood",
-    "en": "Cocktail Fingerfood"
+    "en": "Fingerfood"
   },
   "navAnlaesse": {
     "de": "Anlässe",
@@ -1833,8 +1851,8 @@
     "en": "Overview of All Occasions"
   },
   "navVideos": {
-    "de": "Live-Videos",
-    "en": "Live Videos"
+    "de": "Videos",
+    "en": "Videos"
   },
   "navAnfrage": {
     "de": "Anfrage",
@@ -1846,43 +1864,43 @@
   },
   "headerCta": {
     "de": "Jetzt Anfragen",
-    "en": "Request Proposal"
+    "en": "Inquire Now"
   },
   "heroBadge": {
     "de": "Münchens #1 Live-Cooking & Catering Atelier",
-    "en": "Munich’s Premier Live-Cooking & East African Catering Atelier"
+    "en": "Munich’s #1 Live-Cooking & Catering Atelier"
   },
   "heroH1": {
-    "de": "Catering München – frisch, authentisch & mit Leidenschaft.",
-    "en": "Munich Event Catering – Vibrant, Authentic & Passionately Handcrafted."
+    "de": "Catering München:<br><span class=\"text-[#D97706]\">Frisch, Authentisch</span><br>& Mit Leidenschaft.",
+    "en": "Munich Event Catering:<br><span class=\"text-[#D97706]\">Vibrant, Authentic</span><br>& Handcrafted Live."
   },
   "heroH3": {
-    "de": "Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Eisenplatte, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.",
-    "en": "Experience Uganda’s iconic live Rolex station on sizzling cast-iron tawas, warm chafing-dish celebration feasts, and bite-sized flying fingerfood. Prepared live before your guests for corporate galas, trade fairs, weddings, and private celebrations across Munich and Bavaria."
+    "de": "Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Gusseisen-Tawa, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet – mit zart mariniertem Fleisch und bunter Veggie-Vielfalt für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.",
+    "en": "Experience Uganda’s iconic live Rolex station on sizzling cast-iron tawas, festive chafing-dish warm buffets, and refined flying fingerfood. Freshly prepared right before your guests — featuring succulent spiced meats and vibrant vegetarian creations for corporate galas, trade fairs, weddings, and private celebrations across Munich and Bavaria."
   },
   "heroUsp1": {
     "de": "Live Show-Cooking auf heißer Tawa",
-    "en": "Live Show-Cooking on Sizzling Cast-Iron Tawas"
+    "en": "Live Show-Cooking on Hot Tawa"
   },
   "heroUsp2": {
     "de": "100% Originalrezept aus Kampala",
-    "en": "100% Authentic Heritage Recipe from Kampala"
+    "en": "100% Original Kampala Recipe"
   },
   "heroUsp3": {
-    "de": "Zartes Fleisch & frische Veggie-Vielfalt",
-    "en": "Succulent Spiced Meats & Vibrant Vegetarian Feasts"
+    "de": "Zartes Fleisch & Veggie-Vielfalt",
+    "en": "Tender Meats & Veggie Variety"
   },
   "heroUsp4": {
     "de": "Für 15 bis 500+ Gäste in Bayern",
-    "en": "Full Hospitality for 15 to 500+ Guests across Bavaria"
+    "en": "15 to 500+ Guests in Bavaria"
   },
   "heroBtn1": {
     "de": "Individuelles Angebot anfragen",
-    "en": "Request a Tailored Catering Offer"
+    "en": "Request Tailored Offer"
   },
   "heroBtn2": {
     "de": "Videos ansehen (5 Clips)",
-    "en": "Watch Live Clips (5 Videos)"
+    "en": "Watch Videos (5 Clips)"
   },
   "heroConsult": {
     "de": "Persönliche Beratung & Termin-Check:",
