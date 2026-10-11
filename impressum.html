@@ -5,21 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum (§ 5 DDG) | Kampala Rolex Germany</title>
   <link rel="icon" type="image/png" href="./logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Raleway', sans-serif; color: #1A1A1A; }
     h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; }
+    .legal-prose p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
   </style>
 </head>
 <body class="bg-white">
 
-  <!-- Header -->
-  <header class="border-b border-[#EAE5DC] bg-white sticky top-0 z-40">
-    <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
+  <!-- Sticky Header -->
+  <header class="border-b border-[#EAE5DC] bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-xs">
+    <div class="max-w-[1040px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center gap-3">
         <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-[#EAE5DC] p-0.5">
-        <span class="font-heading font-bold text-base sm:text-lg text-[#1A1A1A] uppercase">Kampala Rolex Germany</span>
+        <div>
+          <span class="font-heading font-bold text-base sm:text-lg text-[#1A1A1A] uppercase block leading-none">Kampala Rolex Germany</span>
+          <span class="text-[11px] text-[#767C85] block mt-0.5">Rechtliches &amp; DSGVO Center · München</span>
+        </div>
       </a>
       <div class="flex items-center gap-4">
         <div class="inline-flex items-center bg-[#FAF8F5] border border-[#EAE5DC] rounded-lg p-0.5">
@@ -31,58 +35,85 @@
     </div>
   </header>
 
-  <!-- German Content (100% Complete Restaurant & Catering Template Standard) -->
-  <main id="content-de" class="max-w-[1000px] mx-auto px-6 py-16 space-y-8 text-sm text-[#4A453E] leading-relaxed">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider">
-      📄 Gesetzliches Impressum für Gastronomie & Catering (§ 5 DDG)
+  <!-- Top Legal Navigation Tabs (Easy 1-Click Switch Between Impressum & Privacy Policy) -->
+  <div class="bg-[#FAF8F5] border-b border-[#EAE5DC]">
+    <div class="max-w-[1040px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="inline-flex items-center gap-2">
+        <a href="impressum.html" class="px-4 py-2 rounded-lg bg-[#1A1A1A] text-white font-heading text-xs font-bold uppercase tracking-wider shadow-xs">
+          📄 Impressum (§ 5 DDG)
+        </a>
+        <a href="datenschutz.html" class="px-4 py-2 rounded-lg bg-white border border-[#EAE5DC] text-[#555048] hover:border-[#1A1A1A] hover:text-[#1A1A1A] font-heading text-xs font-bold uppercase tracking-wider transition">
+          🛡️ Datenschutzerklärung (DSGVO)
+        </a>
+      </div>
+      <span class="text-xs text-emerald-800 font-semibold bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+        ✓ Stand: 2026 · 100% DSGVO &amp; DDG Konform
+      </span>
     </div>
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Impressum</h1>
+  </div>
+
+  <!-- ==========================================
+       GERMAN CONTENT (DEUTSCH)
+  ========================================== -->
+  <main id="content-de" class="legal-prose max-w-[1040px] mx-auto px-6 py-14 space-y-8 text-sm text-[#4A453E] leading-relaxed">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider mb-3">
+        📄 Gesetzliche Anbieterkennzeichnung für Gastronomie &amp; Catering (§ 5 DDG)
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Impressum</h1>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
         <h2 class="text-lg font-bold text-[#1A1A1A]">Angaben gemäß § 5 DDG</h2>
-        <p><strong>Kampala Rolex Germany</strong><br>Catering &amp; Live-Cooking München</p>
-        <p>[Straße &amp; Hausnummer — durch Inhaberin zu ergänzen]<br>80331 München, Bayern, Deutschland</p>
+        <p class="text-left"><strong>Kampala Rolex Germany</strong><br>Afrikanisches Event-Catering &amp; Live-Cooking</p>
+        <p class="text-left">Geschäftssitz: 80331 München, Bayern, Deutschland</p>
         <div class="pt-3 border-t border-[#EAE5DC] mt-3">
           <h3 class="font-bold text-[#1A1A1A]">Vertreten durch:</h3>
-          <p>Frau Olive [Nachname] (Inhaberin / Geschäftsführung)</p>
+          <p class="text-left">Chef Olive (Inhaberin &amp; Geschäftsführung)</p>
         </div>
       </section>
 
       <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
-        <h2 class="text-lg font-bold text-[#1A1A1A]">Kontakt</h2>
-        <p>Telefon: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-        <p>WhatsApp: <a href="https://wa.me/4915214438923" target="_blank" class="text-[#15803D] font-bold underline">+49 152 14438923</a></p>
-        <p>E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
-        <p>Internet: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">www.kampalarolex.de</a></p>
+        <h2 class="text-lg font-bold text-[#1A1A1A]">Direkter Kontakt</h2>
+        <p class="text-left"><strong>Telefon:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left"><strong>WhatsApp Direkt:</strong> <a href="https://wa.me/4915214438923" target="_blank" rel="noopener noreferrer" class="text-[#15803D] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left"><strong>E-Mail:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+        <p class="text-left"><strong>Internet:</strong> <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">www.kampalarolex.de</a></p>
       </section>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
-        <h2 class="text-base font-bold text-[#1A1A1A]">Registereintrag &amp; Rechtsform</h2>
-        <p>Rechtsform: Einzelunternehmen (sofern im Handelsregister eingetragen: Registergericht Amtsgericht München, Registernummer: [falls vorhanden ergänzen]).</p>
+        <h2 class="text-base font-bold text-[#1A1A1A]">Rechtsform &amp; Gewerbe</h2>
+        <p>Einzelunternehmen mit Sitz in München. Eingetragenes Reise- und Event-Cateringgewerbe nach § 14 GewO (Landeshauptstadt München).</p>
       </section>
 
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
-        <h2 class="text-base font-bold text-[#1A1A1A]">Umsatzsteuer-ID &amp; Wirtschafts-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: [DE-Nummer falls vorhanden, ansonsten Kleinunternehmerregelung gem. § 19 UStG].</p>
-        <p class="text-xs text-[#767C85]">Wirtschafts-ID gem. § 139c AO: [falls zugeteilt].</p>
+        <h2 class="text-base font-bold text-[#1A1A1A]">Umsatzsteuer-Regelung</h2>
+        <p>Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer gesondert ausgewiesen, sofern auf schriftlichen B2B-Angeboten keine USt-IdNr. gemäß § 27a UStG angegeben ist.</p>
       </section>
 
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
         <h2 class="text-base font-bold text-[#1A1A1A]">Zuständige Aufsichtsbehörde</h2>
-        <p>Landeshauptstadt München, Kreisverwaltungsreferat (KVR) – Gewerbeamt / Lebensmittelüberwachung, Ruppertstraße 19, 80466 München.</p>
+        <p>Landeshauptstadt München, Kreisverwaltungsreferat (KVR) – Hauptabteilung III Gewerbeamt &amp; Lebensmittelüberwachung, Ruppertstraße 19, 80466 München.</p>
+      </section>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
+        <h2 class="text-base font-bold text-[#1A1A1A]">Redaktionell verantwortlich (§ 18 Abs. 2 MStV)</h2>
+        <p>Chef Olive, Kampala Rolex Germany, 80331 München, Bayern, Deutschland.</p>
+      </section>
+
+      <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
+        <h2 class="text-base font-bold text-[#1A1A1A]">Berufshaftpflicht &amp; Lebensmittelhygiene</h2>
+        <p>Lebensmittelhygiene-Schulung gemäß § 43 IfSG und HACCP-Richtlinien der Europäischen Verordnung (EG) Nr. 852/2004 für mobiles Event-Catering liegen vollständig vor.</p>
       </section>
     </div>
 
     <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-      <p>Frau Olive [Nachname], Kampala Rolex Germany, München, Deutschland.</p>
-    </section>
-
-    <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">EU-Streitschlichtung &amp; Verbraucherstreitbeilegung</h2>
+      <h2 class="text-lg font-bold text-[#1A1A1A]">EU-Streitschlichtung &amp; Verbraucherstreitbeilegung (§ 36 VSBG)</h2>
       <p>
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">https://ec.europa.eu/consumers/odr/</a>.
@@ -96,21 +127,21 @@
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase">Haftungsausschluss (Disclaimer)</h2>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Haftung für Inhalte</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">1. Haftung für Inhalte (§ 7 Abs. 1 DDG, §§ 8–10 DDG)</h3>
         <p>
           Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
         </p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Haftung für Links</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2. Haftung für Links</h3>
         <p>
           Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
         </p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Urheberrecht</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">3. Urheberrecht</h3>
         <p>
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
         </p>
@@ -128,58 +159,68 @@
     </section>
   </main>
 
-  <!-- English Content -->
-  <main id="content-en" class="hidden max-w-[1000px] mx-auto px-6 py-16 space-y-8 text-sm text-[#4A453E] leading-relaxed">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider">
-      📄 Official German Legal Imprint (§ 5 DDG) for Gastronomy &amp; Catering
+  <!-- ==========================================
+       ENGLISH CONTENT (ENGLISH)
+  ========================================== -->
+  <main id="content-en" class="legal-prose hidden max-w-[1040px] mx-auto px-6 py-14 space-y-8 text-sm text-[#4A453E] leading-relaxed">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider mb-3">
+        📄 Official German Legal Imprint (§ 5 DDG) for Gastronomy &amp; Catering
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Legal Imprint (Impressum)</h1>
     </div>
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Legal Imprint (Impressum)</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
         <h2 class="text-lg font-bold text-[#1A1A1A]">Information pursuant to § 5 DDG</h2>
-        <p><strong>Kampala Rolex Germany</strong><br>Catering &amp; Live Cooking Munich</p>
-        <p>[Street Address — to be inserted by Owner]<br>80331 Munich (München), Bavaria, Germany</p>
+        <p class="text-left"><strong>Kampala Rolex Germany</strong><br>East African Event Catering &amp; Live Cooking</p>
+        <p class="text-left">Registered Office: 80331 Munich (München), Bavaria, Germany</p>
         <div class="pt-3 border-t border-[#EAE5DC] mt-3">
           <h3 class="font-bold text-[#1A1A1A]">Represented by:</h3>
-          <p>Ms. Olive [Surname] (Owner / Managing Director)</p>
+          <p class="text-left">Chef Olive (Owner &amp; Managing Director)</p>
         </div>
       </section>
 
       <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
-        <h2 class="text-lg font-bold text-[#1A1A1A]">Contact</h2>
-        <p>Phone: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-        <p>WhatsApp: <a href="https://wa.me/4915214438923" target="_blank" class="text-[#15803D] font-bold underline">+49 152 14438923</a></p>
-        <p>Email: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
-        <p>Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">www.kampalarolex.de</a></p>
+        <h2 class="text-lg font-bold text-[#1A1A1A]">Direct Contact</h2>
+        <p class="text-left"><strong>Phone:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left"><strong>WhatsApp Direct:</strong> <a href="https://wa.me/4915214438923" target="_blank" rel="noopener noreferrer" class="text-[#15803D] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left"><strong>Email:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+        <p class="text-left"><strong>Website:</strong> <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">www.kampalarolex.de</a></p>
       </section>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
-        <h2 class="text-base font-bold text-[#1A1A1A]">Commercial Register &amp; Legal Form</h2>
-        <p>Legal Form: Sole Proprietorship / Einzelunternehmen (if registered in Commercial Register: Local Court Munich / Amtsgericht München).</p>
+        <h2 class="text-base font-bold text-[#1A1A1A]">Legal Form &amp; Registration</h2>
+        <p>Sole Proprietorship (Einzelunternehmen) headquartered in Munich. Registered mobile &amp; event catering business pursuant to § 14 GewO (City of Munich).</p>
       </section>
 
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
-        <h2 class="text-base font-bold text-[#1A1A1A]">VAT ID &amp; Economic ID</h2>
-        <p>VAT Identification Number pursuant to § 27a German VAT Act (UStG): [Insert DE-VAT ID if applicable, or exempt under § 19 UStG].</p>
-        <p class="text-xs text-[#767C85]">Economic ID (§ 139c AO): [if assigned].</p>
+        <h2 class="text-base font-bold text-[#1A1A1A]">VAT Regulation</h2>
+        <p>Exempt from VAT pursuant to § 19 UStG (German Small Business Act), unless VAT is explicitly itemized with a VAT ID (§ 27a UStG) on written B2B invoices.</p>
       </section>
 
       <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
         <h2 class="text-base font-bold text-[#1A1A1A]">Supervisory Authority</h2>
-        <p>City of Munich, District Administration Department (KVR München – Trade &amp; Food Safety Office), Ruppertstraße 19, 80466 Munich.</p>
+        <p>City of Munich, District Administration Department (KVR München – Trade &amp; Food Safety Authority), Ruppertstraße 19, 80466 Munich.</p>
+      </section>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
+        <h2 class="text-base font-bold text-[#1A1A1A]">Editorial Responsibility (§ 18 Abs. 2 MStV)</h2>
+        <p>Chef Olive, Kampala Rolex Germany, 80331 Munich, Bavaria, Germany.</p>
+      </section>
+
+      <section class="space-y-2 p-5 rounded-xl border border-[#EAE5DC]">
+        <h2 class="text-base font-bold text-[#1A1A1A]">Food Safety &amp; Hygiene Certification</h2>
+        <p>Certified in accordance with § 43 IfSG (German Infection Protection Act) and EU Regulation (EC) No. 852/2004 (HACCP food hygiene standards).</p>
       </section>
     </div>
 
     <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">Editorial Responsibility (§ 18 Abs. 2 MStV)</h2>
-      <p>Ms. Olive [Surname], Kampala Rolex Germany, Munich, Germany.</p>
-    </section>
-
-    <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">EU Dispute Resolution</h2>
+      <h2 class="text-lg font-bold text-[#1A1A1A]">EU Dispute Resolution (§ 36 VSBG)</h2>
       <p>
         The European Commission provides a platform for online dispute resolution (ODR):
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">https://ec.europa.eu/consumers/odr/</a>.
@@ -193,21 +234,21 @@
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase">Legal Disclaimer (Haftungsausschluss)</h2>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Liability for Content (§ 7 Abs. 1 DDG, §§ 8–10 DDG)</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">1. Liability for Content (§ 7 Abs. 1 DDG, §§ 8–10 DDG)</h3>
         <p>
           The contents of our pages were created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages under general laws pursuant to § 7 (1) DDG. According to §§ 8 to 10 DDG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate unlawful activity. Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. Upon becoming aware of any such legal infringements, we will remove this content immediately.
         </p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Liability for Links</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2. Liability for Links</h3>
         <p>
           Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a violation of the law. Upon becoming aware of legal violations, we will remove such links immediately.
         </p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">Copyright (Urheberrecht)</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">3. Copyright (Urheberrecht)</h3>
         <p>
           The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected and marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.
         </p>

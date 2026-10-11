@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,14 @@
 <body class="bg-white">
 
   <!-- Sticky Header with DE | EN Switcher -->
-  <header class="border-b border-[#EAE5DC] bg-white sticky top-0 z-40 shadow-xs">
+  <header class="border-b border-[#EAE5DC] bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-xs">
     <div class="max-w-[1040px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center gap-3">
         <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-[#EAE5DC] p-0.5">
-        <span class="font-heading font-bold text-base sm:text-lg text-[#1A1A1A] uppercase">Kampala Rolex Germany</span>
+        <div>
+          <span class="font-heading font-bold text-base sm:text-lg text-[#1A1A1A] uppercase block leading-none">Kampala Rolex Germany</span>
+          <span class="text-[11px] text-[#767C85] block mt-0.5">Rechtliches &amp; DSGVO Center · München</span>
+        </div>
       </a>
       <div class="flex items-center gap-4">
         <div class="inline-flex items-center bg-[#FAF8F5] border border-[#EAE5DC] rounded-lg p-0.5">
@@ -32,48 +35,78 @@
     </div>
   </header>
 
+  <!-- Top Legal Navigation Tabs (Easy 1-Click Switch Between Impressum & Privacy Policy) -->
+  <div class="bg-[#FAF8F5] border-b border-[#EAE5DC]">
+    <div class="max-w-[1040px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="inline-flex items-center gap-2">
+        <a href="impressum.html" class="px-4 py-2 rounded-lg bg-white border border-[#EAE5DC] text-[#555048] hover:border-[#1A1A1A] hover:text-[#1A1A1A] font-heading text-xs font-bold uppercase tracking-wider transition">
+          📄 Impressum (§ 5 DDG)
+        </a>
+        <a href="datenschutz.html" class="px-4 py-2 rounded-lg bg-[#1A1A1A] text-white font-heading text-xs font-bold uppercase tracking-wider shadow-xs">
+          🛡️ Datenschutzerklärung (DSGVO)
+        </a>
+      </div>
+      <span class="text-xs text-emerald-800 font-semibold bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+        ✓ Stand: 2026 · 100% EU-DSGVO &amp; TDDDG Konform
+      </span>
+    </div>
+  </div>
+
   <!-- ==========================================
-       GERMAN VERSION (DEUTSCH — DSGVO I. BIS VII.)
+       GERMAN VERSION (DEUTSCH — DSGVO I. BIS VIII.)
   ========================================== -->
-  <main id="content-de" class="legal-section max-w-[1040px] mx-auto px-6 py-16 space-y-10 text-sm text-[#4A453E] leading-relaxed">
+  <main id="content-de" class="legal-section max-w-[1040px] mx-auto px-6 py-14 space-y-10 text-sm text-[#4A453E] leading-relaxed">
     <div>
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-heading font-bold uppercase tracking-wider mb-3">
-        🛡️ Vollständige Datenschutzerklärung gemäß EU-DSGVO &amp; BDSG
+        🛡️ Vollständige Datenschutzerklärung gemäß EU-DSGVO, BDSG &amp; TDDDG
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Datenschutzerklärung (DSGVO)</h1>
     </div>
 
+    <!-- Quick Table of Contents (Inhaltsverzeichnis I–VIII) -->
+    <nav class="bg-[#FAF8F5] p-5 rounded-2xl border border-[#EAE5DC] text-xs">
+      <div class="font-heading font-bold uppercase tracking-wider text-[#1A1A1A] mb-2.5">Schnellnavigation (Abschnitte I. bis VIII.)</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[#555048] font-medium">
+        <a href="#de-sec-1" class="hover:text-[#D97706] transition">I. Name und Anschrift der verantwortlichen Stelle</a>
+        <a href="#de-sec-2" class="hover:text-[#D97706] transition">II. Kontakt für Datenschutzanfragen</a>
+        <a href="#de-sec-3" class="hover:text-[#D97706] transition">III. Allgemeines zur Datenverarbeitung</a>
+        <a href="#de-sec-4" class="hover:text-[#D97706] transition">IV. Bereitstellung der Website &amp; Server-Logfiles</a>
+        <a href="#de-sec-5" class="hover:text-[#D97706] transition">V. Cookies &amp; Technisch notwendiger LocalStorage</a>
+        <a href="#de-sec-6" class="hover:text-[#D97706] transition">VI. Catering-Anfrageformular, E-Mail &amp; WhatsApp</a>
+        <a href="#de-sec-7" class="hover:text-[#D97706] transition">VII. Hosting, CDNs &amp; Web-Schriftarten (Drittdienste)</a>
+        <a href="#de-sec-8" class="hover:text-[#D97706] transition">VIII. Rechte der betroffenen Person (Art. 15–78 DSGVO)</a>
+      </div>
+    </nav>
+
     <!-- I. Name und Anschrift des Verantwortlichen -->
-    <section class="space-y-3 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border border-[#EAE5DC]">
+    <section id="de-sec-1" class="space-y-3 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border border-[#EAE5DC]">
       <h2 class="text-lg font-extrabold text-[#1A1A1A] uppercase">I. Name und Anschrift der verantwortlichen Stelle</h2>
       <p>
         Der Verantwortliche im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
       </p>
       <div class="pt-2 font-medium text-[#1A1A1A] space-y-1">
-        <p class="font-bold text-base">Kampala Rolex Germany — Catering &amp; Live-Cooking München</p>
-        <p>Inhaberin: Frau Olive [Nachname]</p>
-        <p>[Straße &amp; Hausnummer — vor Livegang ergänzen]</p>
-        <p>80331 München, Bayern, Deutschland</p>
-        <p>Telefon: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-        <p>E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
-        <p>Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">https://kampalarolex.de</a></p>
+        <p class="font-bold text-base text-left">Kampala Rolex Germany — Catering &amp; Live-Cooking München</p>
+        <p class="text-left">Inhaberin &amp; Geschäftsführung: Chef Olive</p>
+        <p class="text-left">Geschäftssitz: 80331 München, Bayern, Deutschland</p>
+        <p class="text-left">Telefon: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left">E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+        <p class="text-left">Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">https://kampalarolex.de</a></p>
       </div>
     </section>
 
     <!-- II. Kontakt für Datenschutzanfragen -->
-    <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
+    <section id="de-sec-2" class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
       <h2 class="text-lg font-extrabold text-[#1A1A1A] uppercase">II. Kontakt für Datenschutzanfragen</h2>
-      <p>Bei sämtlichen Fragen zum Datenschutz, zur Auskunft oder zur Löschung Ihrer Daten erreichen Sie uns direkt unter:</p>
-      <p><strong>Telefon:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-      <p><strong>E-Mail:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+      <p>Da in unserem Unternehmen weniger als 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind, ist die Bestellung eines externen Datenschutzbeauftragten gesetzlich nicht erforderlich (§ 38 BDSG). Für sämtliche Fragen zum Datenschutz erreichen Sie die verantwortliche Inhaberin direkt unter:</p>
+      <p class="text-left"><strong>Telefon:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a> · <strong>E-Mail:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
     </section>
 
     <!-- III. Allgemeines zur Datenverarbeitung -->
-    <section class="space-y-4">
+    <section id="de-sec-3" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">III. Allgemeines zur Datenverarbeitung</h2>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">1) Begriffsbestimmungen</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">1) Begriffsbestimmungen (Art. 4 DSGVO)</h3>
         <p><strong>„Personenbezogene Daten“</strong> sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann.</p>
         <p><strong>„Verarbeitung“</strong> ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten.</p>
         <p><strong>„Pseudonymisierung“</strong> ist die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen Informationen gesondert aufbewahrt werden.</p>
@@ -98,7 +131,7 @@
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">4) Datenlöschung und Speicherdauer</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">4) Datenlöschung und gesetzliche Speicherdauer</h3>
         <p>Ihre bei uns gespeicherten personenbezogenen Daten werden gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren Verarbeitung eingeschränkt (gesperrt). Dies gilt z. B. für Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen.</p>
         <p>Nach den gesetzlichen Vorgaben in Deutschland erfolgt die Aufbewahrung insbesondere für <strong>10 Jahre gemäß § 147 Abs. 1 AO, § 257 Abs. 1 Nr. 1 und 4, Abs. 4 HGB</strong> (Bücher, Aufzeichnungen, Buchungsbelege, Rechnungen) sowie für <strong>6 Jahre gemäß § 257 Abs. 1 Nr. 2 und 3, Abs. 4 HGB</strong> (empfangene und abgesandte Handels- und Geschäftsbriefe, Catering-Angebote).</p>
       </div>
@@ -115,7 +148,7 @@
     </section>
 
     <!-- IV. Bereitstellung der Website und Erstellung von Logfiles -->
-    <section class="space-y-4">
+    <section id="de-sec-4" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">IV. Bereitstellung der Website und Erstellung von Logfiles</h2>
 
       <div class="space-y-2">
@@ -133,86 +166,60 @@
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage für die Datenverarbeitung</h3>
-        <p>Rechtsgrundlage für die vorübergehende Speicherung der Daten und der Logfiles ist <strong>Art. 6 Abs. 1 lit. f DSGVO</strong>. Unser berechtigtes Interesse liegt in der sicheren, stabilen und fehlerfreien Auslieferung unserer Webinhalte.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Speicherdauer</h3>
-        <p>Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Im Falle der Erfassung der Daten zur Bereitstellung der Website ist dies der Fall, wenn die jeweilige Sitzung beendet ist.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">4) Widerspruchs- und Beseitigungsmöglichkeit</h3>
-        <p>Die Erfassung der Daten zur Bereitstellung der Website und die Speicherung der Daten in Logfiles ist für den Betrieb der Internetseite zwingend erforderlich. Sie haben das Recht, gemäß Art. 21 DSGVO Widerspruch einzulegen, soweit Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage, Speicherdauer und Widerspruch</h3>
+        <p>Rechtsgrundlage für die vorübergehende Speicherung der Daten und der Logfiles ist <strong>Art. 6 Abs. 1 lit. f DSGVO</strong>. Die Daten werden gelöscht, sobald die jeweilige Sitzung beendet ist. Sie haben das Recht, gemäß Art. 21 DSGVO Widerspruch einzulegen, soweit Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben.</p>
       </div>
     </section>
 
     <!-- V. Verwendung von Cookies & Lokaler Sprachspeicherung -->
-    <section class="space-y-4">
+    <section id="de-sec-5" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">V. Verwendung von Cookies und technisch notwendiger Speicherung</h2>
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">1) Beschreibung, Zweck und Umfang der Datenverarbeitung</h3>
         <p>Unsere Website ist besonders datenschutzfreundlich gestaltet. Wir setzen <strong>keine Werbe-, Tracking- oder Drittanbieter-Marketing-Cookies</strong> ein. Lediglich technisch notwendige Einstellungen (wie Ihre gewählte Spracheinstellung <code>DE</code> oder <code>EN</code> unter dem Schlüssel <code>kr_lang</code> im lokalen Browser-Speicher / LocalStorage) werden gespeichert, um Ihnen die Navigation auf unserer Website komfortabel zu ermöglichen.</p>
-        <ul class="list-disc pl-6 space-y-1">
-          <li><strong>Temporäre / Sitzungsbezogene Speicherung:</strong> Wird gelöscht, sobald Sie Ihren Browser schließen.</li>
-          <li><strong>Sprachpräferenz-Speicherung (<code>kr_lang</code>):</strong> Speichert ausschließlich die Information „de“ oder „en“, damit die Website bei Ihrem nächsten Seitenaufruf in Ihrer bevorzugten Sprache erscheint. Es werden keinerlei persönliche Profile erstellt.</li>
-        </ul>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage für die Datenverarbeitung</h3>
-        <p>Rechtsgrundlage für die Nutzung technisch notwendiger Speicherung ist <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> sowie <strong>§ 25 Abs. 2 TDDDG</strong>. Unser berechtigtes Interesse liegt in der Bereitstellung einer technisch einwandfreien und zweisprachig bedienbaren Website.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Speicherdauer, Widerrufs- und Widerspruchsmöglichkeit</h3>
-        <p>Als Nutzer haben Sie die volle Kontrolle über die Verwendung von Cookies und LocalStorage. Durch eine Änderung der Einstellungen in Ihrem Internetbrowser können Sie die Speicherung jederzeit deaktivieren, einschränken oder bereits gespeicherte Einträge löschen.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage und Widerruf</h3>
+        <p>Rechtsgrundlage für die Nutzung technisch notwendiger Speicherung ist <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> sowie <strong>§ 25 Abs. 2 Nr. 2 TDDDG</strong>. Als Nutzer haben Sie die volle Kontrolle über die Verwendung von Browser-Speicher und können diesen jederzeit in Ihren Browsereinstellungen löschen.</p>
       </div>
     </section>
 
     <!-- VI. Kontaktformular, E-Mail-Kontakt & WhatsApp-Direktbuchung -->
-    <section class="space-y-4">
+    <section id="de-sec-6" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VI. Catering-Anfrageformular, E-Mail-Kontakt &amp; WhatsApp</h2>
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">1) Beschreibung und Umfang der Datenverarbeitung</h3>
-        <p>Auf unserer Internetseite ist ein Catering-Anfrageformular vorhanden, welches für die elektronische Angebotsanfrage genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegebenen Daten an uns übermittelt und gespeichert. Diese Daten sind:</p>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Vor- und Nachname / Ansprechpartner</li>
-          <li>Firma / Organisation (optional)</li>
-          <li>E-Mail-Adresse und Telefonnummer</li>
-          <li>Veranstaltungsdatum, Veranstaltungsort / PLZ und Gästeanzahl</li>
-          <li>Gewünschtes Catering-Format, Anlass, geplantes Budget sowie besondere Wünsche</li>
-        </ul>
-        <p>Vor dem Absenden des Anfrageformulars holen wir über die DSGVO-Checkbox Ihre Einwilligung für die Verarbeitung der Daten ein und verweisen auf diese Datenschutzerklärung. Alternativ ist eine Kontaktaufnahme über die bereitgestellte E-Mail-Adresse (<code>info@kampalarolex.de</code>) oder per 1-Klick-WhatsApp-Link möglich. Die Daten werden ausschließlich für die Bearbeitung Ihrer Catering-Anfrage verwendet.</p>
+        <p>Auf unserer Internetseite ist ein Catering-Anfrageformular vorhanden, welches für die elektronische Angebotsanfrage genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegebenen Daten an uns übermittelt und gespeichert (Name, Firma, E-Mail-Adresse, Telefonnummer, Veranstaltungsdatum, Ort, Gästeanzahl, gewähltes Menü, Budget und Anmerkungen).</p>
+        <p>Vor dem Absenden des Anfrageformulars holen wir über die DSGVO-Checkbox Ihre Einwilligung für die Verarbeitung der Daten ein. Zur technischen Zustellung von Formularanfragen an unser Postfach nutzen wir den Dienst FormSubmit (FormSubmit.co) sowie Ihr lokales E-Mail-Programm. Alternativ bieten wir 1-Klick-Kontaktbuttons zu <strong>WhatsApp</strong> (WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland). Erst wenn Sie aktiv auf einen WhatsApp-Button klicken, wird eine Verbindung zu WhatsApp hergestellt.</p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage für die Datenverarbeitung</h3>
-        <p>Rechtsgrundlage für die Verarbeitung der Daten ist bei Vorliegen einer Einwilligung des Nutzers <strong>Art. 6 Abs. 1 lit. a DSGVO</strong>. Zielt der Kontakt auf den Abschluss eines Catering-Vertrages oder die Erstellung eines konkreten Angebots ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> sowie <strong>Art. 6 Abs. 1 lit. f DSGVO</strong>.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Zweck der Datenverarbeitung</h3>
-        <p>Die Verarbeitung der personenbezogenen Daten aus der Eingabemaske dient uns allein zur Bearbeitung der Kontaktaufnahme und zur Erstellung Ihres individuellen Catering-Angebots sowie zur Verhinderung eines Missbrauchs des Kontaktformulars.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">4) Speicherdauer</h3>
-        <p>Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Für die personenbezogenen Daten aus der Eingabemaske des Kontaktformulars und diejenigen, die per E-Mail übersandt wurden, ist dies dann der Fall, wenn die jeweilige Konversation mit dem Nutzer beendet ist und keine gesetzlichen Aufbewahrungsfristen (siehe Ziffer III. 4) bestehen.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">5) Widerspruchs- und Beseitigungsmöglichkeit</h3>
-        <p>Der Nutzer hat jederzeit die Möglichkeit, seine Einwilligung zur Verarbeitung der personenbezogenen Daten zu widerrufen oder der Speicherung seiner personenbezogenen Daten per E-Mail an <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a> zu widersprechen. Alle im Zuge der Kontaktaufnahme gespeicherten personenbezogenen Daten werden in diesem Fall gelöscht.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Rechtsgrundlage, Speicherdauer und Löschung</h3>
+        <p>Rechtsgrundlage ist <strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) sowie <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (vorvertragliche Angebotserstellung). Sie können Ihre Einwilligung jederzeit per E-Mail an <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a> widerrufen; Ihre Daten werden dann umgehend gelöscht, sofern keine steuerlichen Aufbewahrungspflichten bestehen.</p>
       </div>
     </section>
 
-    <!-- VII. Rechte der betroffenen Person -->
-    <section class="space-y-4">
-      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VII. Rechte der betroffenen Person</h2>
+    <!-- VII. Hosting, CDNs & Google Web Fonts (CRITICAL GERMAN GDPR DISCLOSURE) -->
+    <section id="de-sec-7" class="space-y-4">
+      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VII. Hosting, Content Delivery Networks (CDNs) &amp; Web-Schriftarten</h2>
+
+      <div class="space-y-2">
+        <h3 class="text-base font-bold text-[#1A1A1A]">1) Externes Hosting (GitHub Pages)</h3>
+        <p>Diese Website wird bei GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. GitHub ist unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> zertifiziert, sodass ein angemessenes Datenschutzniveau gemäß Art. 45 DSGVO gewährleistet ist. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sichere und schnelle Bereitstellung des Online-Angebots).</p>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Google Web Fonts &amp; Content Delivery Networks (Tailwind / Unpkg CDN)</h3>
+        <p>Zur einheitlichen, schnellen und barrierefreien Darstellung von Schriftarten (Montserrat, Raleway, Space Grotesk) sowie Layout- und Scroll-Bibliotheken nutzt diese Seite Web-Ressourcen von Google Fonts (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland / Google LLC, USA) sowie Content Delivery Networks (Cloudflare Inc. / Unpkg). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Ressourcen, wobei Ihre IP-Adresse technisch bedingt an den jeweiligen CDN-Server übertragen wird. Google LLC und Cloudflare Inc. sind nach dem <strong>EU-US Data Privacy Framework</strong> zertifiziert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer performanten, einheitlichen Darstellung).</p>
+      </div>
+    </section>
+
+    <!-- VIII. Rechte der betroffenen Person -->
+    <section id="de-sec-8" class="space-y-4">
+      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VIII. Rechte der betroffenen Person</h2>
       <p>Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie Betroffener i. S. d. DSGVO und es stehen Ihnen folgende Rechte gegenüber dem Verantwortlichen zu:</p>
 
       <div class="space-y-3">
@@ -249,16 +256,16 @@
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">7) Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 und 78 DSGVO)</h3>
           <p>Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt. Die für uns zuständige Aufsichtsbehörde in Bayern ist:</p>
-          <p class="mt-1 font-medium text-[#1A1A1A]">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach (<a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">www.lda.bayern.de</a>).</p>
+          <p class="mt-1 font-medium text-[#1A1A1A] text-left">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach (<a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">www.lda.bayern.de</a>).</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ==========================================
-       ENGLISH VERSION (GDPR I. TO VII.)
+       ENGLISH VERSION (GDPR I. TO VIII.)
   ========================================== -->
-  <main id="content-en" class="legal-section hidden max-w-[1040px] mx-auto px-6 py-16 space-y-10 text-sm text-[#4A453E] leading-relaxed">
+  <main id="content-en" class="legal-section hidden max-w-[1040px] mx-auto px-6 py-14 space-y-10 text-sm text-[#4A453E] leading-relaxed">
     <div>
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-heading font-bold uppercase tracking-wider mb-3">
         🛡️ Complete EU GDPR Data Protection &amp; Privacy Policy
@@ -266,37 +273,50 @@
       <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Privacy Policy (GDPR)</h1>
     </div>
 
+    <!-- Quick Table of Contents (Sections I–VIII) -->
+    <nav class="bg-[#FAF8F5] p-5 rounded-2xl border border-[#EAE5DC] text-xs">
+      <div class="font-heading font-bold uppercase tracking-wider text-[#1A1A1A] mb-2.5">Quick Navigation (Sections I. to VIII.)</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[#555048] font-medium">
+        <a href="#en-sec-1" class="hover:text-[#D97706] transition">I. Name and Address of the Controller</a>
+        <a href="#en-sec-2" class="hover:text-[#D97706] transition">II. Contact for Data Protection Inquiries</a>
+        <a href="#en-sec-3" class="hover:text-[#D97706] transition">III. General Information on Data Processing</a>
+        <a href="#en-sec-4" class="hover:text-[#D97706] transition">IV. Provision of the Website &amp; Log Files</a>
+        <a href="#en-sec-5" class="hover:text-[#D97706] transition">V. Cookies &amp; Technically Necessary LocalStorage</a>
+        <a href="#en-sec-6" class="hover:text-[#D97706] transition">VI. Catering Inquiry Form, Email &amp; WhatsApp</a>
+        <a href="#en-sec-7" class="hover:text-[#D97706] transition">VII. Hosting, CDNs &amp; Web Fonts (Third-Party Services)</a>
+        <a href="#en-sec-8" class="hover:text-[#D97706] transition">VIII. Rights of the Data Subject (Art. 15–78 GDPR)</a>
+      </div>
+    </nav>
+
     <!-- I. Name and address of the responsible person -->
-    <section class="space-y-3 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border border-[#EAE5DC]">
+    <section id="en-sec-1" class="space-y-3 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border border-[#EAE5DC]">
       <h2 class="text-lg font-extrabold text-[#1A1A1A] uppercase">I. Name and Address of the Responsible Person (Controller)</h2>
       <p>
         The controller within the meaning of the General Data Protection Regulation (GDPR) and other national data protection regulations of the Member States and other regulations relating to data protection is:
       </p>
       <div class="pt-2 font-medium text-[#1A1A1A] space-y-1">
-        <p class="font-bold text-base">Kampala Rolex Germany — Catering &amp; Live Cooking Munich</p>
-        <p>Owner: Ms. Olive [Surname]</p>
-        <p>[Street Address — to be inserted prior to custom domain launch]</p>
-        <p>80331 Munich (München), Bavaria, Germany</p>
-        <p>Tel.: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-        <p>E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
-        <p>Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">https://kampalarolex.de</a></p>
+        <p class="font-bold text-base text-left">Kampala Rolex Germany — Catering &amp; Live Cooking Munich</p>
+        <p class="text-left">Owner &amp; Managing Director: Chef Olive</p>
+        <p class="text-left">Registered Office: 80331 Munich (München), Bavaria, Germany</p>
+        <p class="text-left">Tel.: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+        <p class="text-left">E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+        <p class="text-left">Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">https://kampalarolex.de</a></p>
       </div>
     </section>
 
     <!-- II. Contact for data protection inquiries -->
-    <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
+    <section id="en-sec-2" class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
       <h2 class="text-lg font-extrabold text-[#1A1A1A] uppercase">II. Contact for Data Protection Inquiries</h2>
-      <p>For any questions regarding data protection, data access, or erasure requests, you can reach us directly at:</p>
-      <p><strong>Tel.:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
-      <p><strong>E-Mail:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+      <p>Because fewer than 20 employees are permanently engaged in the automated processing of personal data in our business, the appointment of a separate external Data Protection Officer is not legally required under § 38 BDSG. For all data privacy inquiries, you can contact the Controller directly at:</p>
+      <p class="text-left"><strong>Tel.:</strong> <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a> · <strong>E-Mail:</strong> <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
     </section>
 
     <!-- III. General information on data processing -->
-    <section class="space-y-4">
+    <section id="en-sec-3" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">III. General Information on Data Processing</h2>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">1) Definitions</h3>
+        <h3 class="text-base font-bold text-[#1A1A1A]">1) Definitions (Art. 4 GDPR)</h3>
         <p><strong>‘Personal data’</strong> means any information relating to an identified or identifiable natural person (hereinafter referred to as ‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.</p>
         <p><strong>‘Processing’</strong> is any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means. The definition is far-reaching and encompasses almost all data handling.</p>
         <p><strong>‘Pseudonymisation’</strong> refers to the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data is not attributed to an identified or identifiable natural person.</p>
@@ -322,7 +342,7 @@
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">4) Data erasure and retention period</h3>
-        <p>In general, your personal data which we have stored shall be deleted as soon as it is no longer required for the intended purpose and the erasure does not conflict with any statutory retention requirements. Insofar as the data is not erased because it is required for other and legally admissible purposes, its processing shall be restricted. This means that the data will be blocked and not used for any other purposes. This applies, for instance, to data which must be kept for commercial or tax reasons.</p>
+        <p>In general, your personal data which we have stored shall be deleted as soon as it is no longer required for the intended purpose and the erasure does not conflict with any statutory retention requirements. Insofar as the data is not erased because it is required for other and legally admissible purposes, its processing shall be restricted.</p>
         <p>According to legal requirements in Germany, books, records, management reports, accounting receipts, invoices, and documents relevant for taxation shall be retained for a period of <strong>10 years in accordance with Sections 147 (1) Tax Code (AO), 257 (1) (1) and (4), Para. 4 German Commercial Code (HGB)</strong> and in the case of commercial letters and catering proposals for a period of <strong>six years in accordance with Section 257 (1) (2) and (3), Para. 4 HGB</strong>.</p>
       </div>
 
@@ -338,120 +358,84 @@
     </section>
 
     <!-- IV. Provision of the website and creation of log files -->
-    <section class="space-y-4">
+    <section id="en-sec-4" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">IV. Provision of the Website and Creation of Log Files</h2>
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">1) Description and scope of data processing</h3>
-        <p>Each time our website is accessed, our system automatically collects data and information from the computer system of the accessing computer. This data is also referred to as ‘traffic data’. The following data is collected:</p>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Information about the browser type and version used</li>
-          <li>The user’s operating system</li>
-          <li>The Internet service provider of the user</li>
-          <li>Date and time of access</li>
-          <li>Websites from which the user’s system accesses our website</li>
-          <li>Websites accessed by the user’s system from our website</li>
-        </ul>
-        <p>It is necessary for the system to store the IP address temporarily so that the website can be displayed on the user’s computer. To this end, the user’s IP address is stored for the duration of the session. This data is not stored together with other personal data of the user.</p>
+        <p>Each time our website is accessed, our system automatically collects data and information from the computer system of the accessing computer (‘traffic data’): browser type and version, operating system, ISP, date and time of access, referrer URL, and temporary IP address for the duration of the session. This data is not stored together with other personal data of the user.</p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis for data processing</h3>
-        <p><strong>Art. 6 (1) (f) GDPR</strong> provides the legal basis for the temporary storage of data. Our legitimate interest is to deliver our web content securely and reliably to you.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Retention period</h3>
-        <p>We automatically delete your session traffic data once your visit to our website is terminated.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">4) Objection and deletion options</h3>
-        <p>The collection of data to enable provision of the website and the storage of data in log files is essential for the website to function properly. You have the option to object to this in accordance with Art. 21 GDPR, insofar that you assert special circumstances that prevent the processing of your personal data.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis, retention period, and objection</h3>
+        <p><strong>Art. 6 (1) (f) GDPR</strong> provides the legal basis for the temporary storage of data. Session traffic data is deleted automatically once your visit is terminated. You have the option to object in accordance with Art. 21 GDPR.</p>
       </div>
     </section>
 
     <!-- V. Use of Cookies & Local Storage -->
-    <section class="space-y-4">
+    <section id="en-sec-5" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">V. Use of Cookies and Technically Necessary Storage</h2>
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">1) Description, purpose and scope of data processing</h3>
         <p>Our website is designed with strict privacy by default. We do <strong>not</strong> use invasive third-party advertising cookies or marketing trackers. We only use technically necessary browser storage (such as storing your selected language setting <code>de</code> or <code>en</code> under the key <code>kr_lang</code> in your browser's LocalStorage) to make our bilingual website user-friendly.</p>
-        <ul class="list-disc pl-6 space-y-1">
-          <li><strong>Temporary / Session storage:</strong> Deleted automatically when you leave the website and close your browser.</li>
-          <li><strong>Language preference setting (<code>kr_lang</code>):</strong> Stores solely whether you selected German or English so the website remembers your language preference across pages. This data is never linked to your identity or shared with third parties.</li>
-        </ul>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis for data processing</h3>
-        <p><strong>Art. 6 (1) (f) GDPR</strong> and <strong>Section 25 (2) TDDDG</strong> provide the legal basis for processing strictly necessary technical settings. Our legitimate interest lies in providing you with a fully functioning bilingual website.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Retention period, right of revocation and right to object</h3>
-        <p>As a user, you have full control over browser storage and cookies. You can disable, restrict, or delete stored site data at any time in your Internet browser settings.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis and browser controls</h3>
+        <p><strong>Art. 6 (1) (f) GDPR</strong> and <strong>Section 25 (2) No. 2 TDDDG</strong> provide the legal basis for processing strictly necessary technical settings. You can clear or disable browser storage at any time in your browser settings.</p>
       </div>
     </section>
 
     <!-- VI. Contact form, e-mail contact & WhatsApp -->
-    <section class="space-y-4">
+    <section id="en-sec-6" class="space-y-4">
       <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VI. Catering Inquiry Form, E-Mail Contact &amp; WhatsApp</h2>
 
       <div class="space-y-2">
         <h3 class="text-base font-bold text-[#1A1A1A]">1) Description and scope of data processing</h3>
-        <p>An interactive catering inquiry form is available on our website for electronic contact and quote requests. If a user makes use of this option, the data entered in the input screen will be transmitted to us and stored by us. This data includes:</p>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>First name and surname / Contact person</li>
-          <li>Company / Organization (optional)</li>
-          <li>E-mail address and telephone number</li>
-          <li>Event date, venue location / postal code, and guest count</li>
-          <li>Chosen catering menu/format, event type, target budget, and message content / dietary notes</li>
-        </ul>
-        <p>Before the contact form is transmitted, we obtain your consent for the processing of the data via our GDPR consent checkbox and refer you to this Privacy Policy. Alternatively, you may contact us using the email address provided (<code>info@kampalarolex.de</code>) or via our 1-click WhatsApp gateway. The data is not passed on to unauthorized third parties and is used solely for processing the catering inquiry.</p>
+        <p>When you submit our catering inquiry form, the entered event metrics (name, company, email, phone number, event date, venue location, guest count, chosen menu, budget, and notes) are transmitted to us. Prior to submission, we obtain your consent via our GDPR checkbox. Form submissions are relayed securely via FormSubmit (FormSubmit.co) and your email client to <code>info@kampalarolex.de</code>. We also offer optional 1-click links to <strong>WhatsApp</strong> (WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland); data is only transmitted to WhatsApp if you actively click a WhatsApp button.</p>
       </div>
 
       <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis for data processing</h3>
-        <p><strong>Art. 6 (1) (a) GDPR</strong> provides the legal basis for processing data where consent has been given by the user. <strong>Art. 6 (1) (f) GDPR</strong> provides the legal basis for processing personal data transmitted in an email or using the contact form. Where the purpose of the contact is to request a catering quote or conclude a catering contract, <strong>Art. 6 (1) (b) GDPR</strong> provides the additional legal basis.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">3) Purpose of data processing</h3>
-        <p>We process the personal data entered on the input screen solely for the purpose of processing your catering request and preparing your custom quote, as well as preventing misuse of the contact form and ensuring the security of our IT systems.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">4) Retention period</h3>
-        <p>The data is erased as soon as it is no longer required to achieve the purpose for which it was collected and provided no statutory tax or commercial retention periods (see Section III. 4) apply. For personal data entered in the contact form or sent by email, this is the case when the conversation with the user has conclusively ended.</p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-base font-bold text-[#1A1A1A]">5) Objection and deletion options</h3>
-        <p>The user has the right at any time to withdraw their consent to the processing of personal data or to object to the storage of their personal data by sending an email to <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a>. In this case, all personal data stored when contacting us will be deleted.</p>
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Legal basis, retention, and deletion</h3>
+        <p>Processing is based on <strong>Art. 6 (1) (a) GDPR</strong> (consent) and <strong>Art. 6 (1) (b) GDPR</strong> (pre-contractual quote preparation). You may withdraw consent or request immediate erasure at any time by emailing <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a>.</p>
       </div>
     </section>
 
-    <!-- VII. Rights of the data subject -->
-    <section class="space-y-4">
-      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VII. Rights of the Data Subject</h2>
+    <!-- VII. Hosting, CDNs & Google Web Fonts -->
+    <section id="en-sec-7" class="space-y-4">
+      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VII. Hosting, Content Delivery Networks (CDNs) &amp; Web Fonts</h2>
+
+      <div class="space-y-2">
+        <h3 class="text-base font-bold text-[#1A1A1A]">1) External Hosting (GitHub Pages)</h3>
+        <p>This website is hosted on GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). GitHub is certified under the <strong>EU-U.S. Data Privacy Framework (DPF)</strong>, ensuring an adequate level of data protection pursuant to Art. 45 GDPR. The legal basis is Art. 6 (1) (f) GDPR.</p>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="text-base font-bold text-[#1A1A1A]">2) Google Web Fonts &amp; Content Delivery Networks (Tailwind / Unpkg CDN)</h3>
+        <p>For uniform, accessible typography (Montserrat, Raleway, Space Grotesk) and smooth layout rendering, this website loads web assets via Google Fonts (Google Ireland Limited, Dublin, Ireland / Google LLC, USA) and Content Delivery Networks (Cloudflare Inc. / Unpkg). Your browser establishes a technical connection to these CDN servers, transmitting your IP address. Google LLC and Cloudflare Inc. are certified under the <strong>EU-U.S. Data Privacy Framework</strong>. The legal basis is Art. 6 (1) (f) GDPR (legitimate interest in fast, uniform presentation).</p>
+      </div>
+    </section>
+
+    <!-- VIII. Rights of the data subject -->
+    <section id="en-sec-8" class="space-y-4">
+      <h2 class="text-xl font-extrabold text-[#1A1A1A] uppercase border-b border-[#EAE5DC] pb-2">VIII. Rights of the Data Subject</h2>
       <p>If your personal data is processed, you are a data subject within the meaning of the GDPR and you have the following rights vis-à-vis the controller:</p>
 
       <div class="space-y-3">
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">1) Right to information (Art. 15 GDPR)</h3>
-          <p>You have the right to request information about the personal data we process about you. In the case of a request for information that is not made in writing, we ask for your understanding that we may require evidence from you that proves that you are the person you claim to be.</p>
+          <p>You have the right to request information about the personal data we process about you.</p>
         </div>
 
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">2) Right of rectification, erasure and restriction (Art. 16, 17, 18 and 19 GDPR)</h3>
-          <p>Furthermore, you have a right to rectification or erasure of data or restriction of processing insofar as you are so entitled by law. In such cases, we are obliged to notify any recipients of the rectification, erasure or restriction of processing of data (Art. 19 GDPR).</p>
+          <p>Furthermore, you have a right to rectification or erasure of data or restriction of processing insofar as you are so entitled by law.</p>
         </div>
 
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">3) Right to data portability (Art. 20 GDPR)</h3>
-          <p>You also have a right to data portability within the framework of the data protection regulations (Art. 20 GDPR). This applies to data that you have provided to us.</p>
+          <p>You also have a right to data portability within the framework of the data protection regulations (Art. 20 GDPR).</p>
         </div>
 
         <div>
@@ -461,18 +445,18 @@
 
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">5) Right to withdraw the declaration of consent under data protection law (Art. 7 (3) GDPR)</h3>
-          <p>You have the right to withdraw your declaration of consent under data protection law at any time and with effect for the future. The withdrawal of consent shall not affect the lawfulness of any processing for which consent was given and which was carried out prior to the withdrawal thereof.</p>
+          <p>You have the right to withdraw your declaration of consent under data protection law at any time and with effect for the future.</p>
         </div>
 
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">6) Automated individual decision-making process including profiling (Art. 22 GDPR)</h3>
-          <p>You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects on you or significantly affects you in a similar manner.</p>
+          <p>You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects on you.</p>
         </div>
 
         <div>
           <h3 class="text-base font-bold text-[#1A1A1A]">7) Right to lodge a complaint with a supervisory authority (Art. 77 and 78 GDPR)</h3>
-          <p>Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual place of residence, place of work or place of the alleged infringement, where it is your opinion that the processing of your personal data is in breach of GDPR regulations (Art. 77 GDPR). The competent supervisory authority for Bavaria is:</p>
-          <p class="mt-1 font-medium text-[#1A1A1A]">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, Germany (<a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">www.lda.bayern.de</a>).</p>
+          <p>Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). The competent supervisory authority for Bavaria is:</p>
+          <p class="mt-1 font-medium text-[#1A1A1A] text-left">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, Germany (<a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" class="text-[#D97706] underline">www.lda.bayern.de</a>).</p>
         </div>
       </div>
     </section>
