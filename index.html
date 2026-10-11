@@ -877,8 +877,8 @@
         <!-- Dish 11: Swahili Mandazi -->
         <div class="dish-item-card bg-white rounded-xl border border-[#EAE5DC] overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col justify-between" data-dish-cat="snack">
           <div>
-            <div class="aspect-[16/10] overflow-hidden relative bg-amber-50 flex items-center justify-center">
-              <span class="text-5xl">🍯</span>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./mandazi_honey_signature.jpg" alt="Swahili Mandazi-Krapfen mit Blütenhonig" class="w-full h-full object-cover">
               <span class="absolute top-2.5 left-2.5 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">Süßer Abschluss</span>
             </div>
             <div class="p-5">
@@ -1777,11 +1777,51 @@
 
     function handleInquirySubmit(e) {
       e.preventDefault();
+      const date = document.getElementById('inq-date').value || 'Offen';
+      const location = document.getElementById('inq-location').value || 'München';
+      const guests = document.getElementById('inq-guests').value || '50';
+      const name = document.getElementById('inq-name').value || '';
+      const company = document.getElementById('inq-company').value || '';
+      const phone = document.getElementById('inq-phone').value || '';
+      const email = document.getElementById('inq-email').value || '';
+      const notes = document.getElementById('inq-notes').value || '';
+
+      const subject = currentLang === 'de'
+        ? `Catering-Anfrage: ${currentInquiryOccasion} (${guests} Gäste am ${date})`
+        : `Catering Inquiry: ${currentInquiryOccasion} (${guests} Guests on ${date})`;
+
+      const body = currentLang === 'de'
+        ? `Hallo Chef Olive,\n\nich bitte um ein unverbindliches Catering-Angebot für folgende Veranstaltung:\n\n` +
+          `• Anlass: ${currentInquiryOccasion}\n` +
+          `• Gewünschtes Format: ${currentInquiryFormat}\n` +
+          `• Datum: ${date}\n` +
+          `• Ort / PLZ: ${location}\n` +
+          `• Gästeanzahl: ${guests} Personen\n` +
+          `• Name: ${name}\n` +
+          (company ? `• Firma / Organisation: ${company}\n` : '') +
+          `• Telefon: ${phone}\n` +
+          `• E-Mail: ${email}\n` +
+          (notes ? `• Besondere Wünsche: ${notes}\n` : '') +
+          `\nHerzlichen Dank & viele Grüße,\n${name}`
+        : `Hello Chef Olive,\n\nI would like to request a bespoke catering proposal for the following event:\n\n` +
+          `• Event Type: ${currentInquiryOccasion}\n` +
+          `• Preferred Format: ${currentInquiryFormat}\n` +
+          `• Date: ${date}\n` +
+          `• Venue / Location: ${location}\n` +
+          `• Guest Count: ${guests} guests\n` +
+          `• Contact Name: ${name}\n` +
+          (company ? `• Company / Organization: ${company}\n` : '') +
+          `• Phone: ${phone}\n` +
+          `• Email: ${email}\n` +
+          (notes ? `• Special Requests: ${notes}\n` : '') +
+          `\nBest regards,\n${name}`;
+
       const successEl = document.getElementById('inquiry-success');
       if (successEl) {
         successEl.classList.remove('hidden');
         successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+      window.location.href = `mailto:info@kampalarolex.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
         // Global Language Engine (Bilingual Pure English & Authentic German)
