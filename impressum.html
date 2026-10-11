@@ -3,78 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | Kampala Rolex Germany</title>
+  <title>Impressum & Legal Ownership | Kampala Rolex Germany</title>
   <link rel="icon" type="image/png" href="./logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Raleway', sans-serif; color: #1A1A1A; }
+    h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
 <body class="bg-white">
 
   <!-- Header -->
-  <header class="border-b border-[#EAE5DC] bg-white">
-    <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between">
+  <header class="border-b border-[#EAE5DC] bg-white sticky top-0 z-40">
+    <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center gap-3">
         <img src="./logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-[#EAE5DC] p-0.5">
-        <span class="font-bold text-lg text-[#1A1A1A] uppercase">Kampala Rolex Germany</span>
+        <span class="font-heading font-bold text-base sm:text-lg text-[#1A1A1A] uppercase">Kampala Rolex Germany</span>
       </a>
-      <a href="index.html" class="text-xs font-bold text-[#D97706] hover:underline">← Zurück zur Startseite</a>
+      <div class="flex items-center gap-4">
+        <div class="inline-flex items-center bg-[#FAF8F5] border border-[#EAE5DC] rounded-lg p-0.5">
+          <button onclick="switchLegalLang('de')" id="btn-de" class="px-2.5 py-1 rounded-md text-xs font-heading font-extrabold bg-[#D97706] text-white transition">DE</button>
+          <button onclick="switchLegalLang('en')" id="btn-en" class="px-2.5 py-1 rounded-md text-xs font-heading font-extrabold text-[#767C85] hover:text-[#1A1A1A] transition">EN</button>
+        </div>
+        <a href="index.html" class="text-xs font-heading font-bold text-[#D97706] hover:underline" id="back-link">← Zurück zur Startseite</a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-[1000px] mx-auto px-6 py-16 space-y-8 text-sm text-[#4A453E] leading-relaxed">
-    <h1 class="text-3xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Impressum</h1>
+  <!-- German Content -->
+  <main id="content-de" class="max-w-[1000px] mx-auto px-6 py-16 space-y-8 text-sm text-[#4A453E] leading-relaxed">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider">
+      📄 Rechtliches Impressum & Eigentumsnachweis (§ 5 DDG)
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Impressum</h1>
 
-    <section class="space-y-2">
+    <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
       <h2 class="text-lg font-bold text-[#1A1A1A]">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h2>
-      <p><strong>Kampala Rolex Germany</strong></p>
-      <p>Inhaberin: Frau Olive [Nachname]</p>
-      <p>München, Bayern, Deutschland</p>
+      <p><strong>Kampala Rolex Germany — Catering & Live-Cooking München</strong></p>
+      <p>Inhaberin: <strong>Chef Olive</strong> (bitte vollständigen bürgerlichen Nachnamen & Geschäftsadresse vor Livegang der .de-Domain ergänzen)</p>
+      <p>Standort: München, Bayern, Deutschland</p>
     </section>
 
     <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">Kontakt:</h2>
-      <p>Telefon: <a href="tel:+4915214438923" class="text-[#D97706] underline">+49 152 14438923</a></p>
-      <p>E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] underline">info@kampalarolex.de</a></p>
-      <p>Webseite: <a href="https://kampalarolex.de" class="text-[#D97706] underline">kampalarolex.de</a></p>
+      <h2 class="text-lg font-bold text-[#1A1A1A]">Direkter Kontakt:</h2>
+      <p>Telefon & WhatsApp: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+      <p>E-Mail: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+      <p>Webseite: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">kampalarolex.de</a></p>
+    </section>
+
+    <!-- 100% Legal Ownership Section -->
+    <section class="space-y-2 bg-emerald-50/70 p-6 rounded-2xl border-2 border-emerald-300">
+      <h2 class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+        <span>🛡️</span> <span>100% Rechtliches Eigentum (Code, Domain & Markenrechte)</span>
+      </h2>
+      <p class="text-emerald-900">
+        Sämtliche Eigentums-, Urheber- und Nutzungsrechte an dieser Website – einschließlich des gesamten Quellcodes (HTML/CSS/JS), des Designs, der Texte, der Fotografien, der Videos sowie der Marke <strong>Kampala Rolex Germany</strong> – liegen zu <strong>100 % uneingeschränkt bei der Inhaberin (Chef Olive / Kampala Rolex Germany)</strong>. Es bestehen keinerlei monatliche Plattform-Abhängigkeiten oder Lizenzbindungen Dritter.
+      </p>
     </section>
 
     <section class="space-y-2">
       <h2 class="text-lg font-bold text-[#1A1A1A]">Umsatzsteuer-Hinweis:</h2>
       <p>
-        Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung).
+        Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung), sofern nicht anders auf dem schriftlichen Angebot ausgewiesen.
       </p>
     </section>
 
     <section class="space-y-2">
       <h2 class="text-lg font-bold text-[#1A1A1A]">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h2>
-      <p>Frau Olive [Nachname], München, Deutschland.</p>
+      <p>Chef Olive, Kampala Rolex Germany, München, Deutschland.</p>
     </section>
 
     <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">Streitschlichtung:</h2>
+      <h2 class="text-lg font-bold text-[#1A1A1A]">EU-Streitschlichtung:</h2>
       <p>
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" class="text-[#D97706] underline">https://ec.europa.eu/consumers/odr/</a>.
-      </p>
-      <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </section>
+  </main>
+
+  <!-- English Content -->
+  <main id="content-en" class="hidden max-w-[1000px] mx-auto px-6 py-16 space-y-8 text-sm text-[#4A453E] leading-relaxed">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#92400E] text-xs font-heading font-bold uppercase tracking-wider">
+      📄 Legal Imprint (§ 5 DDG) & 100% Ownership Certificate
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] uppercase tracking-tight">Legal Imprint (Impressum)</h1>
+
+    <section class="space-y-2 bg-[#FAF8F5] p-6 rounded-2xl border border-[#EAE5DC]">
+      <h2 class="text-lg font-bold text-[#1A1A1A]">Information pursuant to § 5 DDG (German Digital Services Act):</h2>
+      <p><strong>Kampala Rolex Germany — Catering & Live Cooking Munich</strong></p>
+      <p>Owner & Founder: <strong>Chef Olive</strong> (full legal surname & registered street address to be inserted prior to custom .de domain launch)</p>
+      <p>Location: Munich (München), Bavaria, Germany</p>
+    </section>
 
     <section class="space-y-2">
-      <h2 class="text-lg font-bold text-[#1A1A1A]">Haftung für Inhalte und Links:</h2>
+      <h2 class="text-lg font-bold text-[#1A1A1A]">Direct Contact:</h2>
+      <p>Phone & WhatsApp: <a href="tel:+4915214438923" class="text-[#D97706] font-bold underline">+49 152 14438923</a></p>
+      <p>Email: <a href="mailto:info@kampalarolex.de" class="text-[#D97706] font-bold underline">info@kampalarolex.de</a></p>
+      <p>Website: <a href="https://faizan021.github.io/kampala-rolex-germany/" class="text-[#D97706] underline">kampalarolex.de</a></p>
+    </section>
+
+    <!-- 100% Legal Ownership Section -->
+    <section class="space-y-2 bg-emerald-50/70 p-6 rounded-2xl border-2 border-emerald-300">
+      <h2 class="text-lg font-bold text-emerald-950 flex items-center gap-2">
+        <span>🛡️</span> <span>100% Legal Ownership (Domain, Codebase & Brand Assets)</span>
+      </h2>
+      <p class="text-emerald-900">
+        All legal ownership, copyright, and intellectual property rights to this website — including 100% of the custom source code (HTML/CSS/JS), UI/UX architecture, photography, videos, and branding assets — belong <strong>100% exclusively to the business owner (Chef Olive / Kampala Rolex Germany)</strong> with zero third-party platform lock-in.
+      </p>
+    </section>
+
+    <section class="space-y-2">
+      <h2 class="text-lg font-bold text-[#1A1A1A]">VAT Notice:</h2>
       <p>
-        Als Diensteanbieter sind wir gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+        Exempt from VAT pursuant to § 19 UStG (German Small Business Regulation), unless explicitly itemized on written B2B invoices.
+      </p>
+    </section>
+
+    <section class="space-y-2">
+      <h2 class="text-lg font-bold text-[#1A1A1A]">Editorial Responsibility (§ 18 Abs. 2 MStV):</h2>
+      <p>Chef Olive, Kampala Rolex Germany, Munich, Germany.</p>
+    </section>
+
+    <section class="space-y-2">
+      <h2 class="text-lg font-bold text-[#1A1A1A]">EU Dispute Resolution:</h2>
+      <p>
+        The European Commission provides a platform for online dispute resolution (ODR):
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" class="text-[#D97706] underline">https://ec.europa.eu/consumers/odr/</a>.
+        We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
       </p>
     </section>
   </main>
 
   <footer class="border-t border-[#EAE5DC] bg-[#FAF8F5] py-8 text-xs text-[#767C85] text-center">
-    <div>© 2026 Kampala Rolex Germany · <a href="datenschutz.html" class="underline hover:text-[#1A1A1A]">Datenschutzerklärung</a></div>
+    <div>© 2026 Kampala Rolex Germany · 100% Legal Ownership · <a href="datenschutz.html" class="underline font-bold text-[#D97706] hover:text-[#1A1A1A]">Datenschutzerklärung / Privacy Policy (GDPR)</a></div>
   </footer>
 
+  <script>
+    function switchLegalLang(lang) {
+      try { localStorage.setItem('kr_lang', lang); } catch(e) {}
+      document.getElementById('content-de').classList.toggle('hidden', lang !== 'de');
+      document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+      document.getElementById('btn-de').className = lang === 'de'
+        ? 'px-2.5 py-1 rounded-md text-xs font-heading font-extrabold bg-[#D97706] text-white transition'
+        : 'px-2.5 py-1 rounded-md text-xs font-heading font-extrabold text-[#767C85] hover:text-[#1A1A1A] transition';
+      document.getElementById('btn-en').className = lang === 'en'
+        ? 'px-2.5 py-1 rounded-md text-xs font-heading font-extrabold bg-[#D97706] text-white transition'
+        : 'px-2.5 py-1 rounded-md text-xs font-heading font-extrabold text-[#767C85] hover:text-[#1A1A1A] transition';
+      document.getElementById('back-link').innerText = lang === 'de' ? '← Zurück zur Startseite' : '← Back to Homepage';
+    }
+    try {
+      const saved = localStorage.getItem('kr_lang');
+      if (saved === 'en') switchLegalLang('en');
+    } catch(e) {}
+  </script>
 </body>
 </html>

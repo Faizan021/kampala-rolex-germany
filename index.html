@@ -1404,6 +1404,14 @@
               <textarea id="inq-notes" rows="3" placeholder="z. B. Vegetarisch/Veganer Anteil, gewünschte Servierzeit, Vor-Ort-Gegebenheiten, Dessert-Wünsche..." data-i18n-ph="inqNotesPh" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] focus:border-[#1A1A1A] outline-none text-xs"></textarea>
             </div>
 
+            <!-- 6. DSGVO / GDPR Legal Consent Checkbox -->
+            <div class="flex items-start gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-xs text-[#555048]">
+              <input type="checkbox" id="inq-gdpr" required checked class="mt-0.5 w-4 h-4 accent-[#D97706] rounded cursor-pointer shrink-0">
+              <label for="inq-gdpr" class="leading-relaxed cursor-pointer" data-i18n="inqGdprConsent">
+                Ich stimme zu, dass meine Angaben zur Angebotserstellung gemäß der <a href="datenschutz.html" target="_blank" class="text-[#D97706] font-bold underline hover:text-[#1A1A1A]">Datenschutzerklärung (DSGVO)</a> verarbeitet werden. (<a href="impressum.html" target="_blank" class="underline hover:text-[#1A1A1A]">Impressum</a>)
+              </label>
+            </div>
+
             <!-- Submit CTA & WhatsApp Quick Trigger -->
             <div class="pt-2 flex flex-col sm:flex-row gap-3">
               <button type="submit" class="flex-1 py-4 px-6 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2">
@@ -1576,18 +1584,25 @@
           <p><a href="foodtruck-outdoor.html" class="hover:text-white transition">Foodtruck & Outdoor</a></p>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-2.5">
           <span class="font-heading font-bold uppercase tracking-wider text-white" data-i18n="footerLegalTitle">Rechtliches & DSGVO</span>
-          <p><a href="impressum.html" class="text-white hover:underline font-semibold">Impressum (§ 5 DDG)</a></p>
-          <p><a href="datenschutz.html" class="text-white hover:underline font-semibold">Datenschutz (DSGVO)</a></p>
-          <p class="text-[11px] text-[#767C85]">Gemäß § 19 UStG ohne USt.</p>
+          <p><a href="impressum.html" class="text-amber-400 hover:text-white hover:underline font-bold transition flex items-center gap-1.5" data-i18n="footerImpressum">📄 Impressum (§ 5 DDG)</a></p>
+          <p><a href="datenschutz.html" class="text-amber-400 hover:text-white hover:underline font-bold transition flex items-center gap-1.5" data-i18n="footerPrivacy">🛡️ Datenschutzerklärung (DSGVO)</a></p>
+          <p class="text-[11px] text-emerald-400 font-semibold pt-1" data-i18n="footerOwnership">✓ 100% Marken- & Code-Eigentum: Kampala Rolex Germany</p>
+          <p class="text-[11px] text-[#767C85]" data-i18n="footerTaxNote">Gemäß § 19 UStG ohne USt.</p>
         </div>
 
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#767C85]">
-        <div data-i18n="footerCopy">© 2026 Kampala Rolex Germany. Alle Rechte vorbehalten.</div>
-        <a href="#hero" class="text-white hover:underline font-semibold" data-i18n="footerTop">Nach oben ↑</a>
+        <div data-i18n="footerCopy">© 2026 Kampala Rolex Germany · 100% Legal Ownership (Chef Olive). Alle Rechte vorbehalten.</div>
+        <div class="flex items-center gap-4">
+          <a href="impressum.html" class="text-amber-400 hover:underline font-semibold" data-i18n="footerBottomImp">Impressum</a>
+          <span>·</span>
+          <a href="datenschutz.html" class="text-amber-400 hover:underline font-semibold" data-i18n="footerBottomPriv">Datenschutz (DSGVO)</a>
+          <span>·</span>
+          <a href="#hero" class="text-white hover:underline font-semibold" data-i18n="footerTop">Nach oben ↑</a>
+        </div>
       </div>
 
     </div>
@@ -2890,13 +2905,41 @@
     "de": "Event-Anlässe",
     "en": "Occasions"
   },
+  "inqGdprConsent": {
+    "de": "Ich stimme zu, dass meine Angaben zur Angebotserstellung gemäß der <a href=\"datenschutz.html\" target=\"_blank\" class=\"text-[#D97706] font-bold underline hover:text-[#1A1A1A]\">Datenschutzerklärung (DSGVO)</a> verarbeitet werden. (<a href=\"impressum.html\" target=\"_blank\" class=\"underline hover:text-[#1A1A1A]\">Impressum</a>)",
+    "en": "I consent to my details being processed to prepare a catering quote in accordance with the <a href=\"datenschutz.html\" target=\"_blank\" class=\"text-[#D97706] font-bold underline hover:text-[#1A1A1A]\">Privacy Policy (GDPR)</a>. (<a href=\"impressum.html\" target=\"_blank\" class=\"underline hover:text-[#1A1A1A]\">Legal Imprint / Impressum</a>)"
+  },
   "footerLegalTitle": {
-    "de": "Rechtliches & DSGVO",
-    "en": "Legal & Privacy"
+    "de": "Rechtliches, DSGVO & Eigentum",
+    "en": "GDPR Legal & 100% Ownership"
+  },
+  "footerImpressum": {
+    "de": "📄 Impressum (§ 5 DDG)",
+    "en": "📄 Legal Imprint / Impressum (§ 5 DDG)"
+  },
+  "footerPrivacy": {
+    "de": "🛡️ Datenschutzerklärung (DSGVO)",
+    "en": "🛡️ Privacy Policy (GDPR / DSGVO)"
+  },
+  "footerOwnership": {
+    "de": "✓ 100% Marken- & Code-Eigentum: Kampala Rolex Germany",
+    "en": "✓ 100% Legal Ownership (Code & Brand): Kampala Rolex Germany"
+  },
+  "footerTaxNote": {
+    "de": "Gemäß § 19 UStG ohne USt.",
+    "en": "VAT-exempt under § 19 UStG (German Small Business Act)"
   },
   "footerCopy": {
-    "de": "© 2026 Kampala Rolex Germany. Alle Rechte vorbehalten.",
-    "en": "© 2026 Kampala Rolex Germany. All rights reserved."
+    "de": "© 2026 Kampala Rolex Germany · 100% Marken- & Code-Eigentum (Chef Olive). Alle Rechte vorbehalten.",
+    "en": "© 2026 Kampala Rolex Germany · 100% Legal & Brand Ownership (Chef Olive). All rights reserved."
+  },
+  "footerBottomImp": {
+    "de": "Impressum",
+    "en": "Legal Imprint (Impressum)"
+  },
+  "footerBottomPriv": {
+    "de": "Datenschutz (DSGVO)",
+    "en": "Privacy Policy (GDPR)"
   },
   "footerTop": {
     "de": "Nach oben ↑",
