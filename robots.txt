@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcome Next-Gen AI Search & GEO Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemaps & LLMs.txt Discovery
+Sitemap: https://faizan021.github.io/kampala-rolex-germany/sitemap.xml
+# LLMs.txt: https://faizan021.github.io/kampala-rolex-germany/llms.txt
+# LLMs-Full.txt: https://faizan021.github.io/kampala-rolex-germany/llms-full.txt
