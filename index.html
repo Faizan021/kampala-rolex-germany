@@ -377,59 +377,78 @@
     <!-- Subtle warm glow -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none"></div>
 
-    <!-- CREATIVE UX/UI: Interactive Culinary Story Reel Bar (Instant Visual Appetite Above the Fold!) -->
-    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 mb-5 sm:mb-8 relative z-10">
-      <div class="flex items-center justify-between sm:justify-start gap-3 sm:gap-6 overflow-x-auto no-scrollbar py-1">
+    <!-- CREATIVE UX/UI: Interactive Culinary Story Reel Bar (Mobile Row & Framed Desktop Interactive Dock!) -->
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 mb-5 sm:mb-9 relative z-10">
+      <div class="sm:bg-white/90 sm:backdrop-blur-md sm:border sm:border-[#EAE5DC] sm:rounded-2xl sm:px-6 sm:py-3.5 sm:shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         
-        <!-- Story 1: Live Tawa Video -->
-        <button type="button" onclick="playVideo('tawa')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
-          <div class="story-ring relative">
-            <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Live Tawa" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
-            <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ LIVE</span>
+        <!-- Desktop Editorial Story Kicker (Visible on lg+ Desktop to balance the 1260px layout) -->
+        <div class="hidden lg:flex items-center gap-3.5 pr-4 border-r border-[#EAE5DC] shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-[#FEF3C7] border border-[#FDE68A] flex items-center justify-center text-lg shadow-2xs">
+            🎬
           </div>
-          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story1Label">🔥 Heiße Tawa</span>
-        </button>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-heading text-[11px] font-black uppercase tracking-wider text-[#D97706]" data-i18n="storyDockKicker">LIVE KITCHEN STORIES · 1-CLICK VIDEO</span>
+            </div>
+            <p class="text-xs font-medium text-[#555048] mt-0.5" data-i18n="storyDockSub">Klicken Sie auf einen Kreis für echte Live-Einblicke mit Ton:</p>
+          </div>
+        </div>
 
-        <!-- Story 2: Rolex Duo -->
-        <button type="button" onclick="playVideo('reel')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
-          <div class="story-ring relative">
-            <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Rolex Duo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
-            <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-amber-400 text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ REEL</span>
-          </div>
-          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story2Label">🌯 Rolex Duo</span>
-        </button>
+        <!-- 5 Interactive Story Circles -->
+        <div class="flex items-center justify-between sm:justify-around lg:justify-end gap-3 sm:gap-7 overflow-x-auto no-scrollbar py-1">
+          
+          <!-- Story 1: Live Tawa Video -->
+          <button type="button" onclick="playVideo('tawa')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+            <div class="story-ring relative">
+              <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Live Tawa" class="w-14 h-14 sm:w-15 sm:h-15 rounded-full object-cover border-2 border-white">
+              <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ LIVE</span>
+            </div>
+            <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story1Label">🔥 Heiße Tawa</span>
+          </button>
 
-        <!-- Story 3: Warmbuffet Video -->
-        <button type="button" onclick="playVideo('buffet')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
-          <div class="story-ring relative">
-            <img src="./05_beef_meat_stew_chafing.jpg" alt="Warmbuffet" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
-            <span class="absolute -bottom-1 right-0 bg-[#15803D] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ BUFFET</span>
-          </div>
-          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story3Label">🍲 Beef Buffet</span>
-        </button>
+          <!-- Story 2: Rolex Duo -->
+          <button type="button" onclick="playVideo('reel')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+            <div class="story-ring relative">
+              <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Rolex Duo" class="w-14 h-14 sm:w-15 sm:h-15 rounded-full object-cover border-2 border-white">
+              <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-amber-400 text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ REEL</span>
+            </div>
+            <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story2Label">🌯 Rolex Duo</span>
+          </button>
 
-        <!-- Story 4: Dachau & Events Video -->
-        <button type="button" onclick="playVideo('dachau')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
-          <div class="story-ring relative">
-            <img src="./01_live_station_foodtruck.jpg" alt="Event Truck" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
-            <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ FEST</span>
-          </div>
-          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story4Label">🎪 Live Events</span>
-        </button>
+          <!-- Story 3: Warmbuffet Video -->
+          <button type="button" onclick="playVideo('buffet')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+            <div class="story-ring relative">
+              <img src="./05_beef_meat_stew_chafing.jpg" alt="Warmbuffet" class="w-14 h-14 sm:w-15 sm:h-15 rounded-full object-cover border-2 border-white">
+              <span class="absolute -bottom-1 right-0 bg-[#15803D] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ BUFFET</span>
+            </div>
+            <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story3Label">🍲 Beef Buffet</span>
+          </button>
 
-        <!-- Story 5: Jump to 11 Dishes -->
-        <a href="#speisekarte" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
-          <div class="story-ring relative">
-            <img src="./12_crispy_chicken_clean.jpg" alt="11 Gerichte" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
-            <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">11×</span>
-          </div>
-          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story5Label">🍗 11 Gerichte</span>
-        </a>
+          <!-- Story 4: Dachau & Events Video -->
+          <button type="button" onclick="playVideo('dachau')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+            <div class="story-ring relative">
+              <img src="./01_live_station_foodtruck.jpg" alt="Event Truck" class="w-14 h-14 sm:w-15 sm:h-15 rounded-full object-cover border-2 border-white">
+              <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ FEST</span>
+            </div>
+            <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story4Label">🎪 Live Events</span>
+          </button>
+
+          <!-- Story 5: Jump to 11 Dishes (#menue-katalog) -->
+          <a href="#menue-katalog" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+            <div class="story-ring relative">
+              <img src="./12_crispy_chicken_clean.jpg" alt="11 Gerichte" class="w-14 h-14 sm:w-15 sm:h-15 rounded-full object-cover border-2 border-white">
+              <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">11×</span>
+            </div>
+            <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story5Label">🍗 11 Gerichte</span>
+          </a>
+
+        </div>
 
       </div>
     </div>
 
-    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
       
       <!-- Left Column: Balanced Typography & Justified Copy (DE & EN) -->
       <div class="lg:col-span-6 space-y-4 sm:space-y-5 text-left min-w-0">
@@ -439,7 +458,7 @@
           <span class="truncate" data-i18n="heroBadge">Münchens #1 Live-Cooking & Catering Atelier</span>
         </div>
 
-        <h1 class="font-heading text-[clamp(1.3rem,5.5vw,2.55rem)] sm:text-4xl lg:text-[2.45rem] xl:text-[2.55rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.18] sm:whitespace-nowrap break-words" data-i18n="heroH1">
+        <h1 class="font-heading text-[clamp(1.3rem,5.5vw,2.35rem)] sm:text-3xl lg:text-[2.05rem] xl:text-[2.35rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.18] break-words" data-i18n="heroH1">
           Catering München:<br><span class="text-[#D97706]">Frisch, Authentisch</span><br>& Mit Leidenschaft.
         </h1>
 
@@ -633,9 +652,6 @@
     </div>
   </section>
 
-    </div>
-  </section>
-
   <!-- ==========================================
        4. ANLÄSSE ÜBERSICHT (Spreeküche Style)
   ========================================== -->
@@ -665,9 +681,7 @@
               <h4 class="font-heading text-base font-bold text-[#1A1A1A] uppercase" data-i18n="occ1Title">Event- & Firmen-Catering</h4>
               <p class="text-xs text-[#555048] mt-2 leading-relaxed" data-i18n="occ1Desc">Schnelle, professionelle Bewirtung von 50 bis 500+ Gästen bei Tagungen, Sommerfesten und Weihnachtsfeiern.</p>
             </div>
-            <a href="firmencatering.html" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase">
-              Mehr erfahren & anfragen ➔
-            </a>
+            <a href="firmencatering.html" class="mt-4 inline-block text-xs font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition uppercase" data-i18n="occCardLink">Mehr erfahren & anfragen ➔</a>
           </div>
         </div>
 
@@ -1091,6 +1105,26 @@
           <div class="p-5 pt-0 text-[11px] font-semibold text-amber-700" data-i18n="dish11Serv">✓ Das süße Highlight jedes Menüs</div>
         </div>
 
+        <!-- Card 12: Custom Event Menu & VIP Kombi (Balances Desktop 4x3 & 3x4 Grid!) -->
+        <a href="#anfrage" class="dish-item-card bg-[#1A1A1A] text-white rounded-xl border-2 border-[#D97706] overflow-hidden shadow-md hover:shadow-xl transition flex flex-col justify-between group" data-dish-cat="meat live side snack">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./11_olive_portrait_clean.png" alt="Chef Olive Custom Menü" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent"></div>
+              <span class="absolute top-2.5 left-2.5 bg-[#D97706] text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow">✨ 15 bis 500+ Gäste</span>
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] uppercase font-bold text-amber-400 block mb-1" data-i18n="dish12Tag">INDIVIDUELLE KOMBINATION</span>
+              <h4 class="font-heading font-bold text-base text-white group-hover:text-amber-400 transition" data-i18n="dish12Title">Ihr Wunsch-Menü nach Maß</h4>
+              <p class="text-xs text-[#B5B0A4] mt-2 leading-relaxed" data-i18n="dish12Desc">Kombinieren Sie Ihre Favoriten aus Live-Rolex, Chafing-Dish Buffet und Fingerfood – Chef Olive stellt Ihr perfektes Event-Menü zusammen.</p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 text-[11px] font-bold text-amber-400 flex items-center justify-between">
+            <span data-i18n="dish12Serv">Jetzt Wunsch-Menü anfragen</span>
+            <span class="group-hover:translate-x-1 transition-transform">➔</span>
+          </div>
+        </a>
+
       </div>
 
       <div class="text-center mt-12">
@@ -1104,7 +1138,7 @@
 
   <!-- ==========================================
        7. NEUE SEKTION: LIVE-VIDEOS & PRAXIS-IMPRESSIONEN
-       3 Reale Kunden-Videos direkt abspielbar!
+       5 Reale Kunden-Videos direkt abspielbar + Symmetrisches 3x2 Desktop-Grid!
   ========================================== -->
   <section id="videos" class="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#EAE5DC]">
     <div class="max-w-[1260px] mx-auto px-6">
@@ -1258,6 +1292,33 @@
             </span>
           </div>
         </div>
+
+        <!-- Card 6: Live Show-Cooking für Ihr Event buchen (Completes Symmetrical 3x2 Desktop Grid!) -->
+        <a href="#anfrage" class="bg-[#1A1A1A] text-white rounded-2xl border-2 border-[#D97706] overflow-hidden shadow-md hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="./06_buffet_event_guests.jpg" alt="Live-Catering für Ihr Event buchen" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-black/20 to-transparent flex items-center justify-center">
+                <div class="px-4 py-2 rounded-full bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider shadow-lg transform group-hover:scale-105 transition" data-i18n="vid6BadgeBtn">
+                  📅 Wunschtermin prüfen
+                </div>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#D97706] text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                IHR EVENT 2026
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1" data-i18n="vid6Tag">LIVE BEI IHNEN VOR ORT</span>
+              <h3 class="font-heading text-lg font-bold text-white group-hover:text-amber-400 transition" data-i18n="vid6Title">Holen Sie das Live-Erlebnis zu Ihrem Event</h3>
+              <p class="text-xs text-[#B5B0A4] mt-2 leading-relaxed" data-i18n="vid6Desc">Ob Firmenfeier, Messe, Hochzeit oder Sommerfest: Wir bringen die heiße Gusseisen-Tawa und unser Festtags-Buffet direkt zu Ihrer Location.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 group-hover:underline">
+              <span data-i18n="vid6Cta">Jetzt unverbindliches Angebot anfragen</span> <span>➔</span>
+            </span>
+          </div>
+        </a>
 
       </div>
 
@@ -1734,7 +1795,7 @@
   <footer class="bg-[#1A1A1A] text-[#B5B0A4] py-16 text-xs border-t border-[#2C2C2C]">
     <div class="max-w-[1260px] mx-auto px-6">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#2C2C2C] text-left">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 pb-10 border-b border-[#2C2C2C] text-left">
         
         <div class="md:col-span-2 space-y-3">
           <div class="flex items-center gap-3">
@@ -1797,10 +1858,10 @@
   </footer>
 
   <!-- ==========================================
-       11. MULTI-VIDEO MODAL PLAYER (3 CLIPS DIREKT SCHALTBAR)
+       11. MULTI-VIDEO MODAL PLAYER (5 CLIPS DIREKT SCHALTBAR)
   ========================================== -->
   <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative max-w-md w-full bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/20 shadow-2xl flex flex-col">
+    <div class="relative max-w-md sm:max-w-xl lg:max-w-2xl w-full bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/20 shadow-2xl flex flex-col">
       
       <!-- Modal Tabs & Close Button -->
       <div class="p-3 bg-black/70 border-b border-white/10 flex items-center justify-between gap-2">
@@ -2176,6 +2237,50 @@
   "headerCta": {
     "de": "Jetzt Anfragen",
     "en": "Inquire Now"
+  },
+  "storyDockKicker": {
+    "de": "LIVE KITCHEN STORIES · 1-KLICK VIDEO",
+    "en": "LIVE KITCHEN STORIES · 1-CLICK VIDEO"
+  },
+  "storyDockSub": {
+    "de": "Klicken Sie auf einen Kreis für echte Live-Einblicke mit Ton:",
+    "en": "Click any circle for real live kitchen & event clips with audio:"
+  },
+  "dish12Tag": {
+    "de": "INDIVIDUELLE KOMBINATION",
+    "en": "CUSTOM COMBINATION"
+  },
+  "dish12Title": {
+    "de": "Ihr Wunsch-Menü nach Maß",
+    "en": "Your Custom Event Menu"
+  },
+  "dish12Desc": {
+    "de": "Kombinieren Sie Ihre Favoriten aus Live-Rolex, Chafing-Dish Buffet und Fingerfood – Chef Olive stellt Ihr perfektes Event-Menü zusammen.",
+    "en": "Combine your favorites from Live Rolex, Chafing-Dish Buffet, and Fingerfood — Chef Olive curates your ideal event menu."
+  },
+  "dish12Serv": {
+    "de": "Jetzt Wunsch-Menü anfragen",
+    "en": "Request Custom Menu Now"
+  },
+  "vid6BadgeBtn": {
+    "de": "📅 Wunschtermin prüfen",
+    "en": "📅 Check Your Date"
+  },
+  "vid6Tag": {
+    "de": "LIVE BEI IHNEN VOR ORT",
+    "en": "LIVE ON-SITE AT YOUR VENUE"
+  },
+  "vid6Title": {
+    "de": "Holen Sie das Live-Erlebnis zu Ihrem Event",
+    "en": "Bring the Live Experience to Your Event"
+  },
+  "vid6Desc": {
+    "de": "Ob Firmenfeier, Messe, Hochzeit oder Sommerfest: Wir bringen die heiße Gusseisen-Tawa und unser Festtags-Buffet direkt zu Ihrer Location.",
+    "en": "Whether corporate gala, trade show, wedding, or summer party: we bring the sizzling cast-iron tawa and festive buffet right to your venue."
+  },
+  "vid6Cta": {
+    "de": "Jetzt unverbindliches Angebot anfragen",
+    "en": "Request Non-Binding Quote Now"
   },
   "story1Label": {
     "de": "🔥 Heiße Tawa",
