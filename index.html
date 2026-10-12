@@ -132,6 +132,57 @@
       hyphens: none;
     }
 
+    /* Creative UX/UI: Story Ring Gradient & Pulse */
+    .story-ring {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #15803D 100%);
+      padding: 2.5px;
+      border-radius: 9999px;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+    }
+    .story-ring:hover, .story-ring:active {
+      transform: translateY(-2px) scale(1.06);
+      box-shadow: 0 8px 20px -4px rgba(217, 119, 6, 0.45);
+    }
+
+    /* Creative UX/UI: Shimmer Sweep Primary CTA */
+    .shimmer-cta {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-cta::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
+      transform: skewX(-20deg);
+      animation: shimmerSweep 4s infinite;
+    }
+    @keyframes shimmerSweep {
+      0%, 60% { left: -120%; }
+      100% { left: 160%; }
+    }
+
+    /* Creative UX/UI: Infinite Culinary Marquee Ticker */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 32s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Hide scrollbar on horizontal story strip */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
   </style>
 
   <!-- Schema.org Catering & Local Google SEO Dominance -->
@@ -318,15 +369,67 @@
   </header>
 
   <!-- ==========================================
-       3. BRIGHT & CRISP HERO SECTION (SPLIT-LAYOUT)
-       Kein dunkles Overlay! Volle Sichtbarkeit des Essens!
+       3. BRIGHT & CRISP HERO SECTION (VISUAL-FIRST MOBILE & SPLIT DESKTOP)
+       Includes Interactive Story Reel Bar + Above-the-Fold Mobile Food Preview!
   ========================================== -->
-  <section id="hero" class="relative bg-[#FAF8F5] pt-8 pb-16 sm:pt-16 sm:pb-28 border-b border-[#EAE5DC] overflow-hidden">
+  <section id="hero" class="relative bg-[#FAF8F5] pt-5 pb-14 sm:pt-12 sm:pb-24 border-b border-[#EAE5DC] overflow-hidden">
     
     <!-- Subtle warm glow -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+    <!-- CREATIVE UX/UI: Interactive Culinary Story Reel Bar (Instant Visual Appetite Above the Fold!) -->
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 mb-5 sm:mb-8 relative z-10">
+      <div class="flex items-center justify-between sm:justify-start gap-3 sm:gap-6 overflow-x-auto no-scrollbar py-1">
+        
+        <!-- Story 1: Live Tawa Video -->
+        <button type="button" onclick="playVideo('tawa')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+          <div class="story-ring relative">
+            <img src="./03_chicken_rolex_closeup_clean.jpg" alt="Live Tawa" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
+            <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ LIVE</span>
+          </div>
+          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story1Label">🔥 Heiße Tawa</span>
+        </button>
+
+        <!-- Story 2: Rolex Duo -->
+        <button type="button" onclick="playVideo('reel')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+          <div class="story-ring relative">
+            <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Rolex Duo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
+            <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-amber-400 text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ REEL</span>
+          </div>
+          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story2Label">🌯 Rolex Duo</span>
+        </button>
+
+        <!-- Story 3: Warmbuffet Video -->
+        <button type="button" onclick="playVideo('buffet')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+          <div class="story-ring relative">
+            <img src="./05_beef_meat_stew_chafing.jpg" alt="Warmbuffet" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
+            <span class="absolute -bottom-1 right-0 bg-[#15803D] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ BUFFET</span>
+          </div>
+          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story3Label">🍲 Beef Buffet</span>
+        </button>
+
+        <!-- Story 4: Dachau & Events Video -->
+        <button type="button" onclick="playVideo('dachau')" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+          <div class="story-ring relative">
+            <img src="./01_live_station_foodtruck.jpg" alt="Event Truck" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
+            <span class="absolute -bottom-1 right-0 bg-[#D97706] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">▶ FEST</span>
+          </div>
+          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story4Label">🎪 Live Events</span>
+        </button>
+
+        <!-- Story 5: Jump to 11 Dishes -->
+        <a href="#speisekarte" class="flex flex-col items-center gap-1.5 shrink-0 group cursor-pointer">
+          <div class="story-ring relative">
+            <img src="./12_crispy_chicken_clean.jpg" alt="11 Gerichte" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white">
+            <span class="absolute -bottom-1 right-0 bg-[#1A1A1A] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow">11×</span>
+          </div>
+          <span class="font-heading text-[10px] sm:text-[11px] font-bold text-[#1A1A1A] group-hover:text-[#D97706] transition" data-i18n="story5Label">🍗 11 Gerichte</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
       
       <!-- Left Column: Balanced Typography & Justified Copy (DE & EN) -->
       <div class="lg:col-span-6 space-y-4 sm:space-y-5 text-left min-w-0">
@@ -340,35 +443,55 @@
           Catering München:<br><span class="text-[#D97706]">Frisch, Authentisch</span><br>& Mit Leidenschaft.
         </h1>
 
-        <div class="section-separator-left"></div>
+        <!-- MOBILE ABOVE-THE-FOLD VISUAL SHOWCASE CARD (Solves "Text-Only First Screen" on Phones!) -->
+        <div class="lg:hidden relative rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-[#1A1A1A] my-2">
+          <img src="./02_ugandan_rolex_duo_signature.jpg" alt="Original Ugandan Rolex Signature Duo" class="w-full h-56 sm:h-72 object-cover">
+          <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs border border-[#EAE5DC] px-3 py-1.5 rounded-xl shadow flex items-center gap-2 z-20">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="font-heading text-[11px] font-black text-[#1A1A1A]" data-i18n="heroRolexTitle">Original Ugandan Rolex</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs border border-[#EAE5DC] px-3.5 py-1.5 rounded-xl shadow text-right z-20">
+            <div class="font-heading text-sm font-black text-[#1A1A1A]" data-i18n="heroPriceVal">ab 25,00 € <span class="text-[10px] font-normal text-[#767C85]">p.P.</span></div>
+          </div>
+          <div onclick="playVideo('tawa')" class="cursor-pointer absolute inset-0 bg-black/20 flex items-center justify-center z-10">
+            <div class="w-13 h-13 rounded-full bg-[#D97706] text-white flex items-center justify-center shadow-2xl">
+              <span class="text-xl ml-0.5">▶</span>
+            </div>
+            <span class="absolute bottom-3 left-3 bg-black/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
+              <span>🎬</span> <span data-i18n="heroVideoCta">Live-Video ansehen (mit Ton)</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="section-separator-left hidden sm:block"></div>
 
         <p class="text-sm sm:text-base text-[#3D3934] leading-relaxed font-normal text-justify editorial-justify" data-i18n="heroH3">
           Erleben Sie Ugandas legendäre Live-Rolex-Station auf der heißen Gusseisen-Tawa, festliche Chafing-Dish Warmbuffets und feines Flying Fingerfood. Frisch vor den Augen Ihrer Gäste zubereitet – mit zart mariniertem Fleisch und bunter Veggie-Vielfalt für Firmenfeiern, Messen, Hochzeiten und private Events in München & ganz Bayern.
         </p>
 
-        <!-- 4 Key USPs Grid (Uniform Height & Clean Single-Line Alignment) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1 text-xs font-heading font-semibold text-[#1A1A1A]">
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
-            <span class="text-base shrink-0">🍳</span>
-            <span data-i18n="heroUsp1">Live Show-Cooking auf heißer Tawa</span>
+        <!-- 4 Key USPs Grid (2x2 Compact Grid on Mobile & Desktop!) -->
+        <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-1 text-[11px] sm:text-xs font-heading font-semibold text-[#1A1A1A]">
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[44px]">
+            <span class="text-sm sm:text-base shrink-0">🍳</span>
+            <span class="leading-tight" data-i18n="heroUsp1">Live Show-Cooking auf heißer Tawa</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
-            <span class="text-base shrink-0">🇺🇬</span>
-            <span data-i18n="heroUsp2">100% Originalrezept aus Kampala</span>
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[44px]">
+            <span class="text-sm sm:text-base shrink-0">🇺🇬</span>
+            <span class="leading-tight" data-i18n="heroUsp2">100% Originalrezept aus Kampala</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
-            <span class="text-base shrink-0">🍗</span>
-            <span data-i18n="heroUsp3">Zartes Fleisch & Veggie-Vielfalt</span>
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[44px]">
+            <span class="text-sm sm:text-base shrink-0">🍗</span>
+            <span class="leading-tight" data-i18n="heroUsp3">Zartes Fleisch & Veggie-Vielfalt</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
-            <span class="text-base shrink-0">📍</span>
-            <span data-i18n="heroUsp4">Für 15 bis 500+ Gäste in Bayern</span>
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[44px]">
+            <span class="text-sm sm:text-base shrink-0">📍</span>
+            <span class="leading-tight" data-i18n="heroUsp4">Für 15 bis 500+ Gäste in Bayern</span>
           </div>
         </div>
 
-        <!-- Action Buttons (Full-Width Stack on Mobile, Single Row on Tablet/Desktop) -->
+        <!-- Action Buttons (Shimmer Primary CTA + Video Modal Trigger) -->
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-          <a href="#anfrage" class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
+          <a href="#anfrage" class="shimmer-cta w-full sm:w-auto px-6 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
             <span data-i18n="heroBtn1">Individuelles Angebot anfragen</span>
             <span>➔</span>
           </a>
@@ -386,8 +509,8 @@
 
       </div>
 
-      <!-- Right Column: Living Media Showcase mit Ambient Video Teaser -->
-      <div class="lg:col-span-6 relative">
+      <!-- Right Column: Living Media Showcase mit Ambient Video Teaser (Desktop lg+) -->
+      <div class="hidden lg:block lg:col-span-6 relative">
         
         <!-- Main Food Showcase Card -->
         <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-[#1A1A1A] group">
@@ -444,6 +567,22 @@
 
     </div>
   </section>
+
+  <!-- ==========================================
+       3a. CREATIVE INFINITE CULINARY MARQUEE TICKER
+  ========================================== -->
+  <div class="bg-[#111111] text-white py-3 border-b border-white/10 overflow-hidden select-none">
+    <div class="marquee-track flex items-center gap-8 text-[11px] sm:text-xs font-heading font-extrabold uppercase tracking-widest">
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq1">CNN #1 AFRICAN STREET FOOD</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq2">LIVE AUF HEISSER EISEN-TAWA IN 90 SEKUNDEN</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq3">ZARTES BEEF STEW, CRISPY CHICKEN &amp; 100% VEGANE VIELFALT</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq4">15 BIS 500+ GÄSTE IN MÜNCHEN &amp; BAYERN</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq1">CNN #1 AFRICAN STREET FOOD</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq2">LIVE AUF HEISSER EISEN-TAWA IN 90 SEKUNDEN</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq3">ZARTES BEEF STEW, CRISPY CHICKEN &amp; 100% VEGANE VIELFALT</span></span>
+      <span class="flex items-center gap-3"><span class="text-[#F59E0B]">✦</span> <span data-i18n="mq4">15 BIS 500+ GÄSTE IN MÜNCHEN &amp; BAYERN</span></span>
+    </div>
+  </div>
 
   <!-- ==========================================
        3b. THE ROLEX STORY & UGANDA USP RIBBON
@@ -2037,6 +2176,42 @@
   "headerCta": {
     "de": "Jetzt Anfragen",
     "en": "Inquire Now"
+  },
+  "story1Label": {
+    "de": "🔥 Heiße Tawa",
+    "en": "🔥 Hot Tawa"
+  },
+  "story2Label": {
+    "de": "🌯 Rolex Duo",
+    "en": "🌯 Rolex Duo"
+  },
+  "story3Label": {
+    "de": "🍲 Beef Buffet",
+    "en": "🍲 Beef Buffet"
+  },
+  "story4Label": {
+    "de": "🎪 Live Events",
+    "en": "🎪 Live Events"
+  },
+  "story5Label": {
+    "de": "🍗 11 Gerichte",
+    "en": "🍗 11 Dishes"
+  },
+  "mq1": {
+    "de": "CNN #1 AFRICAN STREET FOOD",
+    "en": "CNN #1 AFRICAN STREET FOOD"
+  },
+  "mq2": {
+    "de": "LIVE AUF DER HEISSEN GUSSEISEN-TAWA IN 90 SEKUNDEN",
+    "en": "LIVE ON HOT CAST-IRON TAWA IN 90 SECONDS"
+  },
+  "mq3": {
+    "de": "100% HANDGEKNETETES CHAPATI · ZARTES FLEISCH & VEGGIE",
+    "en": "100% HAND-KNEADED CHAPATI · SUCCULENT MEATS & VEGGIE"
+  },
+  "mq4": {
+    "de": "FIRMENCATERING · HOCHZEITEN · FESTIVALS · MÜNCHEN & BAYERN",
+    "en": "CORPORATE GALAS · WEDDINGS · FESTIVALS · MUNICH & BAVARIA"
   },
   "heroBadge": {
     "de": "Münchens #1 Live-Cooking & Catering Atelier",
