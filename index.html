@@ -59,10 +59,16 @@
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <style>
+    :root {
+      color-scheme: light only;
+    }
     html, body {
       background-color: #FFFFFF;
       color: #1A1A1A;
       font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
     }
 
     ::selection {
@@ -167,22 +173,25 @@
 <body class="antialiased text-[#1A1A1A] bg-white pb-20 lg:pb-0">
 
   <!-- ==========================================
-       1. TOP BAR (Heller, klarer Header mit Hotline)
+       1. TOP BAR (Kompakt auf Mobilgeräten, Volltext ab Tablet/Desktop)
   ========================================== -->
-  <aside class="bg-[#FAF8F5] text-[#4A453E] text-xs py-2 px-6 border-b border-[#EAE5DC]">
-    <div class="max-w-[1260px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803D]"></span>
-        <span class="font-medium text-xs tracking-wide" data-i18n="topBar">
+  <aside class="bg-[#FAF8F5] text-[#4A453E] text-xs py-2 px-4 sm:px-6 border-b border-[#EAE5DC]">
+    <div class="max-w-[1260px] mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="inline-block w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#15803D] shrink-0"></span>
+        <span class="hidden sm:inline font-medium text-xs tracking-wide truncate" data-i18n="topBar">
           Ihr Caterer für München & Bayern: Frische Live-Cooking Stationen & Festtags-Buffets · Termine 2026 buchbar
         </span>
+        <span class="sm:hidden font-semibold text-[11px] tracking-wide truncate">
+          München & Bayern · 2026
+        </span>
       </div>
-      <div class="flex items-center gap-5 text-xs text-[#555048]">
-        <a href="https://wa.me/4915214438923" target="_blank" rel="noopener noreferrer" class="hover:text-[#15803D] transition flex items-center gap-1.5 font-semibold text-[#15803D]">
+      <div class="flex items-center gap-3 sm:gap-5 text-[11px] sm:text-xs text-[#555048] shrink-0">
+        <a href="https://wa.me/4915214438923" target="_blank" rel="noopener noreferrer" class="hover:text-[#15803D] transition flex items-center gap-1 font-semibold text-[#15803D]">
           <span>💬</span> <span data-i18n="topWaDirect">WhatsApp Direkt</span>
         </a>
         <span class="text-[#DDD8CF]">|</span>
-        <a href="tel:+4915214438923" class="hover:text-[#D97706] transition flex items-center gap-1.5 font-bold text-[#1A1A1A]">
+        <a href="tel:+4915214438923" class="hover:text-[#D97706] transition flex items-center gap-1 font-bold text-[#1A1A1A]">
           <span>📞</span> <span>0152 14438923</span>
         </a>
       </div>
@@ -190,25 +199,25 @@
   </aside>
 
   <!-- ==========================================
-       2. HEADER NAVIGATION (Reinweiß, Einzeilig & Präzise)
+       2. HEADER NAVIGATION (Mobil-Optimiert & Einzeilig auf Desktop)
   ========================================== -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#EAE5DC] shadow-sm">
-    <div class="max-w-[1260px] mx-auto px-6 h-20 sm:h-22 flex items-center justify-between gap-4">
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
-      <!-- Brand Logo (No-Wrap) -->
-      <a href="#hero" class="flex items-center gap-3 group shrink-0">
-        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm shrink-0">
+      <!-- Brand Logo (Fits 320px-390px Mobile Comfortably) -->
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group min-w-0 shrink">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm shrink-0">
           <img src="./logo.png" alt="Kampala Rolex Germany Logo" class="w-full h-full object-contain">
         </div>
-        <div class="whitespace-nowrap">
-          <div class="font-heading text-lg sm:text-xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">
+        <div class="min-w-0">
+          <div class="font-heading text-base sm:text-xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none truncate">
             Kampala Rolex
           </div>
-          <span class="text-[11px] font-medium text-[#767C85] tracking-wide block mt-1 whitespace-nowrap" data-i18n="brandSubtitle">Catering & Live-Cooking München</span>
+          <span class="text-[10px] sm:text-[11px] font-medium text-[#767C85] tracking-wide block mt-1 truncate" data-i18n="brandSubtitle">Catering & Live-Cooking München</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation (Strict Single-Line whitespace-nowrap) -->
+      <!-- Desktop Navigation (Strict Single-Line whitespace-nowrap on lg+) -->
       <nav class="hidden lg:flex items-center gap-5 xl:gap-6 font-heading text-xs font-bold uppercase tracking-wider text-[#1A1A1A] whitespace-nowrap">
         <a href="rolex-experience.html" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navLiveRolex">Live Rolex</a>
         <a href="warmbuffet.html" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navWarmbuffet">Warmbuffet</a>
@@ -266,17 +275,45 @@
         <a href="#faq" class="hover:text-[#D97706] transition whitespace-nowrap" data-i18n="navFaq">FAQ</a>
       </nav>
 
-      <!-- Sticky Header Language Switcher & Action CTA (No-Wrap, Clean Spacing) -->
-      <div class="flex items-center gap-3 shrink-0">
+      <!-- Right: Language Switcher, Desktop CTA & Mobile Menu Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <div class="flex items-center border border-[#EAE5DC] rounded-lg p-0.5 bg-[#FAF8F5] shadow-xs shrink-0">
-          <button onclick="setLanguage('de')" aria-label="Deutsch" class="lang-btn-de px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">DE</button>
-          <button onclick="setLanguage('en')" aria-label="English" class="lang-btn-en px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">EN</button>
+          <button onclick="setLanguage('de')" aria-label="Deutsch" class="lang-btn-de px-2 sm:px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">DE</button>
+          <button onclick="setLanguage('en')" aria-label="English" class="lang-btn-en px-2 sm:px-2.5 py-1 rounded-md text-[11px] font-heading font-extrabold transition">EN</button>
         </div>
-        <a href="#anfrage" class="px-5 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm whitespace-nowrap text-center">
+        <!-- Desktop & Tablet CTA (Hidden on <640px phones to prevent horizontal overflow) -->
+        <a href="#anfrage" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm whitespace-nowrap text-center">
           <span data-i18n="headerCta">Jetzt Anfragen</span>
         </a>
+        <!-- Mobile Navigation Hamburger Button (Visible on <1024px) -->
+        <button type="button" onclick="document.getElementById('mobile-nav-drawer').classList.toggle('hidden')" aria-label="Menü öffnen" class="lg:hidden w-9 h-9 rounded-lg border border-[#EAE5DC] bg-[#FAF8F5] flex items-center justify-center text-[#1A1A1A] hover:border-[#D97706] transition shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="hidden lg:hidden bg-white border-t border-[#EAE5DC] px-4 py-4 shadow-xl space-y-3">
+      <div class="grid grid-cols-2 gap-2 text-xs font-heading font-bold uppercase tracking-wider">
+        <a href="rolex-experience.html" class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#D97706]" data-i18n="navLiveRolex">Live Rolex</a>
+        <a href="warmbuffet.html" class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#D97706]" data-i18n="navWarmbuffet">Warmbuffet</a>
+        <a href="fingerfood.html" class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1A1A] hover:border-[#D97706]" data-i18n="navFingerfood">Fingerfood</a>
+        <a href="anlaesse.html" class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#EAE5DC] text-[#D97706] hover:border-[#D97706]" data-i18n="navAnlaesse">Anlässe</a>
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-[11px] font-heading font-semibold text-[#555048] pt-1 border-t border-[#EAE5DC]">
+        <a href="firmencatering.html" class="py-1.5 px-2 rounded hover:bg-[#FAF8F5] truncate">🏢 <span data-i18n="navOcc1Title">Event- & Firmencatering</span></a>
+        <a href="hochzeitscatering.html" class="py-1.5 px-2 rounded hover:bg-[#FAF8F5] truncate">💍 <span data-i18n="navOcc2Title">Hochzeitscatering</span></a>
+        <a href="private-catering.html" class="py-1.5 px-2 rounded hover:bg-[#FAF8F5] truncate">🥂 <span data-i18n="navOcc3Title">Private Catering</span></a>
+        <a href="foodtruck-outdoor.html" class="py-1.5 px-2 rounded hover:bg-[#FAF8F5] truncate">🎪 <span data-i18n="navOcc4Title">Foodtruck & Outdoor</span></a>
+      </div>
+      <div class="flex items-center justify-between gap-2 pt-2 border-t border-[#EAE5DC]">
+        <a href="#videos" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')" class="text-xs font-heading font-bold uppercase text-[#1A1A1A] px-2 py-1" data-i18n="navVideos">Videos</a>
+        <a href="#faq" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')" class="text-xs font-heading font-bold uppercase text-[#1A1A1A] px-2 py-1" data-i18n="navFaq">FAQ</a>
+        <a href="#anfrage" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')" class="px-4 py-2 rounded-lg bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider" data-i18n="headerCta">Jetzt Anfragen</a>
+      </div>
     </div>
   </header>
 
@@ -284,22 +321,22 @@
        3. BRIGHT & CRISP HERO SECTION (SPLIT-LAYOUT)
        Kein dunkles Overlay! Volle Sichtbarkeit des Essens!
   ========================================== -->
-  <section id="hero" class="relative bg-[#FAF8F5] pt-12 pb-20 sm:pt-16 sm:pb-28 border-b border-[#EAE5DC] overflow-hidden">
+  <section id="hero" class="relative bg-[#FAF8F5] pt-8 pb-16 sm:pt-16 sm:pb-28 border-b border-[#EAE5DC] overflow-hidden">
     
     <!-- Subtle warm glow -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-[1260px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center relative z-10">
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
       
       <!-- Left Column: Balanced Typography & Justified Copy (DE & EN) -->
-      <div class="lg:col-span-6 space-y-5 text-left">
+      <div class="lg:col-span-6 space-y-4 sm:space-y-5 text-left min-w-0">
         
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-xs font-bold uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
-          <span data-i18n="heroBadge">Münchens #1 Live-Cooking & Catering Atelier</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-[11px] sm:text-xs font-bold uppercase tracking-wider max-w-full">
+          <span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse shrink-0"></span>
+          <span class="truncate" data-i18n="heroBadge">Münchens #1 Live-Cooking & Catering Atelier</span>
         </div>
 
-        <h1 class="font-heading text-3xl sm:text-4xl lg:text-[2.45rem] xl:text-[2.55rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.15] whitespace-nowrap" data-i18n="heroH1">
+        <h1 class="font-heading text-[clamp(1.3rem,5.5vw,2.55rem)] sm:text-4xl lg:text-[2.45rem] xl:text-[2.55rem] font-black uppercase tracking-tight text-[#1A1A1A] leading-[1.18] sm:whitespace-nowrap break-words" data-i18n="heroH1">
           Catering München:<br><span class="text-[#D97706]">Frisch, Authentisch</span><br>& Mit Leidenschaft.
         </h1>
 
@@ -310,39 +347,39 @@
         </p>
 
         <!-- 4 Key USPs Grid (Uniform Height & Clean Single-Line Alignment) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs font-heading font-semibold text-[#1A1A1A]">
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1 text-xs font-heading font-semibold text-[#1A1A1A]">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
             <span class="text-base shrink-0">🍳</span>
             <span data-i18n="heroUsp1">Live Show-Cooking auf heißer Tawa</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
             <span class="text-base shrink-0">🇺🇬</span>
             <span data-i18n="heroUsp2">100% Originalrezept aus Kampala</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
             <span class="text-base shrink-0">🍗</span>
             <span data-i18n="heroUsp3">Zartes Fleisch & Veggie-Vielfalt</span>
           </div>
-          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[48px]">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white border border-[#EAE5DC] shadow-xs min-h-[46px]">
             <span class="text-base shrink-0">📍</span>
             <span data-i18n="heroUsp4">Für 15 bis 500+ Gäste in Bayern</span>
           </div>
         </div>
 
-        <!-- Action Buttons (Single Row Alignment) -->
-        <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 pt-2">
-          <a href="#anfrage" class="px-6 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
+        <!-- Action Buttons (Full-Width Stack on Mobile, Single Row on Tablet/Desktop) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+          <a href="#anfrage" class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
             <span data-i18n="heroBtn1">Individuelles Angebot anfragen</span>
             <span>➔</span>
           </a>
-          <button onclick="playVideo('reel')" class="px-5 py-3.5 rounded-lg bg-white hover:bg-[#F3EFEA] border-2 border-[#1A1A1A] text-[#1A1A1A] font-heading text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-xs whitespace-nowrap">
+          <button onclick="playVideo('reel')" class="w-full sm:w-auto px-5 py-3.5 rounded-lg bg-white hover:bg-[#F3EFEA] border-2 border-[#1A1A1A] text-[#1A1A1A] font-heading text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-xs whitespace-nowrap">
             <span class="text-[#D97706] text-sm">▶</span>
             <span data-i18n="heroBtn2">Videos ansehen (5 Clips)</span>
           </button>
         </div>
 
         <!-- Direct Hotline -->
-        <div class="flex items-center gap-2 text-xs text-[#555048] pt-1">
+        <div class="flex flex-wrap items-center gap-1.5 text-xs text-[#555048] pt-1">
           <span data-i18n="heroConsult">Persönliche Beratung & Termin-Check:</span>
           <a href="tel:+4915214438923" class="font-bold text-[#1A1A1A] hover:text-[#D97706] underline">+49 152 14438923</a>
         </div>

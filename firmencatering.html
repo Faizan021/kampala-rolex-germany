@@ -16,7 +16,7 @@
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <style>
-    html, body { background-color: #FFFFFF; color: #1A1A1A; font-family: 'Raleway', sans-serif; }
+    html, body { overflow-x: hidden; max-width: 100%; width: 100%;  background-color: #FFFFFF; color: #1A1A1A; font-family: 'Raleway', sans-serif; }
     ::selection { background: #D97706; color: #FFFFFF; }
     .section-separator { width: 55px; height: 3px; background-color: #D97706; margin: 16px auto 24px auto; border-radius: 2px; }
     .section-separator-left { width: 55px; height: 3px; background-color: #D97706; margin: 16px 0 24px 0; border-radius: 2px; }
@@ -42,13 +42,13 @@
 
   <!-- Sticky Header with Occasions Dropdown -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#EAE5DC] shadow-sm">
-    <div class="max-w-[1260px] mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 h-16 sm:h-24 flex items-center justify-between gap-2">
       <a href="index.html" class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-full border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full shrink-0 border border-[#EAE5DC] p-1 flex items-center justify-center bg-white shadow-sm">
           <img src="./logo.png" alt="Logo" class="w-full h-full object-contain">
         </div>
         <div>
-          <div class="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">Kampala Rolex</div>
+          <div class="font-heading text-base sm:text-2xl font-extrabold tracking-tight text-[#1A1A1A] uppercase leading-none">Kampala Rolex</div>
           <span class="text-[11px] font-medium text-[#767C85] tracking-wider block mt-1">Catering & Live-Cooking München</span>
         </div>
       </a>
@@ -113,7 +113,7 @@
       </nav>
 
       <div>
-        <a href="#anfrage-form" class="px-6 py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-xs font-bold tracking-wider uppercase transition shadow-sm">
+        <a href="#anfrage-form" class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg bg-[#1A1A1A] hover:bg-[#D97706] text-white font-heading text-[10px] sm:text-xs whitespace-nowrap font-bold tracking-wider uppercase transition shadow-sm">
           Firmen-Angebot anfragen
         </a>
       </div>
